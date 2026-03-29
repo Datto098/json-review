@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopee Orders Dashboard - JSON Review</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #f53d2d;
+            --primary-dark: #d72e21;
+            --bg: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: rgba(255, 255, 255, 0.1);
+            --accent: #38bdf8;
+            --success: #10b981;
+            --warning: #f59e0b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(245, 61, 45, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(56, 189, 248, 0.05) 0%, transparent 40%);
+            padding: 2rem;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        header {
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), #ff6b6b);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 15px -3px rgba(245, 61, 45, 0.3);
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 14px 0 rgba(245, 61, 45, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 61, 45, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--text-muted);
+        }
+
+        #fileInput {
+            display: none;
+        }
+
+        .search-box {
+            position: relative;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+
+        .search-box input {
+            width: 100%;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 0.75rem 1rem 0.75rem 2.5rem;
+            border-radius: 12px;
+            color: var(--text);
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .search-box input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(245, 61, 45, 0.2);
+        }
+
+        .search-box svg {
+            position: absolute;
+            left: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            max-height: 70vh;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        th {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 1rem 1.5rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-bottom: 1px solid var(--border);
+        }
+
+        td {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+            transition: background 0.2s;
+        }
+
+        tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .status-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .status-shipped { background: rgba(56, 189, 248, 0.1); color: #38bdf8; }
+        .status-completed { background: rgba(16, 185, 129, 0.1); color: #10b981; }
+        .status-processing { background: rgba(245, 158, 11, 0.1); color: #f59e0b; }
+        .status-cancelled { background: rgba(239, 68, 68, 0.1); color: #ef4444; }
+
+        .currency {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+        }
+
+        .item-list {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            max-width: 300px;
+        }
+
+        .summary-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .empty-state {
+            padding: 5rem 2rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .empty-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+        }
+
+        /* Tooltip */
+        .tooltip {
+            position: relative;
+            cursor: help;
+        }
+
+        .tooltip::before {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1e293b;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--border);
+            z-index: 20;
+        }
+
+        .tooltip:hover::before {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="brand">
+                <div class="logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                </div>
+                <div>
+                    <h1>JSON Orders Viewer</h1>
+                    <p style="color: var(--text-muted); font-size: 0.85rem;">Shopee Ads Dashboard Review</p>
+                </div>
+            </div>
+
+            <div class="controls">
+                <div class="search-box">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <input type="text" id="searchInput" placeholder="Tìm kiếm mã đơn, trạng thái, ngày...">
+                </div>
+                <button class="btn btn-outline" id="loadDefaultBtn">Thử tải shopee_ads_dashboard.orders.json</button>
+                <button class="btn btn-primary" onclick="document.getElementById('fileInput').click()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                    Chọn File JSON
+                </button>
+                <input type="file" id="fileInput" accept=".json">
+            </div>
+        </header>
+
+        <div id="statsContainer" class="summary-stats" style="display: none;">
+            <div class="stat-card">
+                <span class="stat-label">Tổng Đơn Hàng</span>
+                <span class="stat-value" id="totalOrders">0</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Tổng Doanh Thu</span>
+                <span class="stat-value" id="totalRevenue">0 ₫</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Tổng Phụ Phí</span>
+                <span class="stat-value" id="totalFees">0 ₫</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Tổng Thuế</span>
+                <span class="stat-value" id="totalTax">0 ₫</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div id="loading" style="display: none; padding: 2rem; text-align: center; color: var(--text-muted);">
+                Đang xử lý dữ liệu...
+            </div>
+            
+            <div id="emptyState" class="empty-state">
+                <div class="empty-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+                </div>
+                <div>
+                    <h2>Chưa có dữ liệu</h2>
+                    <p style="color: var(--text-muted); margin-top: 0.5rem;">Hãy kéo thả file JSON vào đây hoặc nhấn nút "Chọn File JSON" để bắt đầu.</p>
+                </div>
+            </div>
+
+            <div id="tableWrapper" class="table-responsive" style="display: none;">
+                <table id="ordersTable">
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable(0)">Mã Đơn Hàng ↕</th>
+                            <th onclick="sortTable(1)">Ngày Doanh Thu ↕</th>
+                            <th onclick="sortTable(2)">Trạng Thái ↕</th>
+                            <th onclick="sortTable(3)">Tiền Hàng ↕</th>
+                            <th onclick="sortTable(4)">Escrow ↕</th>
+                            <th onclick="sortTable(5)">Phí ↕</th>
+                            <th onclick="sortTable(6)">Thuế ↕</th>
+                            <th onclick="sortTable(7)">Tổng ↕</th>
+                            <th>Sản Phẩm</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ordersBody">
+                        <!-- Data will be injected here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let ordersData = [];
+        let filteredData = [];
+
+        const fileInput = document.getElementById('fileInput');
+        const loadDefaultBtn = document.getElementById('loadDefaultBtn');
+        const searchInput = document.getElementById('searchInput');
+        const ordersBody = document.getElementById('ordersBody');
+        const emptyState = document.getElementById('emptyState');
+        const tableWrapper = document.getElementById('tableWrapper');
+        const statsContainer = document.getElementById('statsContainer');
+        const loading = document.getElementById('loading');
+
+        // format currency
+        const formatVND = (amount) => {
+            return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(amount);
+        };
+
+        // Handle file selection
+        fileInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                processJSON(e.target.result);
+            };
+            reader.readAsText(file);
+        });
+
+        // Try to load default file (works if served locally)
+        loadDefaultBtn.addEventListener('click', async () => {
+            try {
+                loading.style.display = 'block';
+                const response = await fetch('shopee_ads_dashboard.orders.json');
+                if (!response.ok) throw new Error('Không thể tải file mặc định. Hãy chọn file thủ công.');
+                const text = await response.text();
+                processJSON(text);
+            } catch (err) {
+                alert(err.message);
+                loading.style.display = 'none';
+            }
+        });
+
+        function processJSON(jsonString) {
+            try {
+                loading.style.display = 'block';
+                const data = JSON.parse(jsonString);
+                ordersData = Array.isArray(data) ? data : [data];
+                filteredData = [...ordersData];
+                
+                renderStats();
+                renderTable();
+                
+                emptyState.style.display = 'none';
+                tableWrapper.style.display = 'block';
+                statsContainer.style.display = 'grid';
+                loading.style.display = 'none';
+            } catch (err) {
+                alert('File JSON không hợp lệ: ' + err.message);
+                loading.style.display = 'none';
+            }
+        }
+
+        function renderStats() {
+            const total = ordersData.length;
+            const revenue = ordersData.reduce((sum, o) => sum + (o.total_amount || 0), 0);
+            const fees = ordersData.reduce((sum, o) => sum + (o.fees_and_charges || 0), 0);
+            const tax = ordersData.reduce((sum, o) => sum + (o.tax_amount || 0), 0);
+
+            document.getElementById('totalOrders').textContent = total.toLocaleString();
+            document.getElementById('totalRevenue').textContent = formatVND(revenue);
+            document.getElementById('totalFees').textContent = formatVND(fees);
+            document.getElementById('totalTax').textContent = formatVND(tax);
+        }
+
+        function renderTable() {
+            ordersBody.innerHTML = '';
+            
+            filteredData.forEach(order => {
+                const tr = document.createElement('tr');
+                
+                const statusClass = `status-${(order.order_status || '').toLowerCase().replace(/\s+/g, '-')}`;
+                
+                const itemsHtml = (order.items || []).map(item => 
+                    `<div>• ${item.item_name} (x${item.model_quantity_purchased})</div>`
+                ).join('');
+
+                tr.innerHTML = `
+                    <td style="font-weight: 600; color: var(--accent);">${order.order_sn || 'N/A'}</td>
+                    <td>${order.revenue_date || 'N/A'}</td>
+                    <td><span class="status-badge ${statusClass}">${order.order_status || 'N/A'}</span></td>
+                    <td class="currency">${formatVND(order.merchandise_subtotal || 0)}</td>
+                    <td class="currency" style="color: var(--success);">${formatVND(order.escrow_amount || 0)}</td>
+                    <td class="currency" style="color: var(--warning);">${formatVND(order.fees_and_charges || 0)}</td>
+                    <td class="currency">${formatVND(order.tax_amount || 0)}</td>
+                    <td class="currency" style="font-weight: 700;">${formatVND(order.total_amount || 0)}</td>
+                    <td class="item-list">${itemsHtml || 'Không có thông tin'}</td>
+                `;
+                
+                ordersBody.appendChild(tr);
+            });
+        }
+
+        // Search logic
+        searchInput.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            filteredData = ordersData.filter(o => 
+                (o.order_sn && o.order_sn.toLowerCase().includes(term)) ||
+                (o.order_status && o.order_status.toLowerCase().includes(term)) ||
+                (o.revenue_date && o.revenue_date.toLowerCase().includes(term)) ||
+                (o.items && o.items.some(i => i.item_name.toLowerCase().includes(term)))
+            );
+            renderTable();
+        });
+
+        // Simple sorting
+        let sortDirections = {};
+        function sortTable(colIndex) {
+            const keys = ['order_sn', 'revenue_date', 'order_status', 'merchandise_subtotal', 'escrow_amount', 'fees_and_charges', 'tax_amount', 'total_amount'];
+            const key = keys[colIndex];
+            if (!key) return;
+
+            sortDirections[key] = !sortDirections[key];
+            const dir = sortDirections[key] ? 1 : -1;
+
+            filteredData.sort((a, b) => {
+                let valA = a[key];
+                let valB = b[key];
+
+                if (typeof valA === 'string') {
+                    return valA.localeCompare(valB) * dir;
+                }
+                return (valA - valB) * dir;
+            });
+
+            renderTable();
+        }
+
+        // Drag and drop interface
+        window.addEventListener('dragover', (e) => { e.preventDefault(); });
+        window.addEventListener('drop', (e) => {
+            e.preventDefault();
+            const file = e.dataTransfer.files[0];
+            if (file && file.name.endsWith('.json')) {
+                const reader = new FileReader();
+                reader.onload = (e) => processJSON(e.target.result);
+                reader.readAsText(file);
+            }
+        });
+    </script>
+</body>
+</html>
