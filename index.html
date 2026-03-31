@@ -476,13 +476,12 @@
         }
 
         function renderStats(data = filteredData) {
-            // Filter out cancelled orders for financial calculations
-            // You can add 'Unpaid' or 'Pending' here if needed: 
-            // const validOrders = data.filter(o => !['Cancelled', 'Unpaid', 'Pending'].includes(o.order_status));
-            const validOrders = data.filter(o => o.order_status !== 'Cancelled');
+            // Filter out invalid orders for financial calculations
+            const invalidStatuses = ['Cancelled', 'Pending'];
+            const validOrders = data.filter(o => !invalidStatuses.includes(o.order_status));
 
             const total = data.length;
-            const revenue = validOrders.reduce((sum, o) => sum + (o.total_amount || 0), 0);
+            const revenue = validOrders.reduce((sum, o) => sum + (o.merchandise_subtotal || 0), 0);
             const fees = validOrders.reduce((sum, o) => sum + (o.fees_and_charges || 0), 0);
             const tax = validOrders.reduce((sum, o) => sum + (o.tax_amount || 0), 0);
 
@@ -512,7 +511,7 @@
                     <td class="currency" style="color: var(--success);">${formatVND(order.escrow_amount || 0)}</td>
                     <td class="currency" style="color: var(--warning);">${formatVND(order.fees_and_charges || 0)}</td>
                     <td class="currency">${formatVND(order.tax_amount || 0)}</td>
-                    <td class="currency" style="font-weight: 700;">${formatVND(order.total_amount || 0)}</td>
+                    <td class="currency" style="font-weight: 700;">${formatVND(order.merchandise_subtotal || 0)}</td>
                     <td class="item-list">${itemsHtml || 'Không có thông tin'}</td>
                 `;
                 
@@ -536,7 +535,7 @@
         // Simple sorting
         let sortDirections = {};
         function sortTable(colIndex) {
-            const keys = ['order_sn', 'revenue_date', 'order_status', 'merchandise_subtotal', 'escrow_amount', 'fees_and_charges', 'tax_amount', 'total_amount'];
+            const keys = ['order_sn', 'revenue_date', 'order_status', 'merchandise_subtotal', 'escrow_amount', 'fees_and_charges', 'tax_amount', 'merchandise_subtotal'];
             const key = keys[colIndex];
             if (!key) return;
 
