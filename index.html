@@ -462,7 +462,7 @@
                 ordersData = Array.isArray(data) ? data : [data];
                 filteredData = [...ordersData];
                 
-                renderStats();
+                renderStats(filteredData);
                 renderTable();
                 
                 emptyState.style.display = 'none';
@@ -475,11 +475,16 @@
             }
         }
 
-        function renderStats() {
-            const total = ordersData.length;
-            const revenue = ordersData.reduce((sum, o) => sum + (o.total_amount || 0), 0);
-            const fees = ordersData.reduce((sum, o) => sum + (o.fees_and_charges || 0), 0);
-            const tax = ordersData.reduce((sum, o) => sum + (o.tax_amount || 0), 0);
+        function renderStats(data = filteredData) {
+            // Filter out cancelled orders for financial calculations
+            // You can add 'Unpaid' or 'Pending' here if needed: 
+            // const validOrders = data.filter(o => !['Cancelled', 'Unpaid', 'Pending'].includes(o.order_status));
+            const validOrders = data.filter(o => o.order_status !== 'Cancelled');
+
+            const total = data.length;
+            const revenue = validOrders.reduce((sum, o) => sum + (o.total_amount || 0), 0);
+            const fees = validOrders.reduce((sum, o) => sum + (o.fees_and_charges || 0), 0);
+            const tax = validOrders.reduce((sum, o) => sum + (o.tax_amount || 0), 0);
 
             document.getElementById('totalOrders').textContent = total.toLocaleString();
             document.getElementById('totalRevenue').textContent = formatVND(revenue);
@@ -525,6 +530,7 @@
                 (o.items && o.items.some(i => i.item_name.toLowerCase().includes(term)))
             );
             renderTable();
+            renderStats(filteredData);
         });
 
         // Simple sorting

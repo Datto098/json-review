@@ -1,17 +1,17 @@
 [{
   "_id": {
-    "$oid": "69cb32d96945a815e1f5a35f"
+    "$oid": "69cb794c6945a815e1f853d9"
   },
-  "order_id": 228623482206373,
+  "order_id": 228631290225303,
   "__v": 0,
-  "create_time": 1774924282,
+  "create_time": 1774932091,
   "currency": "VND",
-  "escrow_amount": 61444,
-  "fees_and_charges": 19326,
+  "escrow_amount": 59872,
+  "fees_and_charges": 18928,
   "income_details": {
     "order_info": {
-      "order_id": 228623482206373,
-      "order_sn": "260331J4N6XX55",
+      "order_id": 228631290225303,
+      "order_sn": "260331JBWW8RMQ",
       "is_cb_sip_aff_order": false,
       "shipping_carrier": "",
       "released_time": 0,
@@ -23,14 +23,14 @@
         {
           "field_id": 1,
           "field_name": "MERCHANDISE_SUBTOTAL",
-          "amount": 8200000000,
+          "amount": 8000000000,
           "display_name": "Tổng tiền sản phẩm",
           "hide_amount": false,
           "sub_breakdown": [
             {
               "field_id": 2,
               "field_name": "PRODUCT_PRICE",
-              "amount": 8200000000,
+              "amount": 8000000000,
               "display_name": "Giá sản phẩm",
               "hide_amount": false
             }
@@ -53,8 +53,15 @@
             {
               "field_id": 52,
               "field_name": "ACTUAL_SHIPPING_FEE",
-              "amount": 0,
+              "amount": -2870000000,
               "display_name": "Phí vận chuyển ước tính",
+              "hide_amount": false
+            },
+            {
+              "field_id": 54,
+              "field_name": "SHIPPING_REBATE_FROM_SHOPEE",
+              "amount": 2870000000,
+              "display_name": "Phí vận chuyển được trợ giá từ Shopee ước tính",
               "hide_amount": false
             }
           ],
@@ -63,14 +70,14 @@
         {
           "field_id": 150,
           "field_name": "FEES_AND_CHARGES",
-          "amount": -1932600000,
+          "amount": -1892800000,
           "display_name": "Phụ phí",
           "hide_amount": false,
           "sub_breakdown": [
             {
               "field_id": 151,
               "field_name": "COMMISSION_FEE",
-              "amount": -902000000,
+              "amount": -880000000,
               "display_name": "Phí cố định",
               "caption": "Phí cố định cho đơn hàng này là 11.00%.",
               "link": "https://banhang.shopee.vn/edu/article/2139",
@@ -89,7 +96,7 @@
             {
               "field_id": 154,
               "field_name": "SERVICE_FEE",
-              "amount": -628000000,
+              "amount": -620000000,
               "display_name": "Phí Dịch Vụ",
               "hide_amount": false,
               "ext_info": {
@@ -102,7 +109,7 @@
                   },
                   {
                     "name": "Voucher Xtra",
-                    "amount": -328000000,
+                    "amount": -320000000,
                     "rule_id": 78350,
                     "fee_rate": 0
                   }
@@ -112,7 +119,7 @@
             {
               "field_id": 155,
               "field_name": "TRANSACTION_FEE",
-              "amount": -402600000,
+              "amount": -392800000,
               "display_name": "Phí thanh toán",
               "caption": "Đơn hàng có áp dụng Phí thanh toán",
               "hide_amount": false,
@@ -130,14 +137,14 @@
         {
           "field_id": 173,
           "field_name": "TAX_SUBTOTAL",
-          "amount": -123000000,
+          "amount": -120000000,
           "display_name": "Thuế",
           "hide_amount": false,
           "sub_breakdown": [
             {
               "field_id": 174,
               "field_name": "VAT_WHT_AMOUNT",
-              "amount": -82000000,
+              "amount": -80000000,
               "display_name": "Thuế GTGT",
               "caption": "Chỉ áp dụng cho hộ kinh doanh hoặc cá nhân kinh doanh. Để tìm hiểu thêm về cách tính thuế giá trị gia tăng (GTGT) , vui lòng tham khảo <a href=\"https://banhang.shopee.vn/edu/article/24233\" target=\"_blank\">tại đây.</a>",
               "link": "https://banhang.shopee.vn/edu/article/24233",
@@ -146,7 +153,7 @@
             {
               "field_id": 175,
               "field_name": "PIT_WHT_AMOUNT",
-              "amount": -41000000,
+              "amount": -40000000,
               "display_name": "Thuế TNCN",
               "caption": "Chỉ áp dụng cho hộ kinh doanh hoặc cá nhân kinh doanh. Để tìm hiểu thêm về cách tính thuế thu nhập cá nhân (TNCN), vui lòng tham khảo <a href=\"https://banhang.shopee.vn/edu/article/24233\" target=\"_blank\">tại đây.</a>",
               "link": "https://banhang.shopee.vn/edu/article/24233",
@@ -164,7 +171,7 @@
         {
           "field_id": 250,
           "field_name": "ESCROW_AMOUNT",
-          "amount": 6144400000,
+          "amount": 5987200000,
           "display_name": "Doanh thu đơn hàng ước tính",
           "caption": "Doanh thu thực tế của đơn hàng có thể thay đổi và chỉ được tính toán chính xác sau khi đơn hàng đã hoàn tất.",
           "hide_amount": false
@@ -176,7 +183,7 @@
         {
           "field_id": 1,
           "field_name": "MERCHANDISE_SUBTOTAL",
-          "amount": 8200000000,
+          "amount": 8000000000,
           "display_name": "Tổng tiền sản phẩm",
           "hide_amount": false
         },
@@ -190,7 +197,7 @@
         {
           "field_id": 5,
           "field_name": "SHOPEE_VOUCHER_DISCOUNT",
-          "amount": -820000000,
+          "amount": -800000000,
           "display_name": "Shopee Voucher",
           "hide_amount": false
         },
@@ -204,7 +211,7 @@
         {
           "field_id": 100,
           "field_name": "BUYER_PAID_AMOUNT",
-          "amount": 7380000000,
+          "amount": 7200000000,
           "display_name": "Tổng tiền Thanh toán",
           "hide_amount": false
         }
@@ -213,18 +220,18 @@
     "order_item_list": {
       "order_items": [
         {
-          "item_id": 41178071221,
-          "model_id": 415441154928,
+          "item_id": 54154811838,
+          "model_id": 440444824709,
           "group_id": "0",
-          "line_item_id": 228623482251136,
-          "price": 8200000000,
+          "line_item_id": 228631291232984,
+          "price": 8000000000,
           "amount": 1,
-          "subtotal": 8200000000,
-          "product_name": "[DATE MỚI] 🍌 Kẹo Chuối Cuộn Đậu Phộng - Kẹo Chuối Đậu Cuộn Bánh Tráng Phồng Mềm Dẻo Ngọt Dịu",
-          "product_sku": "TP00225",
-          "product_image": "vn-11134207-820l4-mjjdnekzyj2f40",
-          "model_name": "◾️500G◾️",
-          "model_sku": "TP00225_500",
+          "subtotal": 8000000000,
+          "product_name": "[HÀNG XỊN] Mứt Mãng Cầu Quấn Viên - Sên Đường Chua Ngọt Mềm Dẻo - Mứt Mãng Cầu - Kẹo Dẻo Trái Cây",
+          "product_sku": "TP00272",
+          "product_image": "vn-11134207-820l4-mjkojnq5nw909f",
+          "model_name": "◾️250G◾️,◾️Mãng Cầu◾️",
+          "model_sku": "TP00272_250",
           "sub_type": 0,
           "bundle_item_price": 0,
           "is_add_on_subitem": false,
@@ -248,40 +255,1564 @@
   },
   "items": [
     {
-      "item_id": 41178071221,
-      "item_name": "[DATE MỚI] 🍌 Kẹo Chuối Cuộn Đậu Phộng - Kẹo Chuối Đậu Cuộn Bánh Tráng Phồng Mềm Dẻo Ngọt Dịu",
-      "model_id": 415441154928,
-      "model_name": "◾️500G◾️",
-      "model_sku": "TP00225_500",
+      "item_id": 54154811838,
+      "item_name": "[HÀNG XỊN] Mứt Mãng Cầu Quấn Viên - Sên Đường Chua Ngọt Mềm Dẻo - Mứt Mãng Cầu - Kẹo Dẻo Trái Cây",
+      "model_id": 440444824709,
+      "model_name": "◾️250G◾️,◾️Mãng Cầu◾️",
+      "model_sku": "TP00272_250",
       "model_quantity_purchased": 1,
-      "model_original_price": 82000,
+      "model_original_price": 80000,
       "_id": {
-        "$oid": "69cb32d9b28a59b1e3c2e61c"
+        "$oid": "69cb8040a754a7292210714f"
       }
     }
   ],
   "last_updated": {
-    "$date": "2026-03-31T02:35:01.362Z"
+    "$date": "2026-03-31T08:05:02.796Z"
   },
-  "merchandise_subtotal": 82000,
-  "order_sn": "260331J4N6XX55",
-  "order_status": "Unpaid",
+  "merchandise_subtotal": 80000,
+  "order_sn": "260331JBWW8RMQ",
+  "order_status": "To Ship",
   "ready_to_ship_time": {
-    "$date": "2026-03-31T02:35:01.362Z"
+    "$date": "2026-03-31T04:46:33.000Z"
   },
   "revenue_date": "31-03-2026",
   "shipping_subtotal": 0,
   "shop_id": 1018844008,
   "status_code": 1,
-  "status_text": "Unpaid",
-  "sync_count": 1,
-  "tax_amount": 1230,
-  "total_amount": 73800,
-  "update_time": 1774924501
+  "status_text": "To Ship",
+  "sync_count": 7,
+  "tax_amount": 1200,
+  "total_amount": 72000,
+  "update_time": 1774944302
 },
 {
   "_id": {
-    "$oid": "69cb27216945a815e1f58bb5"
+    "$oid": "69cb794c6945a815e1f853da"
+  },
+  "order_id": 228637507221268,
+  "__v": 0,
+  "create_time": 1774938307,
+  "currency": "VND",
+  "escrow_amount": 86592,
+  "fees_and_charges": 25697,
+  "income_details": {
+    "order_info": {
+      "order_id": 228637507221268,
+      "order_sn": "260331JHQ68DRM",
+      "is_cb_sip_aff_order": false,
+      "shipping_carrier": "",
+      "released_time": 0,
+      "source": "Shopee Wallet",
+      "status": 2,
+      "release_time_transify_key": "ps_escrow_estimate_release__vn"
+    },
+    "seller_income_breakdown": {
+      "breakdown": [
+        {
+          "field_id": 1,
+          "field_name": "MERCHANDISE_SUBTOTAL",
+          "amount": 12000000000,
+          "display_name": "Tổng tiền sản phẩm",
+          "hide_amount": false,
+          "sub_breakdown": [
+            {
+              "field_id": 2,
+              "field_name": "PRODUCT_PRICE",
+              "amount": 12000000000,
+              "display_name": "Giá sản phẩm",
+              "hide_amount": false
+            }
+          ]
+        },
+        {
+          "field_id": 50,
+          "field_name": "SHIPPING_SUBTOTAL",
+          "amount": 0,
+          "display_name": "Tổng phí vận chuyển ước tính",
+          "hide_amount": false,
+          "sub_breakdown": [
+            {
+              "field_id": 51,
+              "field_name": "SHIPPING_FEE_PAID_BY_BUYER",
+              "amount": 0,
+              "display_name": "Phí vận chuyển Người mua trả",
+              "hide_amount": false
+            },
+            {
+              "field_id": 52,
+              "field_name": "ACTUAL_SHIPPING_FEE",
+              "amount": -4340000000,
+              "display_name": "Phí vận chuyển ước tính",
+              "hide_amount": false
+            },
+            {
+              "field_id": 54,
+              "field_name": "SHIPPING_REBATE_FROM_SHOPEE",
+              "amount": 4340000000,
+              "display_name": "Phí vận chuyển được trợ giá từ Shopee ước tính",
+              "hide_amount": false
+            }
+          ],
+          "ext_info": {}
+        },
+        {
+          "field_id": 100,
+          "field_name": "REBATE_AND_VOUCHER",
+          "amount": -600000000,
+          "display_name": "Trợ giá",
+          "hide_amount": false,
+          "sub_breakdown": [
+            {
+              "field_id": 101,
+              "field_name": "VOUCHER_DISCOUNT_FROM_SELLER",
+              "amount": -600000000,
+              "display_name": "Mã giảm giá của shop - HONG6K",
+              "hide_amount": false
+            }
+          ]
+        },
+        {
+          "field_id": 150,
+          "field_name": "FEES_AND_CHARGES",
+          "amount": -2569700000,
+          "display_name": "Phụ phí",
+          "hide_amount": false,
+          "sub_breakdown": [
+            {
+              "field_id": 151,
+              "field_name": "COMMISSION_FEE",
+              "amount": -1254000000,
+              "display_name": "Phí cố định",
+              "caption": "Phí cố định cho đơn hàng này là 11.00%.",
+              "link": "https://banhang.shopee.vn/edu/article/2139",
+              "hide_amount": false,
+              "ext_info": {
+                "commission_fee_infos": [
+                  {
+                    "name": "",
+                    "amount": 0,
+                    "rule_id": 78453,
+                    "fee_rate": 11000
+                  }
+                ]
+              }
+            },
+            {
+              "field_id": 154,
+              "field_name": "SERVICE_FEE",
+              "amount": -756000000,
+              "display_name": "Phí Dịch Vụ",
+              "hide_amount": false,
+              "ext_info": {
+                "service_fee_infos": [
+                  {
+                    "name": "Phí Hạ Tầng",
+                    "amount": -300000000,
+                    "rule_id": 67122,
+                    "fee_rate": 0
+                  },
+                  {
+                    "name": "Voucher Xtra",
+                    "amount": -456000000,
+                    "rule_id": 78350,
+                    "fee_rate": 0
+                  }
+                ]
+              }
+            },
+            {
+              "field_id": 155,
+              "field_name": "TRANSACTION_FEE",
+              "amount": -559700000,
+              "display_name": "Phí thanh toán",
+              "caption": "Đơn hàng có áp dụng Phí thanh toán",
+              "hide_amount": false,
+              "ext_info": {
+                "seller_txn_fee_info": {
+                  "name": "",
+                  "amount": 0,
+                  "rule_id": 10128,
+                  "fee_rate": 4910
+                }
+              }
+            }
+          ]
+        },
+        {
+          "field_id": 173,
+          "field_name": "TAX_SUBTOTAL",
+          "amount": -171100000,
+          "display_name": "Thuế",
+          "hide_amount": false,
+          "sub_breakdown": [
+            {
+              "field_id": 174,
+              "field_name": "VAT_WHT_AMOUNT",
+              "amount": -114100000,
+              "display_name": "Thuế GTGT",
+              "caption": "Chỉ áp dụng cho hộ kinh doanh hoặc cá nhân kinh doanh. Để tìm hiểu thêm về cách tính thuế giá trị gia tăng (GTGT) , vui lòng tham khảo <a href=\"https://banhang.shopee.vn/edu/article/24233\" target=\"_blank\">tại đây.</a>",
+              "link": "https://banhang.shopee.vn/edu/article/24233",
+              "hide_amount": false
+            },
+            {
+              "field_id": 175,
+              "field_name": "PIT_WHT_AMOUNT",
+              "amount": -57000000,
+              "display_name": "Thuế TNCN",
+              "caption": "Chỉ áp dụng cho hộ kinh doanh hoặc cá nhân kinh doanh. Để tìm hiểu thêm về cách tính thuế thu nhập cá nhân (TNCN), vui lòng tham khảo <a href=\"https://banhang.shopee.vn/edu/article/24233\" target=\"_blank\">tại đây.</a>",
+              "link": "https://banhang.shopee.vn/edu/article/24233",
+              "hide_amount": false
+            }
+          ]
+        },
+        {
+          "field_id": 300,
+          "field_name": "VALUE_ADDED_SERVICES_SUBTOTAL",
+          "amount": 0,
+          "display_name": "Tổng phụ dịch vụ giá trị gia tăng cho người mua",
+          "hide_amount": false
+        },
+        {
+          "field_id": 250,
+          "field_name": "ESCROW_AMOUNT",
+          "amount": 8659200000,
+          "display_name": "Doanh thu đơn hàng ước tính",
+          "caption": "Doanh thu thực tế của đơn hàng có thể thay đổi và chỉ được tính toán chính xác sau khi đơn hàng đã hoàn tất.",
+          "hide_amount": false
+        }
+      ]
+    },
+    "buyer_payment_breakdown": {
+      "breakdown": [
+        {
+          "field_id": 1,
+          "field_name": "MERCHANDISE_SUBTOTAL",
+          "amount": 12000000000,
+          "display_name": "Tổng tiền sản phẩm",
+          "hide_amount": false
+        },
+        {
+          "field_id": 3,
+          "field_name": "SHIPPING_FEE",
+          "amount": 0,
+          "display_name": "Phí vận chuyển",
+          "hide_amount": false
+        },
+        {
+          "field_id": 5,
+          "field_name": "SHOPEE_VOUCHER_DISCOUNT",
+          "amount": -1368100000,
+          "display_name": "Shopee Voucher",
+          "hide_amount": false
+        },
+        {
+          "field_id": 6,
+          "field_name": "SELLER_VOUCHER_DISCOUNT",
+          "amount": -600000000,
+          "display_name": "Mã giảm giá của Shop",
+          "hide_amount": false
+        },
+        {
+          "field_id": 100,
+          "field_name": "BUYER_PAID_AMOUNT",
+          "amount": 10031900000,
+          "display_name": "Tổng tiền Thanh toán",
+          "hide_amount": false
+        }
+      ]
+    },
+    "order_item_list": {
+      "order_items": [
+        {
+          "item_id": 42478044799,
+          "model_id": 335437158256,
+          "group_id": "0",
+          "line_item_id": 228637508219514,
+          "price": 5500000000,
+          "amount": 1,
+          "subtotal": 5500000000,
+          "product_name": "[GIÁ TỐT] 🍋 Chanh Leo Sấy Thăng Hoa 🍋 - Chanh Dây Sấy – Bổ Sung Dinh Dưỡng, Pha Trà Giảm Cân",
+          "product_sku": "TP00197",
+          "product_image": "vn-11134207-820l4-mji5kqrq6olja0",
+          "model_name": "◾️100G◾️",
+          "model_sku": "TP00197_100",
+          "sub_type": 0,
+          "bundle_item_price": 0,
+          "is_add_on_subitem": false,
+          "is_pre_order": false,
+          "is_delivery_insured": false,
+          "returned_qty": 0,
+          "cancelled_qty": 0,
+          "show_return_tag": false,
+          "show_cancellation_tag": false,
+          "is_overseas_return_insured": false,
+          "has_spu_vsku": false
+        },
+        {
+          "item_id": 54154806288,
+          "model_id": 355444612626,
+          "group_id": "0",
+          "line_item_id": 228637508219513,
+          "price": 6500000000,
+          "amount": 1,
+          "subtotal": 6500000000,
+          "product_name": "[CHUẨN VỊ] Me Rim Muối Ớt Siêu Ngon - Chua Cay Mặn Ngọt Đậm Đà - Me Rim Nguyên Trái - Mứt Me",
+          "product_sku": "TP00256",
+          "product_image": "vn-11134207-820l4-mjklibg78nicf5",
+          "model_name": "◾️250G◾️",
+          "model_sku": "TP00256_250",
+          "sub_type": 0,
+          "bundle_item_price": 0,
+          "is_add_on_subitem": false,
+          "is_pre_order": false,
+          "is_delivery_insured": false,
+          "returned_qty": 0,
+          "cancelled_qty": 0,
+          "show_return_tag": false,
+          "show_cancellation_tag": false,
+          "is_overseas_return_insured": false,
+          "has_spu_vsku": false
+        }
+      ]
+    },
+    "error_codes": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "items": [
+    {
+      "item_id": 42478044799,
+      "item_name": "[GIÁ TỐT] 🍋 Chanh Leo Sấy Thăng Hoa 🍋 - Chanh Dây Sấy – Bổ Sung Dinh Dưỡng, Pha Trà Giảm Cân",
+      "model_id": 335437158256,
+      "model_name": "◾️100G◾️",
+      "model_sku": "TP00197_100",
+      "model_quantity_purchased": 1,
+      "model_original_price": 55000,
+      "_id": {
+        "$oid": "69cb8040a754a72922107149"
+      }
+    },
+    {
+      "item_id": 54154806288,
+      "item_name": "[CHUẨN VỊ] Me Rim Muối Ớt Siêu Ngon - Chua Cay Mặn Ngọt Đậm Đà - Me Rim Nguyên Trái - Mứt Me",
+      "model_id": 355444612626,
+      "model_name": "◾️250G◾️",
+      "model_sku": "TP00256_250",
+      "model_quantity_purchased": 1,
+      "model_original_price": 65000,
+      "_id": {
+        "$oid": "69cb8040a754a7292210714a"
+      }
+    }
+  ],
+  "last_updated": {
+    "$date": "2026-03-31T08:05:02.156Z"
+  },
+  "merchandise_subtotal": 120000,
+  "order_sn": "260331JHQ68DRM",
+  "order_status": "To Ship",
+  "ready_to_ship_time": {
+    "$date": "2026-03-31T06:25:25.000Z"
+  },
+  "revenue_date": "31-03-2026",
+  "shipping_subtotal": 0,
+  "shop_id": 1018844008,
+  "status_code": 2,
+  "status_text": "To Ship",
+  "sync_count": 7,
+  "tax_amount": 1711,
+  "total_amount": 100319,
+  "update_time": 1774944302
+},
+{
+  "_id": {
+    "$oid": "69cb794c6945a815e1f853db"
+  },
+  "order_id": 228633287274262,
+  "__v": 0,
+  "create_time": 1774934087,
+  "currency": "VND",
+  "escrow_amount": 58465,
+  "fees_and_charges": 18380,
+  "income_details": {
+    "order_info": {
+      "order_id": 228633287274262,
+      "order_sn": "260331JDSDSURP",
+      "is_cb_sip_aff_order": false,
+      "shipping_carrier": "",
+      "released_time": 0,
+      "source": "Shopee Wallet",
+      "status": 1
+    },
+    "seller_income_breakdown": {
+      "breakdown": [
+        {
+          "field_id": 1,
+          "field_name": "MERCHANDISE_SUBTOTAL",
+          "amount": 7700000000,
+          "display_name": "Tổng tiền sản phẩm",
+          "hide_amount": false,
+          "sub_breakdown": [
+            {
+              "field_id": 2,
+              "field_name": "PRODUCT_PRICE",
+              "amount": 7700000000,
+              "display_name": "Giá sản phẩm",
+              "hide_amount": false
+            }
+          ]
+        },
+        {
+          "field_id": 50,
+          "field_name": "SHIPPING_SUBTOTAL",
+          "amount": 100000000,
+          "display_name": "Tổng phí vận chuyển ước tính",
+          "hide_amount": false,
+          "sub_breakdown": [
+            {
+              "field_id": 51,
+              "field_name": "SHIPPING_FEE_PAID_BY_BUYER",
+              "amount": 100000000,
+              "display_name": "Phí vận chuyển Người mua trả",
+              "hide_amount": false
+            },
+            {
+              "field_id": 52,
+              "field_name": "ACTUAL_SHIPPING_FEE",
+              "amount": 0,
+              "display_name": "Phí vận chuyển ước tính",
+              "hide_amount": false
+            }
+          ],
+          "ext_info": {}
+        },
+        {
+          "field_id": 150,
+          "field_name": "FEES_AND_CHARGES",
+          "amount": -1838000000,
+          "display_name": "Phụ phí",
+          "hide_amount": false,
+          "sub_breakdown": [
+            {
+              "field_id": 151,
+              "field_name": "COMMISSION_FEE",
+              "amount": -847000000,
+              "display_name": "Phí cố định",
+              "caption": "Phí cố định cho đơn hàng này là 11.00%.",
+              "link": "https://banhang.shopee.vn/edu/article/2139",
+              "hide_amount": false,
+              "ext_info": {
+                "commission_fee_infos": [
+                  {
+                    "name": "",
+                    "amount": 0,
+                    "rule_id": 78453,
+                    "fee_rate": 11000
+                  }
+                ]
+              }
+            },
+            {
+              "field_id": 154,
+              "field_name": "SERVICE_FEE",
+              "amount": -608000000,
+              "display_name": "Phí Dịch Vụ",
+              "hide_amount": false,
+              "ext_info": {
+                "service_fee_infos": [
+                  {
+                    "name": "Phí Hạ Tầng",
+                    "amount": -300000000,
+                    "rule_id": 67122,
+                    "fee_rate": 0
+                  },
+                  {
+                    "name": "Voucher Xtra",
+                    "amount": -308000000,
+                    "rule_id": 78350,
+                    "fee_rate": 0
+                  }
+                ]
+              }
+            },
+            {
+              "field_id": 155,
+              "field_name": "TRANSACTION_FEE",
+              "amount": -383000000,
+              "display_name": "Phí thanh toán",
+              "caption": "Đơn hàng có áp dụng Phí thanh toán",
+              "hide_amount": false,
+              "ext_info": {
+                "seller_txn_fee_info": {
+                  "name": "",
+                  "amount": 0,
+                  "rule_id": 10131,
+                  "fee_rate": 4910
+                }
+              }
+            }
+          ]
+        },
+        {
+          "field_id": 173,
+          "field_name": "TAX_SUBTOTAL",
+          "amount": -115500000,
+          "display_name": "Thuế",
+          "hide_amount": false,
+          "sub_breakdown": [
+            {
+              "field_id": 174,
+              "field_name": "VAT_WHT_AMOUNT",
+              "amount": -77000000,
+              "display_name": "Thuế GTGT",
+              "caption": "Chỉ áp dụng cho hộ kinh doanh hoặc cá nhân kinh doanh. Để tìm hiểu thêm về cách tính thuế giá trị gia tăng (GTGT) , vui lòng tham khảo <a href=\"https://banhang.shopee.vn/edu/article/24233\" target=\"_blank\">tại đây.</a>",
+              "link": "https://banhang.shopee.vn/edu/article/24233",
+              "hide_amount": false
+            },
+            {
+              "field_id": 175,
+              "field_name": "PIT_WHT_AMOUNT",
+              "amount": -38500000,
+              "display_name": "Thuế TNCN",
+              "caption": "Chỉ áp dụng cho hộ kinh doanh hoặc cá nhân kinh doanh. Để tìm hiểu thêm về cách tính thuế thu nhập cá nhân (TNCN), vui lòng tham khảo <a href=\"https://banhang.shopee.vn/edu/article/24233\" target=\"_blank\">tại đây.</a>",
+              "link": "https://banhang.shopee.vn/edu/article/24233",
+              "hide_amount": false
+            }
+          ]
+        },
+        {
+          "field_id": 300,
+          "field_name": "VALUE_ADDED_SERVICES_SUBTOTAL",
+          "amount": 0,
+          "display_name": "Tổng phụ dịch vụ giá trị gia tăng cho người mua",
+          "hide_amount": false
+        },
+        {
+          "field_id": 250,
+          "field_name": "ESCROW_AMOUNT",
+          "amount": 5846500000,
+          "display_name": "Doanh thu đơn hàng ước tính",
+          "caption": "Doanh thu thực tế của đơn hàng có thể thay đổi và chỉ được tính toán chính xác sau khi đơn hàng đã hoàn tất.",
+          "hide_amount": false
+        }
+      ]
+    },
+    "buyer_payment_breakdown": {
+      "breakdown": [
+        {
+          "field_id": 1,
+          "field_name": "MERCHANDISE_SUBTOTAL",
+          "amount": 7700000000,
+          "display_name": "Tổng tiền sản phẩm",
+          "hide_amount": false
+        },
+        {
+          "field_id": 3,
+          "field_name": "SHIPPING_FEE",
+          "amount": 100000000,
+          "display_name": "Phí vận chuyển",
+          "hide_amount": false
+        },
+        {
+          "field_id": 5,
+          "field_name": "SHOPEE_VOUCHER_DISCOUNT",
+          "amount": -6000000000,
+          "display_name": "Shopee Voucher",
+          "hide_amount": false
+        },
+        {
+          "field_id": 6,
+          "field_name": "SELLER_VOUCHER_DISCOUNT",
+          "amount": 0,
+          "display_name": "Mã giảm giá của Shop",
+          "hide_amount": false
+        },
+        {
+          "field_id": 100,
+          "field_name": "BUYER_PAID_AMOUNT",
+          "amount": 1800000000,
+          "display_name": "Tổng tiền Thanh toán",
+          "hide_amount": false
+        }
+      ]
+    },
+    "order_item_list": {
+      "order_items": [
+        {
+          "item_id": 41078141812,
+          "model_id": 400465223662,
+          "group_id": "0",
+          "line_item_id": 228633287281487,
+          "price": 7700000000,
+          "amount": 1,
+          "subtotal": 7700000000,
+          "product_name": "[LOẠI 1] Ô Mai Xí Muội Đà.o Hồng Phấn - Không Hạt Chua Ngọt Thịt Dày - Xí Muội Thịt Ăn Liền",
+          "product_sku": "TP00226",
+          "product_image": "vn-11134207-820l4-mjnt97w1v7cx43",
+          "model_name": "◾️500G◾️",
+          "model_sku": "TP00226_500",
+          "sub_type": 0,
+          "bundle_item_price": 0,
+          "is_add_on_subitem": false,
+          "is_pre_order": false,
+          "is_delivery_insured": false,
+          "returned_qty": 0,
+          "cancelled_qty": 0,
+          "show_return_tag": false,
+          "show_cancellation_tag": false,
+          "is_overseas_return_insured": false,
+          "has_spu_vsku": false
+        }
+      ]
+    },
+    "error_codes": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "items": [
+    {
+      "item_id": 41078141812,
+      "item_name": "[LOẠI 1] Ô Mai Xí Muội Đà.o Hồng Phấn - Không Hạt Chua Ngọt Thịt Dày - Xí Muội Thịt Ăn Liền",
+      "model_id": 400465223662,
+      "model_name": "◾️500G◾️",
+      "model_sku": "TP00226_500",
+      "model_quantity_purchased": 1,
+      "model_original_price": 77000,
+      "_id": {
+        "$oid": "69cb8040a754a7292210714d"
+      }
+    }
+  ],
+  "last_updated": {
+    "$date": "2026-03-31T08:05:02.361Z"
+  },
+  "merchandise_subtotal": 77000,
+  "order_sn": "260331JDSDSURP",
+  "order_status": "Pending",
+  "ready_to_ship_time": {
+    "$date": "2026-03-31T05:19:48.000Z"
+  },
+  "revenue_date": "31-03-2026",
+  "shipping_subtotal": 1000,
+  "shop_id": 1018844008,
+  "status_code": 1,
+  "status_text": "Pending",
+  "sync_count": 7,
+  "tax_amount": 1155,
+  "total_amount": 18000,
+  "update_time": 1774944302
+},
+{
+  "_id": {
+    "$oid": "69cb794c6945a815e1f853dc"
+  },
+  "order_id": 228639446290827,
+  "__v": 0,
+  "create_time": 1774940267,
+  "currency": "VND",
+  "escrow_amount": 119600,
+  "fees_and_charges": 34060,
+  "income_details": {
+    "order_info": {
+      "order_id": 228639446290827,
+      "order_sn": "260331JKGYG4CB",
+      "is_cb_sip_aff_order": false,
+      "shipping_carrier": "",
+      "released_time": 0,
+      "source": "Shopee Wallet",
+      "status": 1
+    },
+    "seller_income_breakdown": {
+      "breakdown": [
+        {
+          "field_id": 1,
+          "field_name": "MERCHANDISE_SUBTOTAL",
+          "amount": 15600000000,
+          "display_name": "Tổng tiền sản phẩm",
+          "hide_amount": false,
+          "sub_breakdown": [
+            {
+              "field_id": 2,
+              "field_name": "PRODUCT_PRICE",
+              "amount": 15600000000,
+              "display_name": "Giá sản phẩm",
+              "hide_amount": false
+            }
+          ]
+        },
+        {
+          "field_id": 50,
+          "field_name": "SHIPPING_SUBTOTAL",
+          "amount": 0,
+          "display_name": "Tổng phí vận chuyển ước tính",
+          "hide_amount": false,
+          "sub_breakdown": [
+            {
+              "field_id": 51,
+              "field_name": "SHIPPING_FEE_PAID_BY_BUYER",
+              "amount": 0,
+              "display_name": "Phí vận chuyển Người mua trả",
+              "hide_amount": false
+            },
+            {
+              "field_id": 52,
+              "field_name": "ACTUAL_SHIPPING_FEE",
+              "amount": -4190000000,
+              "display_name": "Phí vận chuyển ước tính",
+              "hide_amount": false
+            },
+            {
+              "field_id": 54,
+              "field_name": "SHIPPING_REBATE_FROM_SHOPEE",
+              "amount": 4190000000,
+              "display_name": "Phí vận chuyển được trợ giá từ Shopee ước tính",
+              "hide_amount": false
+            }
+          ],
+          "ext_info": {}
+        },
+        {
+          "field_id": 150,
+          "field_name": "FEES_AND_CHARGES",
+          "amount": -3406000000,
+          "display_name": "Phụ phí",
+          "hide_amount": false,
+          "sub_breakdown": [
+            {
+              "field_id": 151,
+              "field_name": "COMMISSION_FEE",
+              "amount": -1716000000,
+              "display_name": "Phí cố định",
+              "caption": "Phí cố định cho đơn hàng này là 11.00%.",
+              "link": "https://banhang.shopee.vn/edu/article/2139",
+              "hide_amount": false,
+              "ext_info": {
+                "commission_fee_infos": [
+                  {
+                    "name": "",
+                    "amount": 0,
+                    "rule_id": 78453,
+                    "fee_rate": 11000
+                  }
+                ]
+              }
+            },
+            {
+              "field_id": 154,
+              "field_name": "SERVICE_FEE",
+              "amount": -924000000,
+              "display_name": "Phí Dịch Vụ",
+              "hide_amount": false,
+              "ext_info": {
+                "service_fee_infos": [
+                  {
+                    "name": "Phí Hạ Tầng",
+                    "amount": -300000000,
+                    "rule_id": 67122,
+                    "fee_rate": 0
+                  },
+                  {
+                    "name": "Voucher Xtra",
+                    "amount": -624000000,
+                    "rule_id": 78350,
+                    "fee_rate": 0
+                  }
+                ]
+              }
+            },
+            {
+              "field_id": 155,
+              "field_name": "TRANSACTION_FEE",
+              "amount": -766000000,
+              "display_name": "Phí thanh toán",
+              "caption": "Đơn hàng có áp dụng Phí thanh toán",
+              "hide_amount": false,
+              "ext_info": {
+                "seller_txn_fee_info": {
+                  "name": "",
+                  "amount": 0,
+                  "rule_id": 10131,
+                  "fee_rate": 4910
+                }
+              }
+            }
+          ]
+        },
+        {
+          "field_id": 173,
+          "field_name": "TAX_SUBTOTAL",
+          "amount": -234000000,
+          "display_name": "Thuế",
+          "hide_amount": false,
+          "sub_breakdown": [
+            {
+              "field_id": 174,
+              "field_name": "VAT_WHT_AMOUNT",
+              "amount": -156000000,
+              "display_name": "Thuế GTGT",
+              "caption": "Chỉ áp dụng cho hộ kinh doanh hoặc cá nhân kinh doanh. Để tìm hiểu thêm về cách tính thuế giá trị gia tăng (GTGT) , vui lòng tham khảo <a href=\"https://banhang.shopee.vn/edu/article/24233\" target=\"_blank\">tại đây.</a>",
+              "link": "https://banhang.shopee.vn/edu/article/24233",
+              "hide_amount": false
+            },
+            {
+              "field_id": 175,
+              "field_name": "PIT_WHT_AMOUNT",
+              "amount": -78000000,
+              "display_name": "Thuế TNCN",
+              "caption": "Chỉ áp dụng cho hộ kinh doanh hoặc cá nhân kinh doanh. Để tìm hiểu thêm về cách tính thuế thu nhập cá nhân (TNCN), vui lòng tham khảo <a href=\"https://banhang.shopee.vn/edu/article/24233\" target=\"_blank\">tại đây.</a>",
+              "link": "https://banhang.shopee.vn/edu/article/24233",
+              "hide_amount": false
+            }
+          ]
+        },
+        {
+          "field_id": 300,
+          "field_name": "VALUE_ADDED_SERVICES_SUBTOTAL",
+          "amount": 0,
+          "display_name": "Tổng phụ dịch vụ giá trị gia tăng cho người mua",
+          "hide_amount": false
+        },
+        {
+          "field_id": 250,
+          "field_name": "ESCROW_AMOUNT",
+          "amount": 11960000000,
+          "display_name": "Doanh thu đơn hàng ước tính",
+          "caption": "Doanh thu thực tế của đơn hàng có thể thay đổi và chỉ được tính toán chính xác sau khi đơn hàng đã hoàn tất.",
+          "hide_amount": false
+        }
+      ]
+    },
+    "buyer_payment_breakdown": {
+      "breakdown": [
+        {
+          "field_id": 1,
+          "field_name": "MERCHANDISE_SUBTOTAL",
+          "amount": 15600000000,
+          "display_name": "Tổng tiền sản phẩm",
+          "hide_amount": false
+        },
+        {
+          "field_id": 3,
+          "field_name": "SHIPPING_FEE",
+          "amount": 0,
+          "display_name": "Phí vận chuyển",
+          "hide_amount": false
+        },
+        {
+          "field_id": 5,
+          "field_name": "SHOPEE_VOUCHER_DISCOUNT",
+          "amount": -2587600000,
+          "display_name": "Shopee Voucher",
+          "hide_amount": false
+        },
+        {
+          "field_id": 6,
+          "field_name": "SELLER_VOUCHER_DISCOUNT",
+          "amount": -2662400000,
+          "display_name": "Mã giảm giá của Shop",
+          "hide_amount": false
+        },
+        {
+          "field_id": 100,
+          "field_name": "BUYER_PAID_AMOUNT",
+          "amount": 10350000000,
+          "display_name": "Tổng tiền Thanh toán",
+          "hide_amount": false
+        }
+      ]
+    },
+    "order_item_list": {
+      "order_items": [
+        {
+          "item_id": 48254916885,
+          "model_id": 400451954154,
+          "group_id": "0",
+          "line_item_id": 228639467233070,
+          "price": 10800000000,
+          "amount": 1,
+          "subtotal": 10800000000,
+          "product_name": "[LOẠI 1] Xí Muội Oliu Thịt Không Hạt - Chua Ngọt Dẻo Ngon - Ô Mai Xí Muội - Xí Muội Ô Liu",
+          "product_sku": "TP00015",
+          "product_image": "vn-11134207-820l4-mjnqda1t375z20",
+          "model_name": "◾️500G◾️",
+          "model_sku": "TP00015_500",
+          "sub_type": 0,
+          "bundle_item_price": 0,
+          "is_add_on_subitem": false,
+          "is_pre_order": false,
+          "is_delivery_insured": false,
+          "returned_qty": 0,
+          "cancelled_qty": 0,
+          "show_return_tag": false,
+          "show_cancellation_tag": false,
+          "is_overseas_return_insured": false,
+          "has_spu_vsku": false
+        },
+        {
+          "item_id": 48604741432,
+          "model_id": 315438662446,
+          "group_id": "0",
+          "line_item_id": 228639467233071,
+          "price": 4800000000,
+          "amount": 1,
+          "subtotal": 4800000000,
+          "product_name": "[LOẠI 1] Ô Mai Xí Muội Mơ Sữa - Đậm Đà Thịt Dày Không Hạt - Ô Mai Chua Ngọt - Xí Muội Thịt",
+          "product_sku": "TP00218",
+          "product_image": "vn-11134207-820l4-mjiask3t998k9c",
+          "model_name": "◾️250G◾️",
+          "model_sku": "TP00218_250",
+          "sub_type": 0,
+          "bundle_item_price": 0,
+          "is_add_on_subitem": false,
+          "is_pre_order": false,
+          "is_delivery_insured": false,
+          "returned_qty": 0,
+          "cancelled_qty": 0,
+          "show_return_tag": false,
+          "show_cancellation_tag": false,
+          "is_overseas_return_insured": false,
+          "has_spu_vsku": false
+        }
+      ]
+    },
+    "error_codes": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "items": [
+    {
+      "item_id": 48254916885,
+      "item_name": "[LOẠI 1] Xí Muội Oliu Thịt Không Hạt - Chua Ngọt Dẻo Ngon - Ô Mai Xí Muội - Xí Muội Ô Liu",
+      "model_id": 400451954154,
+      "model_name": "◾️500G◾️",
+      "model_sku": "TP00015_500",
+      "model_quantity_purchased": 1,
+      "model_original_price": 108000,
+      "_id": {
+        "$oid": "69cb8040a754a72922107147"
+      }
+    },
+    {
+      "item_id": 48604741432,
+      "item_name": "[LOẠI 1] Ô Mai Xí Muội Mơ Sữa - Đậm Đà Thịt Dày Không Hạt - Ô Mai Chua Ngọt - Xí Muội Thịt",
+      "model_id": 315438662446,
+      "model_name": "◾️250G◾️",
+      "model_sku": "TP00218_250",
+      "model_quantity_purchased": 1,
+      "model_original_price": 48000,
+      "_id": {
+        "$oid": "69cb8040a754a72922107148"
+      }
+    }
+  ],
+  "last_updated": {
+    "$date": "2026-03-31T08:05:02.123Z"
+  },
+  "merchandise_subtotal": 156000,
+  "order_sn": "260331JKGYG4CB",
+  "order_status": "To Ship",
+  "ready_to_ship_time": {
+    "$date": "2026-03-31T07:02:49.000Z"
+  },
+  "revenue_date": "31-03-2026",
+  "shipping_subtotal": 0,
+  "shop_id": 1018844008,
+  "status_code": 1,
+  "status_text": "To Ship",
+  "sync_count": 7,
+  "tax_amount": 2340,
+  "total_amount": 103500,
+  "update_time": 1774944302
+},
+{
+  "_id": {
+    "$oid": "69cb794c6945a815e1f853dd"
+  },
+  "order_id": 228638195254996,
+  "__v": 0,
+  "create_time": 1774938996,
+  "currency": "VND",
+  "escrow_amount": 50441,
+  "fees_and_charges": 16539,
+  "income_details": {
+    "order_info": {
+      "order_id": 228638195254996,
+      "order_sn": "260331JJBPDHPM",
+      "is_cb_sip_aff_order": false,
+      "shipping_carrier": "",
+      "released_time": 0,
+      "source": "Shopee Wallet",
+      "status": 1
+    },
+    "seller_income_breakdown": {
+      "breakdown": [
+        {
+          "field_id": 1,
+          "field_name": "MERCHANDISE_SUBTOTAL",
+          "amount": 6800000000,
+          "display_name": "Tổng tiền sản phẩm",
+          "hide_amount": false,
+          "sub_breakdown": [
+            {
+              "field_id": 2,
+              "field_name": "PRODUCT_PRICE",
+              "amount": 6800000000,
+              "display_name": "Giá sản phẩm",
+              "hide_amount": false
+            }
+          ]
+        },
+        {
+          "field_id": 50,
+          "field_name": "SHIPPING_SUBTOTAL",
+          "amount": 0,
+          "display_name": "Tổng phí vận chuyển ước tính",
+          "hide_amount": false,
+          "sub_breakdown": [
+            {
+              "field_id": 51,
+              "field_name": "SHIPPING_FEE_PAID_BY_BUYER",
+              "amount": 0,
+              "display_name": "Phí vận chuyển Người mua trả",
+              "hide_amount": false
+            },
+            {
+              "field_id": 52,
+              "field_name": "ACTUAL_SHIPPING_FEE",
+              "amount": -1830000000,
+              "display_name": "Phí vận chuyển ước tính",
+              "hide_amount": false
+            },
+            {
+              "field_id": 54,
+              "field_name": "SHIPPING_REBATE_FROM_SHOPEE",
+              "amount": 1830000000,
+              "display_name": "Phí vận chuyển được trợ giá từ Shopee ước tính",
+              "hide_amount": false
+            }
+          ],
+          "ext_info": {}
+        },
+        {
+          "field_id": 150,
+          "field_name": "FEES_AND_CHARGES",
+          "amount": -1653900000,
+          "display_name": "Phụ phí",
+          "hide_amount": false,
+          "sub_breakdown": [
+            {
+              "field_id": 151,
+              "field_name": "COMMISSION_FEE",
+              "amount": -748000000,
+              "display_name": "Phí cố định",
+              "caption": "Phí cố định cho đơn hàng này là 11.00%.",
+              "link": "https://banhang.shopee.vn/edu/article/2139",
+              "hide_amount": false,
+              "ext_info": {
+                "commission_fee_infos": [
+                  {
+                    "name": "",
+                    "amount": 0,
+                    "rule_id": 78453,
+                    "fee_rate": 11000
+                  }
+                ]
+              }
+            },
+            {
+              "field_id": 154,
+              "field_name": "SERVICE_FEE",
+              "amount": -572000000,
+              "display_name": "Phí Dịch Vụ",
+              "hide_amount": false,
+              "ext_info": {
+                "service_fee_infos": [
+                  {
+                    "name": "Phí Hạ Tầng",
+                    "amount": -300000000,
+                    "rule_id": 67122,
+                    "fee_rate": 0
+                  },
+                  {
+                    "name": "Voucher Xtra",
+                    "amount": -272000000,
+                    "rule_id": 78350,
+                    "fee_rate": 0
+                  }
+                ]
+              }
+            },
+            {
+              "field_id": 155,
+              "field_name": "TRANSACTION_FEE",
+              "amount": -333900000,
+              "display_name": "Phí thanh toán",
+              "caption": "Đơn hàng có áp dụng Phí thanh toán",
+              "hide_amount": false,
+              "ext_info": {
+                "seller_txn_fee_info": {
+                  "name": "",
+                  "amount": 0,
+                  "rule_id": 10131,
+                  "fee_rate": 4910
+                }
+              }
+            }
+          ]
+        },
+        {
+          "field_id": 173,
+          "field_name": "TAX_SUBTOTAL",
+          "amount": -102000000,
+          "display_name": "Thuế",
+          "hide_amount": false,
+          "sub_breakdown": [
+            {
+              "field_id": 174,
+              "field_name": "VAT_WHT_AMOUNT",
+              "amount": -68000000,
+              "display_name": "Thuế GTGT",
+              "caption": "Chỉ áp dụng cho hộ kinh doanh hoặc cá nhân kinh doanh. Để tìm hiểu thêm về cách tính thuế giá trị gia tăng (GTGT) , vui lòng tham khảo <a href=\"https://banhang.shopee.vn/edu/article/24233\" target=\"_blank\">tại đây.</a>",
+              "link": "https://banhang.shopee.vn/edu/article/24233",
+              "hide_amount": false
+            },
+            {
+              "field_id": 175,
+              "field_name": "PIT_WHT_AMOUNT",
+              "amount": -34000000,
+              "display_name": "Thuế TNCN",
+              "caption": "Chỉ áp dụng cho hộ kinh doanh hoặc cá nhân kinh doanh. Để tìm hiểu thêm về cách tính thuế thu nhập cá nhân (TNCN), vui lòng tham khảo <a href=\"https://banhang.shopee.vn/edu/article/24233\" target=\"_blank\">tại đây.</a>",
+              "link": "https://banhang.shopee.vn/edu/article/24233",
+              "hide_amount": false
+            }
+          ]
+        },
+        {
+          "field_id": 300,
+          "field_name": "VALUE_ADDED_SERVICES_SUBTOTAL",
+          "amount": 0,
+          "display_name": "Tổng phụ dịch vụ giá trị gia tăng cho người mua",
+          "hide_amount": false
+        },
+        {
+          "field_id": 250,
+          "field_name": "ESCROW_AMOUNT",
+          "amount": 5044100000,
+          "display_name": "Doanh thu đơn hàng ước tính",
+          "caption": "Doanh thu thực tế của đơn hàng có thể thay đổi và chỉ được tính toán chính xác sau khi đơn hàng đã hoàn tất.",
+          "hide_amount": false
+        }
+      ]
+    },
+    "buyer_payment_breakdown": {
+      "breakdown": [
+        {
+          "field_id": 1,
+          "field_name": "MERCHANDISE_SUBTOTAL",
+          "amount": 6800000000,
+          "display_name": "Tổng tiền sản phẩm",
+          "hide_amount": false
+        },
+        {
+          "field_id": 3,
+          "field_name": "SHIPPING_FEE",
+          "amount": 0,
+          "display_name": "Phí vận chuyển",
+          "hide_amount": false
+        },
+        {
+          "field_id": 5,
+          "field_name": "SHOPEE_VOUCHER_DISCOUNT",
+          "amount": -1000000000,
+          "display_name": "Shopee Voucher",
+          "hide_amount": false
+        },
+        {
+          "field_id": 6,
+          "field_name": "SELLER_VOUCHER_DISCOUNT",
+          "amount": 0,
+          "display_name": "Mã giảm giá của Shop",
+          "hide_amount": false
+        },
+        {
+          "field_id": 100,
+          "field_name": "BUYER_PAID_AMOUNT",
+          "amount": 5800000000,
+          "display_name": "Tổng tiền Thanh toán",
+          "hide_amount": false
+        }
+      ]
+    },
+    "order_item_list": {
+      "order_items": [
+        {
+          "item_id": 49304960059,
+          "model_id": 440455953295,
+          "group_id": "0",
+          "line_item_id": 228638196219656,
+          "price": 6800000000,
+          "amount": 1,
+          "subtotal": 6800000000,
+          "product_name": "[LOẠI 1] Đậu Nành Xanh Rang Muối 500G - Thơm Bùi Tự Nhiên Mặn Dịu - Ăn Vặt Lành Mạnh Bổ Dưỡng",
+          "product_sku": "TP00251",
+          "product_image": "vn-11134207-820l4-mjp18zsklhjb30",
+          "model_name": "◾️500G◾️",
+          "model_sku": "TP00251_500",
+          "sub_type": 0,
+          "bundle_item_price": 0,
+          "is_add_on_subitem": false,
+          "is_pre_order": false,
+          "is_delivery_insured": false,
+          "returned_qty": 0,
+          "cancelled_qty": 0,
+          "show_return_tag": false,
+          "show_cancellation_tag": false,
+          "is_overseas_return_insured": false,
+          "has_spu_vsku": false
+        }
+      ]
+    },
+    "error_codes": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "items": [
+    {
+      "item_id": 49304960059,
+      "item_name": "[LOẠI 1] Đậu Nành Xanh Rang Muối 500G - Thơm Bùi Tự Nhiên Mặn Dịu - Ăn Vặt Lành Mạnh Bổ Dưỡng",
+      "model_id": 440455953295,
+      "model_name": "◾️500G◾️",
+      "model_sku": "TP00251_500",
+      "model_quantity_purchased": 1,
+      "model_original_price": 68000,
+      "_id": {
+        "$oid": "69cb8040a754a7292210714c"
+      }
+    }
+  ],
+  "last_updated": {
+    "$date": "2026-03-31T08:05:02.341Z"
+  },
+  "merchandise_subtotal": 68000,
+  "order_sn": "260331JJBPDHPM",
+  "order_status": "To Ship",
+  "ready_to_ship_time": {
+    "$date": "2026-03-31T06:41:39.000Z"
+  },
+  "revenue_date": "31-03-2026",
+  "shipping_subtotal": 0,
+  "shop_id": 1018844008,
+  "status_code": 1,
+  "status_text": "To Ship",
+  "sync_count": 7,
+  "tax_amount": 1020,
+  "total_amount": 58000,
+  "update_time": 1774944302
+},
+{
+  "_id": {
+    "$oid": "69cb794c6945a815e1f853de"
+  },
+  "order_id": 228596396228317,
+  "__v": 0,
+  "create_time": 1774897196,
+  "currency": "VND",
+  "escrow_amount": 42582,
+  "fees_and_charges": 14548,
+  "income_details": {
+    "order_info": {
+      "order_id": 228596396228317,
+      "order_sn": "260331HBDYRFPW",
+      "is_cb_sip_aff_order": false,
+      "shipping_carrier": "",
+      "released_time": 0,
+      "source": "Shopee Wallet",
+      "status": 1
+    },
+    "seller_income_breakdown": {
+      "breakdown": [
+        {
+          "field_id": 1,
+          "field_name": "MERCHANDISE_SUBTOTAL",
+          "amount": 5800000000,
+          "display_name": "Tổng tiền sản phẩm",
+          "hide_amount": false,
+          "sub_breakdown": [
+            {
+              "field_id": 2,
+              "field_name": "PRODUCT_PRICE",
+              "amount": 5800000000,
+              "display_name": "Giá sản phẩm",
+              "hide_amount": false
+            }
+          ]
+        },
+        {
+          "field_id": 50,
+          "field_name": "SHIPPING_SUBTOTAL",
+          "amount": 0,
+          "display_name": "Tổng phí vận chuyển ước tính",
+          "hide_amount": false,
+          "sub_breakdown": [
+            {
+              "field_id": 51,
+              "field_name": "SHIPPING_FEE_PAID_BY_BUYER",
+              "amount": 0,
+              "display_name": "Phí vận chuyển Người mua trả",
+              "hide_amount": false
+            },
+            {
+              "field_id": 52,
+              "field_name": "ACTUAL_SHIPPING_FEE",
+              "amount": -5010000000,
+              "display_name": "Phí vận chuyển ước tính",
+              "hide_amount": false
+            },
+            {
+              "field_id": 54,
+              "field_name": "SHIPPING_REBATE_FROM_SHOPEE",
+              "amount": 5010000000,
+              "display_name": "Phí vận chuyển được trợ giá từ Shopee ước tính",
+              "hide_amount": false
+            }
+          ],
+          "ext_info": {}
+        },
+        {
+          "field_id": 150,
+          "field_name": "FEES_AND_CHARGES",
+          "amount": -1454800000,
+          "display_name": "Phụ phí",
+          "hide_amount": false,
+          "sub_breakdown": [
+            {
+              "field_id": 151,
+              "field_name": "COMMISSION_FEE",
+              "amount": -638000000,
+              "display_name": "Phí cố định",
+              "caption": "Phí cố định cho đơn hàng này là 11.00%.",
+              "link": "https://banhang.shopee.vn/edu/article/2139",
+              "hide_amount": false,
+              "ext_info": {
+                "commission_fee_infos": [
+                  {
+                    "name": "",
+                    "amount": 0,
+                    "rule_id": 78453,
+                    "fee_rate": 11000
+                  }
+                ]
+              }
+            },
+            {
+              "field_id": 154,
+              "field_name": "SERVICE_FEE",
+              "amount": -532000000,
+              "display_name": "Phí Dịch Vụ",
+              "hide_amount": false,
+              "ext_info": {
+                "service_fee_infos": [
+                  {
+                    "name": "Phí Hạ Tầng",
+                    "amount": -300000000,
+                    "rule_id": 67122,
+                    "fee_rate": 0
+                  },
+                  {
+                    "name": "Voucher Xtra",
+                    "amount": -232000000,
+                    "rule_id": 78350,
+                    "fee_rate": 0
+                  }
+                ]
+              }
+            },
+            {
+              "field_id": 155,
+              "field_name": "TRANSACTION_FEE",
+              "amount": -284800000,
+              "display_name": "Phí thanh toán",
+              "caption": "Đơn hàng có áp dụng Phí thanh toán",
+              "hide_amount": false,
+              "ext_info": {
+                "seller_txn_fee_info": {
+                  "name": "",
+                  "amount": 0,
+                  "rule_id": 10131,
+                  "fee_rate": 4910
+                }
+              }
+            }
+          ]
+        },
+        {
+          "field_id": 173,
+          "field_name": "TAX_SUBTOTAL",
+          "amount": -87000000,
+          "display_name": "Thuế",
+          "hide_amount": false,
+          "sub_breakdown": [
+            {
+              "field_id": 174,
+              "field_name": "VAT_WHT_AMOUNT",
+              "amount": -58000000,
+              "display_name": "Thuế GTGT",
+              "caption": "Chỉ áp dụng cho hộ kinh doanh hoặc cá nhân kinh doanh. Để tìm hiểu thêm về cách tính thuế giá trị gia tăng (GTGT) , vui lòng tham khảo <a href=\"https://banhang.shopee.vn/edu/article/24233\" target=\"_blank\">tại đây.</a>",
+              "link": "https://banhang.shopee.vn/edu/article/24233",
+              "hide_amount": false
+            },
+            {
+              "field_id": 175,
+              "field_name": "PIT_WHT_AMOUNT",
+              "amount": -29000000,
+              "display_name": "Thuế TNCN",
+              "caption": "Chỉ áp dụng cho hộ kinh doanh hoặc cá nhân kinh doanh. Để tìm hiểu thêm về cách tính thuế thu nhập cá nhân (TNCN), vui lòng tham khảo <a href=\"https://banhang.shopee.vn/edu/article/24233\" target=\"_blank\">tại đây.</a>",
+              "link": "https://banhang.shopee.vn/edu/article/24233",
+              "hide_amount": false
+            }
+          ]
+        },
+        {
+          "field_id": 300,
+          "field_name": "VALUE_ADDED_SERVICES_SUBTOTAL",
+          "amount": 0,
+          "display_name": "Tổng phụ dịch vụ giá trị gia tăng cho người mua",
+          "hide_amount": false
+        },
+        {
+          "field_id": 250,
+          "field_name": "ESCROW_AMOUNT",
+          "amount": 4258200000,
+          "display_name": "Doanh thu đơn hàng ước tính",
+          "caption": "Doanh thu thực tế của đơn hàng có thể thay đổi và chỉ được tính toán chính xác sau khi đơn hàng đã hoàn tất.",
+          "hide_amount": false
+        }
+      ]
+    },
+    "buyer_payment_breakdown": {
+      "breakdown": [
+        {
+          "field_id": 1,
+          "field_name": "MERCHANDISE_SUBTOTAL",
+          "amount": 5800000000,
+          "display_name": "Tổng tiền sản phẩm",
+          "hide_amount": false
+        },
+        {
+          "field_id": 3,
+          "field_name": "SHIPPING_FEE",
+          "amount": 0,
+          "display_name": "Phí vận chuyển",
+          "hide_amount": false
+        },
+        {
+          "field_id": 5,
+          "field_name": "SHOPEE_VOUCHER_DISCOUNT",
+          "amount": 0,
+          "display_name": "Shopee Voucher",
+          "hide_amount": false
+        },
+        {
+          "field_id": 6,
+          "field_name": "SELLER_VOUCHER_DISCOUNT",
+          "amount": 0,
+          "display_name": "Mã giảm giá của Shop",
+          "hide_amount": false
+        },
+        {
+          "field_id": 100,
+          "field_name": "BUYER_PAID_AMOUNT",
+          "amount": 5800000000,
+          "display_name": "Tổng tiền Thanh toán",
+          "hide_amount": false
+        }
+      ]
+    },
+    "order_item_list": {
+      "order_items": [
+        {
+          "item_id": 50004761684,
+          "model_id": 375441282836,
+          "group_id": "0",
+          "line_item_id": 228596396202541,
+          "price": 5800000000,
+          "amount": 1,
+          "subtotal": 5800000000,
+          "product_name": "[HÀNG CHUẨN] Bánh Tai Heo Nhí Mix 3 Vị - Giòn Rụm Ngọt Dịu Thơm Bơ - Bánh Ăn Vặt Tuổi Thơ",
+          "product_sku": "TP00230",
+          "product_image": "vn-11134207-820l4-mjjfn25sa9s7a9",
+          "model_name": "◾️500G◾️",
+          "model_sku": "TP00230_500",
+          "sub_type": 0,
+          "bundle_item_price": 0,
+          "is_add_on_subitem": false,
+          "is_pre_order": false,
+          "is_delivery_insured": false,
+          "returned_qty": 0,
+          "cancelled_qty": 0,
+          "show_return_tag": false,
+          "show_cancellation_tag": false,
+          "is_overseas_return_insured": false,
+          "has_spu_vsku": false
+        }
+      ]
+    },
+    "error_codes": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "items": [
+    {
+      "item_id": 50004761684,
+      "item_name": "[HÀNG CHUẨN] Bánh Tai Heo Nhí Mix 3 Vị - Giòn Rụm Ngọt Dịu Thơm Bơ - Bánh Ăn Vặt Tuổi Thơ",
+      "model_id": 375441282836,
+      "model_name": "◾️500G◾️",
+      "model_sku": "TP00230_500",
+      "model_quantity_purchased": 1,
+      "model_original_price": 58000,
+      "_id": {
+        "$oid": "69cb8040a754a72922107154"
+      }
+    }
+  ],
+  "last_updated": {
+    "$date": "2026-03-31T08:05:03.403Z"
+  },
+  "merchandise_subtotal": 58000,
+  "order_sn": "260331HBDYRFPW",
+  "order_status": "Shipped",
+  "ready_to_ship_time": {
+    "$date": "2026-03-30T19:04:59.000Z"
+  },
+  "revenue_date": "31-03-2026",
+  "shipping_subtotal": 0,
+  "shop_id": 1018844008,
+  "status_code": 1,
+  "status_text": "Shipped",
+  "sync_count": 7,
+  "tax_amount": 870,
+  "total_amount": 58000,
+  "update_time": 1774944303
+},
+{
+  "_id": {
+    "$oid": "69cb794c6945a815e1f853df"
   },
   "order_id": 228620607208657,
   "__v": 0,
@@ -545,16 +2076,16 @@
       "model_quantity_purchased": 1,
       "model_original_price": 51000,
       "_id": {
-        "$oid": "69cb32d9b28a59b1e3c2e619"
+        "$oid": "69cb8040a754a7292210714e"
       }
     }
   ],
   "last_updated": {
-    "$date": "2026-03-31T02:35:01.059Z"
+    "$date": "2026-03-31T08:05:02.779Z"
   },
   "merchandise_subtotal": 51000,
   "order_sn": "260331J1YH4Y6H",
-  "order_status": "To Ship",
+  "order_status": "Shipped",
   "ready_to_ship_time": {
     "$date": "2026-03-31T01:43:34.000Z"
   },
@@ -562,26 +2093,26 @@
   "shipping_subtotal": 0,
   "shop_id": 1018844008,
   "status_code": 2,
-  "status_text": "To Ship",
-  "sync_count": 11,
+  "status_text": "Shipped",
+  "sync_count": 7,
   "tax_amount": 765,
   "total_amount": 45900,
-  "update_time": 1774924501
+  "update_time": 1774944302
 },
 {
   "_id": {
-    "$oid": "69cac8356945a815e1f4f286"
+    "$oid": "69cb794c6945a815e1f853e0"
   },
-  "order_id": 228596396228317,
+  "order_id": 228623482206373,
   "__v": 0,
-  "create_time": 1774897196,
+  "create_time": 1774924282,
   "currency": "VND",
-  "escrow_amount": 42582,
-  "fees_and_charges": 14548,
+  "escrow_amount": 61444,
+  "fees_and_charges": 19326,
   "income_details": {
     "order_info": {
-      "order_id": 228596396228317,
-      "order_sn": "260331HBDYRFPW",
+      "order_id": 228623482206373,
+      "order_sn": "260331J4N6XX55",
       "is_cb_sip_aff_order": false,
       "shipping_carrier": "",
       "released_time": 0,
@@ -593,14 +2124,14 @@
         {
           "field_id": 1,
           "field_name": "MERCHANDISE_SUBTOTAL",
-          "amount": 5800000000,
+          "amount": 8200000000,
           "display_name": "Tổng tiền sản phẩm",
           "hide_amount": false,
           "sub_breakdown": [
             {
               "field_id": 2,
               "field_name": "PRODUCT_PRICE",
-              "amount": 5800000000,
+              "amount": 8200000000,
               "display_name": "Giá sản phẩm",
               "hide_amount": false
             }
@@ -623,14 +2154,14 @@
             {
               "field_id": 52,
               "field_name": "ACTUAL_SHIPPING_FEE",
-              "amount": -5010000000,
+              "amount": -3760000000,
               "display_name": "Phí vận chuyển ước tính",
               "hide_amount": false
             },
             {
               "field_id": 54,
               "field_name": "SHIPPING_REBATE_FROM_SHOPEE",
-              "amount": 5010000000,
+              "amount": 3760000000,
               "display_name": "Phí vận chuyển được trợ giá từ Shopee ước tính",
               "hide_amount": false
             }
@@ -640,14 +2171,14 @@
         {
           "field_id": 150,
           "field_name": "FEES_AND_CHARGES",
-          "amount": -1454800000,
+          "amount": -1932600000,
           "display_name": "Phụ phí",
           "hide_amount": false,
           "sub_breakdown": [
             {
               "field_id": 151,
               "field_name": "COMMISSION_FEE",
-              "amount": -638000000,
+              "amount": -902000000,
               "display_name": "Phí cố định",
               "caption": "Phí cố định cho đơn hàng này là 11.00%.",
               "link": "https://banhang.shopee.vn/edu/article/2139",
@@ -666,7 +2197,7 @@
             {
               "field_id": 154,
               "field_name": "SERVICE_FEE",
-              "amount": -532000000,
+              "amount": -628000000,
               "display_name": "Phí Dịch Vụ",
               "hide_amount": false,
               "ext_info": {
@@ -679,7 +2210,7 @@
                   },
                   {
                     "name": "Voucher Xtra",
-                    "amount": -232000000,
+                    "amount": -328000000,
                     "rule_id": 78350,
                     "fee_rate": 0
                   }
@@ -689,7 +2220,7 @@
             {
               "field_id": 155,
               "field_name": "TRANSACTION_FEE",
-              "amount": -284800000,
+              "amount": -402600000,
               "display_name": "Phí thanh toán",
               "caption": "Đơn hàng có áp dụng Phí thanh toán",
               "hide_amount": false,
@@ -707,14 +2238,14 @@
         {
           "field_id": 173,
           "field_name": "TAX_SUBTOTAL",
-          "amount": -87000000,
+          "amount": -123000000,
           "display_name": "Thuế",
           "hide_amount": false,
           "sub_breakdown": [
             {
               "field_id": 174,
               "field_name": "VAT_WHT_AMOUNT",
-              "amount": -58000000,
+              "amount": -82000000,
               "display_name": "Thuế GTGT",
               "caption": "Chỉ áp dụng cho hộ kinh doanh hoặc cá nhân kinh doanh. Để tìm hiểu thêm về cách tính thuế giá trị gia tăng (GTGT) , vui lòng tham khảo <a href=\"https://banhang.shopee.vn/edu/article/24233\" target=\"_blank\">tại đây.</a>",
               "link": "https://banhang.shopee.vn/edu/article/24233",
@@ -723,7 +2254,7 @@
             {
               "field_id": 175,
               "field_name": "PIT_WHT_AMOUNT",
-              "amount": -29000000,
+              "amount": -41000000,
               "display_name": "Thuế TNCN",
               "caption": "Chỉ áp dụng cho hộ kinh doanh hoặc cá nhân kinh doanh. Để tìm hiểu thêm về cách tính thuế thu nhập cá nhân (TNCN), vui lòng tham khảo <a href=\"https://banhang.shopee.vn/edu/article/24233\" target=\"_blank\">tại đây.</a>",
               "link": "https://banhang.shopee.vn/edu/article/24233",
@@ -741,7 +2272,7 @@
         {
           "field_id": 250,
           "field_name": "ESCROW_AMOUNT",
-          "amount": 4258200000,
+          "amount": 6144400000,
           "display_name": "Doanh thu đơn hàng ước tính",
           "caption": "Doanh thu thực tế của đơn hàng có thể thay đổi và chỉ được tính toán chính xác sau khi đơn hàng đã hoàn tất.",
           "hide_amount": false
@@ -753,7 +2284,7 @@
         {
           "field_id": 1,
           "field_name": "MERCHANDISE_SUBTOTAL",
-          "amount": 5800000000,
+          "amount": 8200000000,
           "display_name": "Tổng tiền sản phẩm",
           "hide_amount": false
         },
@@ -767,7 +2298,7 @@
         {
           "field_id": 5,
           "field_name": "SHOPEE_VOUCHER_DISCOUNT",
-          "amount": 0,
+          "amount": -820000000,
           "display_name": "Shopee Voucher",
           "hide_amount": false
         },
@@ -781,7 +2312,7 @@
         {
           "field_id": 100,
           "field_name": "BUYER_PAID_AMOUNT",
-          "amount": 5800000000,
+          "amount": 7380000000,
           "display_name": "Tổng tiền Thanh toán",
           "hide_amount": false
         }
@@ -790,18 +2321,18 @@
     "order_item_list": {
       "order_items": [
         {
-          "item_id": 50004761684,
-          "model_id": 375441282836,
+          "item_id": 41178071221,
+          "model_id": 415441154928,
           "group_id": "0",
-          "line_item_id": 228596396202541,
-          "price": 5800000000,
+          "line_item_id": 228623482251136,
+          "price": 8200000000,
           "amount": 1,
-          "subtotal": 5800000000,
-          "product_name": "[HÀNG CHUẨN] Bánh Tai Heo Nhí Mix 3 Vị - Giòn Rụm Ngọt Dịu Thơm Bơ - Bánh Ăn Vặt Tuổi Thơ",
-          "product_sku": "TP00230",
-          "product_image": "vn-11134207-820l4-mjjfn25sa9s7a9",
+          "subtotal": 8200000000,
+          "product_name": "[DATE MỚI] 🍌 Kẹo Chuối Cuộn Đậu Phộng - Kẹo Chuối Đậu Cuộn Bánh Tráng Phồng Mềm Dẻo Ngọt Dịu",
+          "product_sku": "TP00225",
+          "product_image": "vn-11134207-820l4-mjjdnekzyj2f40",
           "model_name": "◾️500G◾️",
-          "model_sku": "TP00230_500",
+          "model_sku": "TP00225_500",
           "sub_type": 0,
           "bundle_item_price": 0,
           "is_add_on_subitem": false,
@@ -825,40 +2356,524 @@
   },
   "items": [
     {
-      "item_id": 50004761684,
-      "item_name": "[HÀNG CHUẨN] Bánh Tai Heo Nhí Mix 3 Vị - Giòn Rụm Ngọt Dịu Thơm Bơ - Bánh Ăn Vặt Tuổi Thơ",
-      "model_id": 375441282836,
+      "item_id": 41178071221,
+      "item_name": "[DATE MỚI] 🍌 Kẹo Chuối Cuộn Đậu Phộng - Kẹo Chuối Đậu Cuộn Bánh Tráng Phồng Mềm Dẻo Ngọt Dịu",
+      "model_id": 415441154928,
       "model_name": "◾️500G◾️",
-      "model_sku": "TP00230_500",
+      "model_sku": "TP00225_500",
       "model_quantity_purchased": 1,
-      "model_original_price": 58000,
+      "model_original_price": 82000,
       "_id": {
-        "$oid": "69cb32d9b28a59b1e3c2e61a"
+        "$oid": "69cb8040a754a72922107150"
       }
     }
   ],
   "last_updated": {
-    "$date": "2026-03-31T02:35:01.208Z"
+    "$date": "2026-03-31T08:05:02.858Z"
   },
-  "merchandise_subtotal": 58000,
-  "order_sn": "260331HBDYRFPW",
-  "order_status": "To Ship",
+  "merchandise_subtotal": 82000,
+  "order_sn": "260331J4N6XX55",
+  "order_status": "Shipped",
   "ready_to_ship_time": {
-    "$date": "2026-03-30T19:04:59.000Z"
+    "$date": "2026-03-31T02:36:24.000Z"
   },
   "revenue_date": "31-03-2026",
   "shipping_subtotal": 0,
   "shop_id": 1018844008,
   "status_code": 1,
-  "status_text": "To Ship",
-  "sync_count": 92,
-  "tax_amount": 870,
-  "total_amount": 58000,
-  "update_time": 1774924501
+  "status_text": "Shipped",
+  "sync_count": 7,
+  "tax_amount": 1230,
+  "total_amount": 73800,
+  "update_time": 1774944302
 },
 {
   "_id": {
-    "$oid": "69caad416945a815e1f4b1ea"
+    "$oid": "69cb794c6945a815e1f853e1"
+  },
+  "order_id": 228601479221545,
+  "__v": 0,
+  "create_time": 1774902280,
+  "currency": "VND",
+  "escrow_amount": 74500,
+  "fees_and_charges": 0,
+  "income_details": {
+    "order_info": {
+      "order_id": 228601479221545,
+      "order_sn": "260331HG5F9499",
+      "is_cb_sip_aff_order": false,
+      "shipping_carrier": "",
+      "cancelled_time": 1774902295,
+      "cancelled_reason": "label_buyer_cancel_order_reason_503",
+      "cancelled_by": 1,
+      "released_time": 0,
+      "source": "Shopee Wallet",
+      "status": 6
+    },
+    "seller_income_breakdown": {
+      "breakdown": [
+        {
+          "field_id": 1,
+          "field_name": "MERCHANDISE_SUBTOTAL",
+          "amount": 0,
+          "display_name": "Tổng tiền sản phẩm",
+          "hide_amount": false,
+          "sub_breakdown": [
+            {
+              "field_id": 2,
+              "field_name": "PRODUCT_PRICE",
+              "amount": 7700000000,
+              "display_name": "Giá sản phẩm",
+              "hide_amount": false
+            },
+            {
+              "field_id": 3,
+              "field_name": "REFUND_AMOUNT",
+              "amount": -7700000000,
+              "display_name": "Số tiền đã hủy",
+              "hide_amount": false
+            }
+          ]
+        },
+        {
+          "field_id": 50,
+          "field_name": "SHIPPING_SUBTOTAL",
+          "amount": 0,
+          "display_name": "Tổng phí vận chuyển ước tính",
+          "hide_amount": false,
+          "sub_breakdown": [
+            {
+              "field_id": 51,
+              "field_name": "SHIPPING_FEE_PAID_BY_BUYER",
+              "amount": 0,
+              "display_name": "Phí vận chuyển Người mua trả",
+              "hide_amount": false
+            },
+            {
+              "field_id": 52,
+              "field_name": "ACTUAL_SHIPPING_FEE",
+              "amount": 0,
+              "display_name": "Phí vận chuyển ước tính",
+              "hide_amount": false
+            }
+          ],
+          "ext_info": {}
+        },
+        {
+          "field_id": 300,
+          "field_name": "VALUE_ADDED_SERVICES_SUBTOTAL",
+          "amount": 0,
+          "display_name": "Tổng phụ dịch vụ giá trị gia tăng cho người mua",
+          "hide_amount": false
+        },
+        {
+          "field_id": 250,
+          "field_name": "ESCROW_AMOUNT",
+          "amount": 0,
+          "display_name": "Doanh thu đơn hàng ước tính",
+          "caption": "Doanh thu thực tế của đơn hàng có thể thay đổi và chỉ được tính toán chính xác sau khi đơn hàng đã hoàn tất.",
+          "hide_amount": false
+        }
+      ]
+    },
+    "buyer_payment_breakdown": {
+      "breakdown": [
+        {
+          "field_id": 1,
+          "field_name": "MERCHANDISE_SUBTOTAL",
+          "amount": 7700000000,
+          "display_name": "Tổng tiền sản phẩm",
+          "hide_amount": false
+        },
+        {
+          "field_id": 3,
+          "field_name": "SHIPPING_FEE",
+          "amount": 2050000000,
+          "display_name": "Phí vận chuyển",
+          "hide_amount": false
+        },
+        {
+          "field_id": 5,
+          "field_name": "SHOPEE_VOUCHER_DISCOUNT",
+          "amount": -1800000000,
+          "display_name": "Shopee Voucher",
+          "hide_amount": false
+        },
+        {
+          "field_id": 6,
+          "field_name": "SELLER_VOUCHER_DISCOUNT",
+          "amount": -500000000,
+          "display_name": "Mã giảm giá của Shop",
+          "hide_amount": false
+        },
+        {
+          "field_id": 100,
+          "field_name": "BUYER_PAID_AMOUNT",
+          "amount": 7450000000,
+          "display_name": "Tổng tiền Thanh toán",
+          "hide_amount": false
+        }
+      ]
+    },
+    "order_item_list": {
+      "order_items": [
+        {
+          "item_id": 26494067324,
+          "model_id": 315457012681,
+          "group_id": "0",
+          "line_item_id": 228601455290840,
+          "price": 7700000000,
+          "amount": 1,
+          "subtotal": 7700000000,
+          "product_name": "[SIÊU PHẨM] Me Dốt Muối Ớt Đỏ - Chua Cay Cơm Dày Thơm Nồng - Me Dốt Rim - Me Dốt Tẩm Vị",
+          "product_sku": "TP00271",
+          "product_image": "vn-11134207-820l4-mjp4z9h9sburfb",
+          "model_name": "◾️500G◾️",
+          "model_sku": "TP00271_500",
+          "sub_type": 0,
+          "bundle_item_price": 0,
+          "is_add_on_subitem": false,
+          "is_pre_order": false,
+          "is_delivery_insured": false,
+          "returned_qty": 0,
+          "cancelled_qty": 1,
+          "show_return_tag": false,
+          "show_cancellation_tag": true,
+          "is_overseas_return_insured": false,
+          "has_spu_vsku": false
+        }
+      ]
+    },
+    "error_codes": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "items": [
+    {
+      "item_id": 26494067324,
+      "item_name": "[SIÊU PHẨM] Me Dốt Muối Ớt Đỏ - Chua Cay Cơm Dày Thơm Nồng - Me Dốt Rim - Me Dốt Tẩm Vị",
+      "model_id": 315457012681,
+      "model_name": "◾️500G◾️",
+      "model_sku": "TP00271_500",
+      "model_quantity_purchased": 1,
+      "model_original_price": 77000,
+      "_id": {
+        "$oid": "69cb794d0edfb584dae1c08a"
+      }
+    }
+  ],
+  "last_updated": {
+    "$date": "2026-03-31T07:35:03.491Z"
+  },
+  "merchandise_subtotal": 0,
+  "order_sn": "260331HG5F9499",
+  "order_status": "Cancelled",
+  "ready_to_ship_time": null,
+  "revenue_date": "31-03-2026",
+  "shipping_subtotal": 0,
+  "shop_id": 1018844008,
+  "status_code": 5,
+  "status_text": "Cancelled",
+  "sync_count": 2,
+  "tax_amount": 0,
+  "total_amount": 74500,
+  "update_time": 1774942503
+},
+{
+  "_id": {
+    "$oid": "69cb794c6945a815e1f853e2"
+  },
+  "order_id": 228628903213789,
+  "__v": 0,
+  "create_time": 1774929703,
+  "currency": "VND",
+  "escrow_amount": 77014,
+  "fees_and_charges": 23456,
+  "income_details": {
+    "order_info": {
+      "order_id": 228628903213789,
+      "order_sn": "260331J9PRTXPW",
+      "is_cb_sip_aff_order": false,
+      "shipping_carrier": "",
+      "released_time": 0,
+      "source": "Shopee Wallet",
+      "status": 2,
+      "release_time_transify_key": "ps_escrow_estimate_release__vn"
+    },
+    "seller_income_breakdown": {
+      "breakdown": [
+        {
+          "field_id": 1,
+          "field_name": "MERCHANDISE_SUBTOTAL",
+          "amount": 10200000000,
+          "display_name": "Tổng tiền sản phẩm",
+          "hide_amount": false,
+          "sub_breakdown": [
+            {
+              "field_id": 2,
+              "field_name": "PRODUCT_PRICE",
+              "amount": 10200000000,
+              "display_name": "Giá sản phẩm",
+              "hide_amount": false
+            }
+          ]
+        },
+        {
+          "field_id": 50,
+          "field_name": "SHIPPING_SUBTOTAL",
+          "amount": 0,
+          "display_name": "Tổng phí vận chuyển ước tính",
+          "hide_amount": false,
+          "sub_breakdown": [
+            {
+              "field_id": 51,
+              "field_name": "SHIPPING_FEE_PAID_BY_BUYER",
+              "amount": 300000000,
+              "display_name": "Phí vận chuyển Người mua trả",
+              "hide_amount": false
+            },
+            {
+              "field_id": 52,
+              "field_name": "ACTUAL_SHIPPING_FEE",
+              "amount": -3000000000,
+              "display_name": "Phí vận chuyển ước tính",
+              "hide_amount": false
+            },
+            {
+              "field_id": 54,
+              "field_name": "SHIPPING_REBATE_FROM_SHOPEE",
+              "amount": 2700000000,
+              "display_name": "Phí vận chuyển được trợ giá từ Shopee ước tính",
+              "hide_amount": false
+            }
+          ],
+          "ext_info": {}
+        },
+        {
+          "field_id": 150,
+          "field_name": "FEES_AND_CHARGES",
+          "amount": -2345600000,
+          "display_name": "Phụ phí",
+          "hide_amount": false,
+          "sub_breakdown": [
+            {
+              "field_id": 151,
+              "field_name": "COMMISSION_FEE",
+              "amount": -1122000000,
+              "display_name": "Phí cố định",
+              "caption": "Phí cố định cho đơn hàng này là 11.00%.",
+              "link": "https://banhang.shopee.vn/edu/article/2139",
+              "hide_amount": false,
+              "ext_info": {
+                "commission_fee_infos": [
+                  {
+                    "name": "",
+                    "amount": 0,
+                    "rule_id": 78453,
+                    "fee_rate": 11000
+                  }
+                ]
+              }
+            },
+            {
+              "field_id": 154,
+              "field_name": "SERVICE_FEE",
+              "amount": -708000000,
+              "display_name": "Phí Dịch Vụ",
+              "hide_amount": false,
+              "ext_info": {
+                "service_fee_infos": [
+                  {
+                    "name": "Phí Hạ Tầng",
+                    "amount": -300000000,
+                    "rule_id": 67122,
+                    "fee_rate": 0
+                  },
+                  {
+                    "name": "Voucher Xtra",
+                    "amount": -408000000,
+                    "rule_id": 78350,
+                    "fee_rate": 0
+                  }
+                ]
+              }
+            },
+            {
+              "field_id": 155,
+              "field_name": "TRANSACTION_FEE",
+              "amount": -515600000,
+              "display_name": "Phí thanh toán",
+              "caption": "Đơn hàng có áp dụng Phí thanh toán",
+              "hide_amount": false,
+              "ext_info": {
+                "seller_txn_fee_info": {
+                  "name": "",
+                  "amount": 0,
+                  "rule_id": 10137,
+                  "fee_rate": 4910
+                }
+              }
+            }
+          ]
+        },
+        {
+          "field_id": 173,
+          "field_name": "TAX_SUBTOTAL",
+          "amount": -153000000,
+          "display_name": "Thuế",
+          "hide_amount": false,
+          "sub_breakdown": [
+            {
+              "field_id": 174,
+              "field_name": "VAT_WHT_AMOUNT",
+              "amount": -102000000,
+              "display_name": "Thuế GTGT",
+              "caption": "Chỉ áp dụng cho hộ kinh doanh hoặc cá nhân kinh doanh. Để tìm hiểu thêm về cách tính thuế giá trị gia tăng (GTGT) , vui lòng tham khảo <a href=\"https://banhang.shopee.vn/edu/article/24233\" target=\"_blank\">tại đây.</a>",
+              "link": "https://banhang.shopee.vn/edu/article/24233",
+              "hide_amount": false
+            },
+            {
+              "field_id": 175,
+              "field_name": "PIT_WHT_AMOUNT",
+              "amount": -51000000,
+              "display_name": "Thuế TNCN",
+              "caption": "Chỉ áp dụng cho hộ kinh doanh hoặc cá nhân kinh doanh. Để tìm hiểu thêm về cách tính thuế thu nhập cá nhân (TNCN), vui lòng tham khảo <a href=\"https://banhang.shopee.vn/edu/article/24233\" target=\"_blank\">tại đây.</a>",
+              "link": "https://banhang.shopee.vn/edu/article/24233",
+              "hide_amount": false
+            }
+          ]
+        },
+        {
+          "field_id": 300,
+          "field_name": "VALUE_ADDED_SERVICES_SUBTOTAL",
+          "amount": 0,
+          "display_name": "Tổng phụ dịch vụ giá trị gia tăng cho người mua",
+          "hide_amount": false
+        },
+        {
+          "field_id": 250,
+          "field_name": "ESCROW_AMOUNT",
+          "amount": 7701400000,
+          "display_name": "Doanh thu đơn hàng ước tính",
+          "caption": "Doanh thu thực tế của đơn hàng có thể thay đổi và chỉ được tính toán chính xác sau khi đơn hàng đã hoàn tất.",
+          "hide_amount": false
+        }
+      ]
+    },
+    "buyer_payment_breakdown": {
+      "breakdown": [
+        {
+          "field_id": 1,
+          "field_name": "MERCHANDISE_SUBTOTAL",
+          "amount": 10200000000,
+          "display_name": "Tổng tiền sản phẩm",
+          "hide_amount": false
+        },
+        {
+          "field_id": 3,
+          "field_name": "SHIPPING_FEE",
+          "amount": 300000000,
+          "display_name": "Phí vận chuyển",
+          "hide_amount": false
+        },
+        {
+          "field_id": 5,
+          "field_name": "SHOPEE_VOUCHER_DISCOUNT",
+          "amount": -1224000000,
+          "display_name": "Shopee Voucher",
+          "hide_amount": false
+        },
+        {
+          "field_id": 6,
+          "field_name": "SELLER_VOUCHER_DISCOUNT",
+          "amount": 0,
+          "display_name": "Mã giảm giá của Shop",
+          "hide_amount": false
+        },
+        {
+          "field_id": 100,
+          "field_name": "BUYER_PAID_AMOUNT",
+          "amount": 9276000000,
+          "display_name": "Tổng tiền Thanh toán",
+          "hide_amount": false
+        }
+      ]
+    },
+    "order_item_list": {
+      "order_items": [
+        {
+          "item_id": 47054484571,
+          "model_id": 262326318159,
+          "group_id": "0",
+          "line_item_id": 228628902256668,
+          "price": 10200000000,
+          "amount": 1,
+          "subtotal": 10200000000,
+          "product_name": "[DATE MỚI] Chuối Sấy Mè Gừng Loại 1 - Không Vụn Giòn Thơm - Chuối Sấy Đặc Sản Đà Lạt Ăn Vặt Healthy",
+          "product_sku": "TP00038",
+          "product_image": "vn-11134207-820l4-mjdjsa013wg50a",
+          "model_name": "◾️1KG◾️",
+          "model_sku": "TP00038_1000",
+          "sub_type": 0,
+          "bundle_item_price": 0,
+          "is_add_on_subitem": false,
+          "is_pre_order": false,
+          "is_delivery_insured": false,
+          "returned_qty": 0,
+          "cancelled_qty": 0,
+          "show_return_tag": false,
+          "show_cancellation_tag": false,
+          "is_overseas_return_insured": false,
+          "has_spu_vsku": false
+        }
+      ]
+    },
+    "error_codes": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "items": [
+    {
+      "item_id": 47054484571,
+      "item_name": "[DATE MỚI] Chuối Sấy Mè Gừng Loại 1 - Không Vụn Giòn Thơm - Chuối Sấy Đặc Sản Đà Lạt Ăn Vặt Healthy",
+      "model_id": 262326318159,
+      "model_name": "◾️1KG◾️",
+      "model_sku": "TP00038_1000",
+      "model_quantity_purchased": 1,
+      "model_original_price": 102000,
+      "_id": {
+        "$oid": "69cb8040a754a72922107151"
+      }
+    }
+  ],
+  "last_updated": {
+    "$date": "2026-03-31T08:05:02.979Z"
+  },
+  "merchandise_subtotal": 102000,
+  "order_sn": "260331J9PRTXPW",
+  "order_status": "Delivered",
+  "ready_to_ship_time": {
+    "$date": "2026-03-31T04:01:54.000Z"
+  },
+  "revenue_date": "31-03-2026",
+  "shipping_subtotal": 0,
+  "shop_id": 1018844008,
+  "status_code": 2,
+  "status_text": "Delivered",
+  "sync_count": 7,
+  "tax_amount": 1530,
+  "total_amount": 92760,
+  "update_time": 1774944302
+},
+{
+  "_id": {
+    "$oid": "69cb794c6945a815e1f853e5"
   },
   "order_id": 228589323226346,
   "__v": 0,
@@ -1122,16 +3137,16 @@
       "model_quantity_purchased": 1,
       "model_original_price": 39000,
       "_id": {
-        "$oid": "69cb32d9b28a59b1e3c2e61b"
+        "$oid": "69cb8040a754a72922107156"
       }
     }
   ],
   "last_updated": {
-    "$date": "2026-03-31T02:35:01.324Z"
+    "$date": "2026-03-31T08:05:03.560Z"
   },
   "merchandise_subtotal": 39000,
   "order_sn": "260331H4U6DK7A",
-  "order_status": "To Ship",
+  "order_status": "Shipped",
   "ready_to_ship_time": {
     "$date": "2026-03-30T17:02:13.000Z"
   },
@@ -1139,26 +3154,26 @@
   "shipping_subtotal": 0,
   "shop_id": 1018844008,
   "status_code": 2,
-  "status_text": "To Ship",
-  "sync_count": 115,
+  "status_text": "Shipped",
+  "sync_count": 7,
   "tax_amount": 585,
   "total_amount": 33929,
-  "update_time": 1774924501
+  "update_time": 1774944303
 },
 {
   "_id": {
-    "$oid": "69ca76316945a815e1f3efdb"
+    "$oid": "69cb7cbf6945a815e1f885f2"
   },
-  "order_id": 228575128286980,
+  "order_id": 228642055264866,
   "__v": 0,
-  "create_time": 1774875928,
+  "create_time": 1774942855,
   "currency": "VND",
-  "escrow_amount": 37081,
-  "fees_and_charges": 13154,
+  "escrow_amount": 40224,
+  "fees_and_charges": 13951,
   "income_details": {
     "order_info": {
-      "order_id": 228575128286980,
-      "order_sn": "260330GQM52DR4",
+      "order_id": 228642055264866,
+      "order_sn": "260331JNXQKPK2",
       "is_cb_sip_aff_order": false,
       "shipping_carrier": "",
       "released_time": 0,
@@ -1170,14 +3185,14 @@
         {
           "field_id": 1,
           "field_name": "MERCHANDISE_SUBTOTAL",
-          "amount": 5100000000,
+          "amount": 5500000000,
           "display_name": "Tổng tiền sản phẩm",
           "hide_amount": false,
           "sub_breakdown": [
             {
               "field_id": 2,
               "field_name": "PRODUCT_PRICE",
-              "amount": 5100000000,
+              "amount": 5500000000,
               "display_name": "Giá sản phẩm",
               "hide_amount": false
             }
@@ -1200,14 +3215,14 @@
             {
               "field_id": 52,
               "field_name": "ACTUAL_SHIPPING_FEE",
-              "amount": -3760000000,
+              "amount": -1650000000,
               "display_name": "Phí vận chuyển ước tính",
               "hide_amount": false
             },
             {
               "field_id": 54,
               "field_name": "SHIPPING_REBATE_FROM_SHOPEE",
-              "amount": 3760000000,
+              "amount": 1650000000,
               "display_name": "Phí vận chuyển được trợ giá từ Shopee ước tính",
               "hide_amount": false
             }
@@ -1217,14 +3232,14 @@
         {
           "field_id": 150,
           "field_name": "FEES_AND_CHARGES",
-          "amount": -1315400000,
+          "amount": -1395100000,
           "display_name": "Phụ phí",
           "hide_amount": false,
           "sub_breakdown": [
             {
               "field_id": 151,
               "field_name": "COMMISSION_FEE",
-              "amount": -561000000,
+              "amount": -605000000,
               "display_name": "Phí cố định",
               "caption": "Phí cố định cho đơn hàng này là 11.00%.",
               "link": "https://banhang.shopee.vn/edu/article/2139",
@@ -1243,7 +3258,7 @@
             {
               "field_id": 154,
               "field_name": "SERVICE_FEE",
-              "amount": -504000000,
+              "amount": -520000000,
               "display_name": "Phí Dịch Vụ",
               "hide_amount": false,
               "ext_info": {
@@ -1256,7 +3271,7 @@
                   },
                   {
                     "name": "Voucher Xtra",
-                    "amount": -204000000,
+                    "amount": -220000000,
                     "rule_id": 78350,
                     "fee_rate": 0
                   }
@@ -1266,7 +3281,7 @@
             {
               "field_id": 155,
               "field_name": "TRANSACTION_FEE",
-              "amount": -250400000,
+              "amount": -270100000,
               "display_name": "Phí thanh toán",
               "caption": "Đơn hàng có áp dụng Phí thanh toán",
               "hide_amount": false,
@@ -1284,14 +3299,14 @@
         {
           "field_id": 173,
           "field_name": "TAX_SUBTOTAL",
-          "amount": -76500000,
+          "amount": -82500000,
           "display_name": "Thuế",
           "hide_amount": false,
           "sub_breakdown": [
             {
               "field_id": 174,
               "field_name": "VAT_WHT_AMOUNT",
-              "amount": -51000000,
+              "amount": -55000000,
               "display_name": "Thuế GTGT",
               "caption": "Chỉ áp dụng cho hộ kinh doanh hoặc cá nhân kinh doanh. Để tìm hiểu thêm về cách tính thuế giá trị gia tăng (GTGT) , vui lòng tham khảo <a href=\"https://banhang.shopee.vn/edu/article/24233\" target=\"_blank\">tại đây.</a>",
               "link": "https://banhang.shopee.vn/edu/article/24233",
@@ -1300,7 +3315,7 @@
             {
               "field_id": 175,
               "field_name": "PIT_WHT_AMOUNT",
-              "amount": -25500000,
+              "amount": -27500000,
               "display_name": "Thuế TNCN",
               "caption": "Chỉ áp dụng cho hộ kinh doanh hoặc cá nhân kinh doanh. Để tìm hiểu thêm về cách tính thuế thu nhập cá nhân (TNCN), vui lòng tham khảo <a href=\"https://banhang.shopee.vn/edu/article/24233\" target=\"_blank\">tại đây.</a>",
               "link": "https://banhang.shopee.vn/edu/article/24233",
@@ -1318,7 +3333,7 @@
         {
           "field_id": 250,
           "field_name": "ESCROW_AMOUNT",
-          "amount": 3708100000,
+          "amount": 4022400000,
           "display_name": "Doanh thu đơn hàng ước tính",
           "caption": "Doanh thu thực tế của đơn hàng có thể thay đổi và chỉ được tính toán chính xác sau khi đơn hàng đã hoàn tất.",
           "hide_amount": false
@@ -1330,7 +3345,7 @@
         {
           "field_id": 1,
           "field_name": "MERCHANDISE_SUBTOTAL",
-          "amount": 5100000000,
+          "amount": 5500000000,
           "display_name": "Tổng tiền sản phẩm",
           "hide_amount": false
         },
@@ -1344,7 +3359,7 @@
         {
           "field_id": 5,
           "field_name": "SHOPEE_VOUCHER_DISCOUNT",
-          "amount": -510000000,
+          "amount": 0,
           "display_name": "Shopee Voucher",
           "hide_amount": false
         },
@@ -1358,7 +3373,7 @@
         {
           "field_id": 100,
           "field_name": "BUYER_PAID_AMOUNT",
-          "amount": 4590000000,
+          "amount": 5500000000,
           "display_name": "Tổng tiền Thanh toán",
           "hide_amount": false
         }
@@ -1367,18 +3382,18 @@
     "order_item_list": {
       "order_items": [
         {
-          "item_id": 49054498689,
-          "model_id": 445419652935,
+          "item_id": 45354643544,
+          "model_id": 272332595196,
           "group_id": "0",
-          "line_item_id": 228575128289259,
-          "price": 5100000000,
+          "line_item_id": 228642055218207,
+          "price": 5500000000,
           "amount": 1,
-          "subtotal": 5100000000,
-          "product_name": "[LOẠI 1] Chuối Sứ Sấy Khoanh Tròn Giòn Rụm - Ăn Vặt Trái Cây Healthy - Ăn Vặt Đà Lạt Lành Mạnh",
-          "product_sku": "TP00037",
-          "product_image": "vn-11134207-820l4-mjdizeeuyih2b5",
-          "model_name": "◾️300G◾️",
-          "model_sku": "TP00037_300",
+          "subtotal": 5500000000,
+          "product_name": "[SIÊU PHẨM] Mứt Cóc Ngào Đường - Chua Cay Mặn Ngọt Hấp Dẫn - Mứt cóc Chanh Muối Đường - Cóc Sấy Dẻo Ngọt Cay",
+          "product_sku": "TP00157",
+          "product_image": "vn-11134207-820l4-mjgg8euh34069d",
+          "model_name": "◾️250G◾️",
+          "model_sku": "TP00157_250",
           "sub_type": 0,
           "bundle_item_price": 0,
           "is_add_on_subitem": false,
@@ -1402,315 +3417,34 @@
   },
   "items": [
     {
-      "item_id": 49054498689,
-      "item_name": "[LOẠI 1] Chuối Sứ Sấy Khoanh Tròn Giòn Rụm - Ăn Vặt Trái Cây Healthy - Ăn Vặt Đà Lạt Lành Mạnh",
-      "model_id": 445419652935,
-      "model_name": "◾️300G◾️",
-      "model_sku": "TP00037_300",
+      "item_id": 45354643544,
+      "item_name": "[SIÊU PHẨM] Mứt Cóc Ngào Đường - Chua Cay Mặn Ngọt Hấp Dẫn - Mứt cóc Chanh Muối Đường - Cóc Sấy Dẻo Ngọt Cay",
+      "model_id": 272332595196,
+      "model_name": "◾️250G◾️",
+      "model_sku": "TP00157_250",
       "model_quantity_purchased": 1,
-      "model_original_price": 51000,
+      "model_original_price": 55000,
       "_id": {
-        "$oid": "69cb32d9b28a59b1e3c2e624"
+        "$oid": "69cb8040a754a7292210714b"
       }
     }
   ],
   "last_updated": {
-    "$date": "2026-03-31T02:35:02.402Z"
+    "$date": "2026-03-31T08:05:02.163Z"
   },
-  "merchandise_subtotal": 51000,
-  "order_sn": "260330GQM52DR4",
+  "merchandise_subtotal": 55000,
+  "order_sn": "260331JNXQKPK2",
   "order_status": "To Ship",
   "ready_to_ship_time": {
-    "$date": "2026-03-30T17:05:30.000Z"
+    "$date": "2026-03-31T07:45:58.000Z"
   },
   "revenue_date": "31-03-2026",
   "shipping_subtotal": 0,
   "shop_id": 1018844008,
   "status_code": 1,
   "status_text": "To Ship",
-  "sync_count": 162,
-  "tax_amount": 765,
-  "total_amount": 45900,
-  "update_time": 1774924502
-},
-{
-  "_id": {
-    "$oid": "69c9ffe36945a815e1f2ca4c"
-  },
-  "order_id": 228544963285998,
-  "__v": 0,
-  "create_time": 1774845763,
-  "currency": "VND",
-  "escrow_amount": 57514,
-  "fees_and_charges": 18331,
-  "income_details": {
-    "order_info": {
-      "order_id": 228544963285998,
-      "order_sn": "260330FUH5FMYE",
-      "is_cb_sip_aff_order": false,
-      "shipping_carrier": "",
-      "released_time": 0,
-      "source": "Shopee Wallet",
-      "status": 1
-    },
-    "seller_income_breakdown": {
-      "breakdown": [
-        {
-          "field_id": 1,
-          "field_name": "MERCHANDISE_SUBTOTAL",
-          "amount": 7700000000,
-          "display_name": "Tổng tiền sản phẩm",
-          "hide_amount": false,
-          "sub_breakdown": [
-            {
-              "field_id": 2,
-              "field_name": "PRODUCT_PRICE",
-              "amount": 7700000000,
-              "display_name": "Giá sản phẩm",
-              "hide_amount": false
-            }
-          ]
-        },
-        {
-          "field_id": 50,
-          "field_name": "SHIPPING_SUBTOTAL",
-          "amount": 0,
-          "display_name": "Tổng phí vận chuyển ước tính",
-          "hide_amount": false,
-          "sub_breakdown": [
-            {
-              "field_id": 51,
-              "field_name": "SHIPPING_FEE_PAID_BY_BUYER",
-              "amount": 0,
-              "display_name": "Phí vận chuyển Người mua trả",
-              "hide_amount": false
-            },
-            {
-              "field_id": 52,
-              "field_name": "ACTUAL_SHIPPING_FEE",
-              "amount": 0,
-              "display_name": "Phí vận chuyển ước tính",
-              "hide_amount": false
-            }
-          ],
-          "ext_info": {}
-        },
-        {
-          "field_id": 150,
-          "field_name": "FEES_AND_CHARGES",
-          "amount": -1833100000,
-          "display_name": "Phụ phí",
-          "hide_amount": false,
-          "sub_breakdown": [
-            {
-              "field_id": 151,
-              "field_name": "COMMISSION_FEE",
-              "amount": -847000000,
-              "display_name": "Phí cố định",
-              "caption": "Phí cố định cho đơn hàng này là 11.00%.",
-              "link": "https://banhang.shopee.vn/edu/article/2139",
-              "hide_amount": false,
-              "ext_info": {
-                "commission_fee_infos": [
-                  {
-                    "name": "",
-                    "amount": 0,
-                    "rule_id": 78453,
-                    "fee_rate": 11000
-                  }
-                ]
-              }
-            },
-            {
-              "field_id": 154,
-              "field_name": "SERVICE_FEE",
-              "amount": -608000000,
-              "display_name": "Phí Dịch Vụ",
-              "hide_amount": false,
-              "ext_info": {
-                "service_fee_infos": [
-                  {
-                    "name": "Phí Hạ Tầng",
-                    "amount": -300000000,
-                    "rule_id": 67122,
-                    "fee_rate": 0
-                  },
-                  {
-                    "name": "Voucher Xtra",
-                    "amount": -308000000,
-                    "rule_id": 78350,
-                    "fee_rate": 0
-                  }
-                ]
-              }
-            },
-            {
-              "field_id": 155,
-              "field_name": "TRANSACTION_FEE",
-              "amount": -378100000,
-              "display_name": "Phí thanh toán",
-              "caption": "Đơn hàng có áp dụng Phí thanh toán",
-              "hide_amount": false,
-              "ext_info": {
-                "seller_txn_fee_info": {
-                  "name": "",
-                  "amount": 0,
-                  "rule_id": 10133,
-                  "fee_rate": 4910
-                }
-              }
-            }
-          ]
-        },
-        {
-          "field_id": 173,
-          "field_name": "TAX_SUBTOTAL",
-          "amount": -115500000,
-          "display_name": "Thuế",
-          "hide_amount": false,
-          "sub_breakdown": [
-            {
-              "field_id": 174,
-              "field_name": "VAT_WHT_AMOUNT",
-              "amount": -77000000,
-              "display_name": "Thuế GTGT",
-              "caption": "Chỉ áp dụng cho hộ kinh doanh hoặc cá nhân kinh doanh. Để tìm hiểu thêm về cách tính thuế giá trị gia tăng (GTGT) , vui lòng tham khảo <a href=\"https://banhang.shopee.vn/edu/article/24233\" target=\"_blank\">tại đây.</a>",
-              "link": "https://banhang.shopee.vn/edu/article/24233",
-              "hide_amount": false
-            },
-            {
-              "field_id": 175,
-              "field_name": "PIT_WHT_AMOUNT",
-              "amount": -38500000,
-              "display_name": "Thuế TNCN",
-              "caption": "Chỉ áp dụng cho hộ kinh doanh hoặc cá nhân kinh doanh. Để tìm hiểu thêm về cách tính thuế thu nhập cá nhân (TNCN), vui lòng tham khảo <a href=\"https://banhang.shopee.vn/edu/article/24233\" target=\"_blank\">tại đây.</a>",
-              "link": "https://banhang.shopee.vn/edu/article/24233",
-              "hide_amount": false
-            }
-          ]
-        },
-        {
-          "field_id": 300,
-          "field_name": "VALUE_ADDED_SERVICES_SUBTOTAL",
-          "amount": 0,
-          "display_name": "Tổng phụ dịch vụ giá trị gia tăng cho người mua",
-          "hide_amount": false
-        },
-        {
-          "field_id": 250,
-          "field_name": "ESCROW_AMOUNT",
-          "amount": 5751400000,
-          "display_name": "Doanh thu đơn hàng ước tính",
-          "caption": "Doanh thu thực tế của đơn hàng có thể thay đổi và chỉ được tính toán chính xác sau khi đơn hàng đã hoàn tất.",
-          "hide_amount": false
-        }
-      ]
-    },
-    "buyer_payment_breakdown": {
-      "breakdown": [
-        {
-          "field_id": 1,
-          "field_name": "MERCHANDISE_SUBTOTAL",
-          "amount": 7700000000,
-          "display_name": "Tổng tiền sản phẩm",
-          "hide_amount": false
-        },
-        {
-          "field_id": 3,
-          "field_name": "SHIPPING_FEE",
-          "amount": 0,
-          "display_name": "Phí vận chuyển",
-          "hide_amount": false
-        },
-        {
-          "field_id": 5,
-          "field_name": "SHOPEE_VOUCHER_DISCOUNT",
-          "amount": 0,
-          "display_name": "Shopee Voucher",
-          "hide_amount": false
-        },
-        {
-          "field_id": 6,
-          "field_name": "SELLER_VOUCHER_DISCOUNT",
-          "amount": 0,
-          "display_name": "Mã giảm giá của Shop",
-          "hide_amount": false
-        },
-        {
-          "field_id": 100,
-          "field_name": "BUYER_PAID_AMOUNT",
-          "amount": 7700000000,
-          "display_name": "Tổng tiền Thanh toán",
-          "hide_amount": false
-        }
-      ]
-    },
-    "order_item_list": {
-      "order_items": [
-        {
-          "item_id": 26494067324,
-          "model_id": 315457012681,
-          "group_id": "0",
-          "line_item_id": 228544963273730,
-          "price": 7700000000,
-          "amount": 1,
-          "subtotal": 7700000000,
-          "product_name": "[SIÊU PHẨM] Me Dốt Muối Ớt Đỏ - Chua Cay Cơm Dày Thơm Nồng - Me Dốt Rim - Me Dốt Tẩm Vị",
-          "product_sku": "TP00271",
-          "product_image": "vn-11134207-820l4-mjp4z9h9sburfb",
-          "model_name": "◾️500G◾️",
-          "model_sku": "TP00271_500",
-          "sub_type": 0,
-          "bundle_item_price": 0,
-          "is_add_on_subitem": false,
-          "is_pre_order": false,
-          "is_delivery_insured": false,
-          "returned_qty": 0,
-          "cancelled_qty": 0,
-          "show_return_tag": false,
-          "show_cancellation_tag": false,
-          "is_overseas_return_insured": false,
-          "has_spu_vsku": false
-        }
-      ]
-    },
-    "error_codes": [
-      0,
-      0,
-      0,
-      0
-    ]
-  },
-  "items": [
-    {
-      "item_id": 26494067324,
-      "item_name": "[SIÊU PHẨM] Me Dốt Muối Ớt Đỏ - Chua Cay Cơm Dày Thơm Nồng - Me Dốt Rim - Me Dốt Tẩm Vị",
-      "model_id": 315457012681,
-      "model_name": "◾️500G◾️",
-      "model_sku": "TP00271_500",
-      "model_quantity_purchased": 1,
-      "model_original_price": 77000,
-      "_id": {
-        "$oid": "69cb32d9b28a59b1e3c2e637"
-      }
-    }
-  ],
-  "last_updated": {
-    "$date": "2026-03-31T02:35:03.721Z"
-  },
-  "merchandise_subtotal": 77000,
-  "order_sn": "260330FUH5FMYE",
-  "order_status": "Unpaid",
-  "ready_to_ship_time": {
-    "$date": "2026-03-31T02:35:03.721Z"
-  },
-  "revenue_date": "31-03-2026",
-  "shipping_subtotal": 0,
-  "shop_id": 1018844008,
-  "status_code": 1,
-  "status_text": "Unpaid",
-  "sync_count": 263,
-  "tax_amount": 1155,
-  "total_amount": 77000,
-  "update_time": 1774924503
+  "sync_count": 4,
+  "tax_amount": 825,
+  "total_amount": 55000,
+  "update_time": 1774944302
 }]
