@@ -151,6 +151,37 @@
             color: var(--text-muted);
         }
 
+        .file-select {
+            background: var(--card-bg);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid var(--border);
+            padding: 0.75rem 1rem;
+            border-radius: 12px;
+            color: var(--text);
+            outline: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s;
+            appearance: none;
+            -webkit-appearance: none;
+            padding-right: 2.5rem;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+        }
+
+        .file-select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(245, 61, 45, 0.2);
+        }
+
+        .file-select option {
+            background: var(--bg);
+            color: var(--text);
+        }
+
         .card {
             background: var(--card-bg);
             backdrop-filter: blur(12px);
@@ -345,10 +376,16 @@
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                     <input type="text" id="searchInput" placeholder="Tìm kiếm mã đơn, trạng thái, ngày...">
                 </div>
-                <button class="btn btn-outline" id="loadDefaultBtn">Thử tải shopee_ads_dashboard.orders.json</button>
+                
+                <select class="file-select" id="fileSelector">
+                    <option value="">-- Chọn File JSON --</option>
+                    <option value="shopee_ads_dashboard.orders-shopmb.json">Shop MB</option>
+                    <option value="shopee_ads_dashboard.orders-shoppp.json">Shop PP</option>
+                </select>
+
                 <button class="btn btn-primary" onclick="document.getElementById('fileInput').click()">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
-                    Chọn File JSON
+                    Chọn File Ngoài
                 </button>
                 <input type="file" id="fileInput" accept=".json">
             </div>
@@ -441,12 +478,16 @@
             reader.readAsText(file);
         });
 
-        // Try to load default file (works if served locally)
-        loadDefaultBtn.addEventListener('click', async () => {
+        // Handle file select dropdown
+        const fileSelector = document.getElementById('fileSelector');
+        fileSelector.addEventListener('change', async (e) => {
+            const fileName = e.target.value;
+            if (!fileName) return;
+
             try {
                 loading.style.display = 'block';
-                const response = await fetch('shopee_ads_dashboard.orders.json');
-                if (!response.ok) throw new Error('Không thể tải file mặc định. Hãy chọn file thủ công.');
+                const response = await fetch(fileName);
+                if (!response.ok) throw new Error('Không thể tải file ' + fileName);
                 const text = await response.text();
                 processJSON(text);
             } catch (err) {
