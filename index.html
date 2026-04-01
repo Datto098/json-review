@@ -7,7 +7,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap"
 			rel="stylesheet"
 		/>
 		<style>
@@ -31,7 +31,7 @@
 			}
 
 			body {
-				font-family: 'Be Vietnam Pro', sans-serif;
+				font-family: 'Inter', sans-serif;
 				color: var(--ink);
 				min-height: 100vh;
 				background:
@@ -367,19 +367,19 @@
 					<div class="title">
 						<div class="mark">CM</div>
 						<div>
-							<h1>SAN PHAM CHAY NHIEU CAMPAIGN</h1>
+							<h1>SẢN PHẨM CHẠY NHIỀU CAMPAIGN</h1>
 							<p class="sub">
-								Quan sat nhanh overlap campaign theo item, shop,
-								loai campaign va ngan sach.
+								Quan sát nhanh overlap campaign theo item, shop,
+								loại campaign và ngân sách.
 							</p>
 						</div>
 					</div>
 					<div class="actions">
 						<button class="btn btn-main" id="loadDefaultBtn">
-							Tai camps.json
+							Tải camps.json
 						</button>
 						<button class="btn btn-soft" id="uploadBtn">
-							Chon file JSON
+							Chọn file JSON
 						</button>
 						<input
 							id="fileInput"
@@ -391,30 +391,30 @@
 
 				<div class="filter-grid">
 					<div class="field">
-						<label for="q">Tim kiem</label>
+						<label for="q">Tìm kiếm</label>
 						<input
 							id="q"
 							type="text"
-							placeholder="Ten san pham, campaign, item_id, shop_id..."
+							placeholder="Tên sản phẩm, campaign, item_id, shop_id..."
 						/>
 					</div>
 
 					<div class="field">
-						<label for="shopFilter">Loc shop</label>
+						<label for="shopFilter">Lọc shop</label>
 						<select id="shopFilter">
-							<option value="all">Tat ca shop</option>
+							<option value="all">Tất cả shop</option>
 						</select>
 					</div>
 
 					<div class="field">
-						<label for="typeFilter">Loai campaign</label>
+						<label for="typeFilter">Loại campaign</label>
 						<select id="typeFilter">
-							<option value="all">Tat ca loai</option>
+							<option value="all">Tất cả loại</option>
 						</select>
 					</div>
 
 					<div class="field">
-						<label for="minRunning">So camp toi thieu</label>
+						<label for="minRunning">Số campaign tối thiểu</label>
 						<select id="minRunning">
 							<option value="1">>= 1</option>
 							<option value="2" selected>>= 2</option>
@@ -427,36 +427,36 @@
 
 			<section class="stats" id="stats">
 				<article class="stat">
-					<div class="k">Tong dong</div>
+					<div class="k">Tổng dòng</div>
 					<div class="v n" id="sRows">0</div>
 				</article>
 				<article class="stat">
-					<div class="k">Tong shop</div>
+					<div class="k">Tổng shop</div>
 					<div class="v n" id="sShops">0</div>
 				</article>
 				<article class="stat">
-					<div class="k">Max running camp</div>
+					<div class="k">Max running campaign</div>
 					<div class="v n" id="sMax">0</div>
 				</article>
 				<article class="stat">
-					<div class="k">Avg running camp</div>
+					<div class="k">Avg running campaign</div>
 					<div class="v n" id="sAvg">0</div>
 				</article>
 				<article class="stat">
-					<div class="k">Tong budget / ngay</div>
+					<div class="k">Tổng budget / ngày</div>
 					<div class="v n" id="sBudget">0</div>
 				</article>
 			</section>
 
 			<section class="panel">
-				<p class="status" id="status">Dang cho du lieu...</p>
+				<p class="status" id="status">Đang chờ dữ liệu...</p>
 				<div class="table-wrap hidden" id="tableWrap">
 					<table>
 						<thead>
 							<tr>
 								<th data-sort="shop_id">Shop</th>
 								<th data-sort="item_id">Item</th>
-								<th data-sort="item_name">San pham</th>
+								<th data-sort="item_name">Sản phẩm</th>
 								<th data-sort="model_sku_sample">SKU</th>
 								<th data-sort="running_campaign_count">
 									Running
@@ -528,7 +528,7 @@
 				const set = new Set();
 				rows.forEach((row) => {
 					(row.campaigns || []).forEach((c) =>
-						set.add(c.type || 'unknown')
+						set.add(c.type || 'chưa xác định')
 					);
 				});
 				return Array.from(set).sort();
@@ -655,11 +655,11 @@
 				updateStats(state.filtered);
 
 				setStatus(
-					'Hien thi ' +
+					'Hiển thị ' +
 						formatNumber(state.filtered.length) +
 						' / ' +
 						formatNumber(state.rows.length) +
-						' dong'
+						' dòng'
 				);
 			}
 
@@ -669,7 +669,7 @@
 				if (!state.filtered.length) {
 					const tr = document.createElement('tr');
 					tr.innerHTML =
-						'<td colspan="6" style="padding:18px;color:#866b5f;">Khong co du lieu trung voi dieu kien loc.</td>';
+						'<td colspan="6" style="padding:18px;color:#866b5f;">Không có dữ liệu trùng với điều kiện lọc.</td>';
 					els.tbody.appendChild(tr);
 					return;
 				}
@@ -679,7 +679,7 @@
 
 					const campaigns = (row.campaigns || []).map((c) => {
 						const label = [
-							c.type || 'unknown',
+							c.type || 'chưa xác định',
 							c.status || '-',
 							formatVnd(c.daily_budget),
 						].join(' | ');
@@ -702,7 +702,7 @@
 						safe(row.item_id) +
 						'</div></td>' +
 						'<td><div class="main-name">' +
-						safe(row.item_name, 'Khong co ten san pham') +
+						safe(row.item_name, 'Không có tên sản phẩm') +
 						'</div></td>' +
 						'<td><div>' +
 						safe(row.model_sku_sample) +
@@ -786,7 +786,7 @@
 
 			function prepareData(raw) {
 				if (!raw || !Array.isArray(raw.details)) {
-					throw new Error('Khong tim thay mang details trong JSON');
+					throw new Error('Không tìm thấy mảng details trong JSON');
 				}
 
 				state.shopNames = raw.shop_names || {};
@@ -805,13 +805,13 @@
 				fillSelect(
 					els.shopFilter,
 					getAllShops(state.rows),
-					'Tat ca shop',
+					'Tất cả shop',
 					(shopId) => getShopDisplay(shopId)
 				);
 				fillSelect(
 					els.typeFilter,
 					getAllCampaignTypes(state.rows),
-					'Tat ca loai'
+					'Tất cả loại'
 				);
 
 				state.sortKey = 'running_campaign_count';
@@ -824,26 +824,26 @@
 				try {
 					const parsed = JSON.parse(String(text || ''));
 					prepareData(parsed);
-					setStatus('Da tai du lieu tu: ' + sourceName);
+					setStatus('Đã tải dữ liệu từ: ' + sourceName);
 				} catch (error) {
-					setStatus('Loi doc JSON: ' + error.message);
+					setStatus('Lỗi đọc JSON: ' + error.message);
 				}
 			}
 
 			async function loadDefaultFile() {
-				setStatus('Dang tai camps.json...');
+				setStatus('Đang tải camps.json...');
 				try {
 					const response = await fetch('camps.json', {
 						cache: 'no-store',
 					});
 					if (!response.ok) {
-						throw new Error('Khong mo duoc camps.json');
+						throw new Error('Không mở được camps.json');
 					}
 
 					const text = await response.text();
 					loadFromText(text, 'camps.json');
 				} catch (error) {
-					setStatus('Khong the tai file mac dinh: ' + error.message);
+					setStatus('Không thể tải file mặc định: ' + error.message);
 				}
 			}
 
