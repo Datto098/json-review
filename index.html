@@ -1,661 +1,855 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopee Orders Dashboard - JSON Review</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap"
-        rel="stylesheet">
-    <style>
-        :root {
-            --primary: #f53d2d;
-            --primary-dark: #d72e21;
-            --bg: #0f172a;
-            --card-bg: rgba(30, 41, 59, 0.7);
-            --text: #f1f5f9;
-            --text-muted: #94a3b8;
-            --border: rgba(255, 255, 255, 0.1);
-            --accent: #38bdf8;
-            --success: #10b981;
-            --warning: #f59e0b;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
-
-        body {
-            background-color: var(--bg);
-            color: var(--text);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            background-image:
-                radial-gradient(circle at 20% 20%, rgba(245, 61, 45, 0.05) 0%, transparent 40%),
-                radial-gradient(circle at 80% 80%, rgba(56, 189, 248, 0.05) 0%, transparent 40%);
-            padding: 2rem;
-        }
-
-        h1,
-        h2,
-        h3 {
-            font-family: 'Outfit', sans-serif;
-            font-weight: 700;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            width: 100%;
-        }
-
-        header {
-            margin-bottom: 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .logo {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, var(--primary), #ff6b6b);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 10px 15px -3px rgba(245, 61, 45, 0.3);
-        }
-
-        .controls {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 0.75rem 1.5rem;
-            border-radius: 12px;
-            border: none;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.9rem;
-        }
-
-        .btn-primary {
-            background: var(--primary);
-            color: white;
-            box-shadow: 0 4px 14px 0 rgba(245, 61, 45, 0.3);
-        }
-
-        .btn-primary:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(245, 61, 45, 0.4);
-        }
-
-        .btn-outline {
-            background: transparent;
-            border: 1px solid var(--border);
-            color: var(--text);
-        }
-
-        .btn-outline:hover {
-            background: rgba(255, 255, 255, 0.05);
-            border-color: var(--text-muted);
-        }
-
-        #fileInput {
-            display: none;
-        }
-
-        .search-box {
-            position: relative;
-            flex-grow: 1;
-            max-width: 400px;
-        }
-
-        .search-box input {
-            width: 100%;
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            padding: 0.75rem 1rem 0.75rem 2.5rem;
-            border-radius: 12px;
-            color: var(--text);
-            outline: none;
-            transition: all 0.3s;
-        }
-
-        .search-box input:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 2px rgba(245, 61, 45, 0.2);
-        }
-
-        .search-box svg {
-            position: absolute;
-            left: 0.75rem;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--text-muted);
-        }
-
-        .file-select {
-            background: var(--card-bg);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            border: 1px solid var(--border);
-            padding: 0.75rem 1rem;
-            border-radius: 12px;
-            color: var(--text);
-            outline: none;
-            cursor: pointer;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: all 0.3s;
-            appearance: none;
-            -webkit-appearance: none;
-            padding-right: 2.5rem;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 0.75rem center;
-        }
-
-        .file-select:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 2px rgba(245, 61, 45, 0.2);
-        }
-
-        .file-select option {
-            background: var(--bg);
-            color: var(--text);
-        }
-
-        .card {
-            background: var(--card-bg);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            animation: fadeIn 0.6s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .table-responsive {
-            overflow-x: auto;
-            max-height: 70vh;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: left;
-            font-size: 0.9rem;
-        }
-
-        th {
-            background: rgba(255, 255, 255, 0.03);
-            padding: 1rem 1.5rem;
-            font-weight: 600;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            border-bottom: 1px solid var(--border);
-        }
-
-        td {
-            padding: 1rem 1.5rem;
-            border-bottom: 1px solid var(--border);
-            transition: background 0.2s;
-        }
-
-        tr:hover td {
-            background: rgba(255, 255, 255, 0.02);
-        }
-
-        .status-badge {
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            display: inline-block;
-        }
-
-        .status-shipped {
-            background: rgba(56, 189, 248, 0.1);
-            color: #38bdf8;
-        }
-
-        .status-completed {
-            background: rgba(16, 185, 129, 0.1);
-            color: #10b981;
-        }
-
-        .status-processing {
-            background: rgba(245, 158, 11, 0.1);
-            color: #f59e0b;
-        }
-
-        .status-cancelled {
-            background: rgba(239, 68, 68, 0.1);
-            color: #ef4444;
-        }
-
-        .currency {
-            font-family: 'Outfit', sans-serif;
-            font-weight: 600;
-        }
-
-        .item-list {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            max-width: 300px;
-        }
-
-        .summary-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .stat-card {
-            background: var(--card-bg);
-            padding: 1.5rem;
-            border-radius: 16px;
-            border: 1px solid var(--border);
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-
-        .stat-value {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text);
-            font-family: 'Outfit', sans-serif;
-        }
-
-        .empty-state {
-            padding: 5rem 2rem;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1.5rem;
-        }
-
-        .empty-icon {
-            width: 80px;
-            height: 80px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-muted);
-        }
-
-        /* Tooltip */
-        .tooltip {
-            position: relative;
-            cursor: help;
-        }
-
-        .tooltip::before {
-            content: attr(data-tooltip);
-            position: absolute;
-            bottom: 125%;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #1e293b;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            font-size: 0.75rem;
-            white-space: nowrap;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.2s;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
-            border: 1px solid var(--border);
-            z-index: 20;
-        }
-
-        .tooltip:hover::before {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        ::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: transparent;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-    </style>
-</head>
-
-<body>
-
-    <div class="container">
-        <header>
-            <div class="brand">
-                <div class="logo">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                        <line x1="3" y1="9" x2="21" y2="9"></line>
-                        <line x1="9" y1="21" x2="9" y2="9"></line>
-                    </svg>
-                </div>
-                <div>
-                    <h1>JSON Orders Viewer</h1>
-                    <p style="color: var(--text-muted); font-size: 0.85rem;">Shopee Ads Dashboard Review</p>
-                </div>
-            </div>
-
-            <div class="controls">
-                <div class="search-box">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                    <input type="text" id="searchInput" placeholder="Tìm kiếm mã đơn, trạng thái, ngày...">
-                </div>
-
-                <select class="file-select" id="fileSelector">
-                    <option value="">-- Chọn File JSON --</option>
-                    <option value="shopee_ads_dashboard.orders-shopmb.json">Shop MB</option>
-                    <option value="shopee_ads_dashboard.orders-shoppp.json">Shop PP</option>
-                    <option value="shopee_ads_dashboard.orders-shopmb-30.json">Shop MB - 30/3</option>
-                </select>
-
-                <button class="btn btn-primary" onclick="document.getElementById('fileInput').click()">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                        <polyline points="17 8 12 3 7 8"></polyline>
-                        <line x1="12" y1="3" x2="12" y2="15"></line>
-                    </svg>
-                    Chọn File Ngoài
-                </button>
-                <input type="file" id="fileInput" accept=".json">
-            </div>
-        </header>
-
-        <div id="statsContainer" class="summary-stats" style="display: none;">
-            <div class="stat-card">
-                <span class="stat-label">Tổng Đơn Hàng</span>
-                <span class="stat-value" id="totalOrders">0</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-label">Tổng Doanh Thu</span>
-                <span class="stat-value" id="totalRevenue">0 ₫</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-label">Tổng Phụ Phí</span>
-                <span class="stat-value" id="totalFees">0 ₫</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-label">Tổng Thuế</span>
-                <span class="stat-value" id="totalTax">0 ₫</span>
-            </div>
-        </div>
-
-        <div class="card">
-            <div id="loading" style="display: none; padding: 2rem; text-align: center; color: var(--text-muted);">
-                Đang xử lý dữ liệu...
-            </div>
-
-            <div id="emptyState" class="empty-state">
-                <div class="empty-icon">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
-                        <polyline points="13 2 13 9 20 9"></polyline>
-                    </svg>
-                </div>
-                <div>
-                    <h2>Chưa có dữ liệu</h2>
-                    <p style="color: var(--text-muted); margin-top: 0.5rem;">Hãy kéo thả file JSON vào đây hoặc nhấn nút
-                        "Chọn File JSON" để bắt đầu.</p>
-                </div>
-            </div>
-
-            <div id="tableWrapper" class="table-responsive" style="display: none;">
-                <table id="ordersTable">
-                    <thead>
-                        <tr>
-                            <th onclick="sortTable(0)">Mã Đơn Hàng ↕</th>
-                            <th onclick="sortTable(1)">Ngày Doanh Thu ↕</th>
-                            <th onclick="sortTable(2)">Trạng Thái ↕</th>
-                            <th onclick="sortTable(3)">Tiền Hàng ↕</th>
-                            <th onclick="sortTable(4)">Escrow ↕</th>
-                            <th onclick="sortTable(5)">Phí ↕</th>
-                            <th onclick="sortTable(6)">Thuế ↕</th>
-                            <th onclick="sortTable(7)">Tổng ↕</th>
-                            <th>Sản Phẩm</th>
-                        </tr>
-                    </thead>
-                    <tbody id="ordersBody">
-                        <!-- Data will be injected here -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        let ordersData = [];
-        let filteredData = [];
-
-        const fileInput = document.getElementById('fileInput');
-        const loadDefaultBtn = document.getElementById('loadDefaultBtn');
-        const searchInput = document.getElementById('searchInput');
-        const ordersBody = document.getElementById('ordersBody');
-        const emptyState = document.getElementById('emptyState');
-        const tableWrapper = document.getElementById('tableWrapper');
-        const statsContainer = document.getElementById('statsContainer');
-        const loading = document.getElementById('loading');
-
-        // format currency
-        const formatVND = (amount) => {
-            return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(amount);
-        };
-
-        // Handle file selection
-        fileInput.addEventListener('change', function (e) {
-            const file = e.target.files[0];
-            if (!file) return;
-
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                processJSON(e.target.result);
-            };
-            reader.readAsText(file);
-        });
-
-        // Handle file select dropdown
-        const fileSelector = document.getElementById('fileSelector');
-        fileSelector.addEventListener('change', async (e) => {
-            const fileName = e.target.value;
-            if (!fileName) return;
-
-            try {
-                loading.style.display = 'block';
-                const response = await fetch(fileName);
-                if (!response.ok) throw new Error('Không thể tải file ' + fileName);
-                const text = await response.text();
-                processJSON(text);
-            } catch (err) {
-                alert(err.message);
-                loading.style.display = 'none';
-            }
-        });
-
-        function processJSON(jsonString) {
-            try {
-                loading.style.display = 'block';
-                const data = JSON.parse(jsonString);
-                ordersData = Array.isArray(data) ? data : [data];
-                filteredData = [...ordersData];
-
-                renderStats(filteredData);
-                renderTable();
-
-                emptyState.style.display = 'none';
-                tableWrapper.style.display = 'block';
-                statsContainer.style.display = 'grid';
-                loading.style.display = 'none';
-            } catch (err) {
-                alert('File JSON không hợp lệ: ' + err.message);
-                loading.style.display = 'none';
-            }
-        }
-
-        function renderStats(data = filteredData) {
-            // Filter out invalid orders for financial calculations
-            const invalidStatuses = ['Cancelled', 'Pending'];
-            const validOrders = data.filter(o => !invalidStatuses.includes(o.order_status));
-
-            const total = data.length;
-            const revenue = validOrders.reduce((sum, o) => sum + (o.merchandise_subtotal || 0), 0);
-            const fees = validOrders.reduce((sum, o) => sum + (o.fees_and_charges || 0), 0);
-            const tax = validOrders.reduce((sum, o) => sum + (o.tax_amount || 0), 0);
-
-            document.getElementById('totalOrders').textContent = total.toLocaleString();
-            document.getElementById('totalRevenue').textContent = formatVND(revenue);
-            document.getElementById('totalFees').textContent = formatVND(fees);
-            document.getElementById('totalTax').textContent = formatVND(tax);
-        }
-
-        function renderTable() {
-            ordersBody.innerHTML = '';
-
-            filteredData.forEach(order => {
-                const tr = document.createElement('tr');
-
-                const statusClass = `status-${(order.order_status || '').toLowerCase().replace(/\s+/g, '-')}`;
-
-                const itemsHtml = (order.items || []).map(item =>
-                    `<div>• ${item.item_name} (x${item.model_quantity_purchased})</div>`
-                ).join('');
-
-                tr.innerHTML = `
-                    <td style="font-weight: 600; color: var(--accent);">${order.order_sn || 'N/A'}</td>
-                    <td>${order.revenue_date || 'N/A'}</td>
-                    <td><span class="status-badge ${statusClass}">${order.order_status || 'N/A'}</span></td>
-                    <td class="currency">${formatVND(order.merchandise_subtotal || 0)}</td>
-                    <td class="currency" style="color: var(--success);">${formatVND(order.escrow_amount || 0)}</td>
-                    <td class="currency" style="color: var(--warning);">${formatVND(order.fees_and_charges || 0)}</td>
-                    <td class="currency">${formatVND(order.tax_amount || 0)}</td>
-                    <td class="currency" style="font-weight: 700;">${formatVND(order.merchandise_subtotal || 0)}</td>
-                    <td class="item-list">${itemsHtml || 'Không có thông tin'}</td>
-                `;
-
-                ordersBody.appendChild(tr);
-            });
-        }
-
-        // Search logic
-        searchInput.addEventListener('input', (e) => {
-            const term = e.target.value.toLowerCase();
-            filteredData = ordersData.filter(o =>
-                (o.order_sn && o.order_sn.toLowerCase().includes(term)) ||
-                (o.order_status && o.order_status.toLowerCase().includes(term)) ||
-                (o.revenue_date && o.revenue_date.toLowerCase().includes(term)) ||
-                (o.items && o.items.some(i => i.item_name.toLowerCase().includes(term)))
-            );
-            renderTable();
-            renderStats(filteredData);
-        });
-
-        // Simple sorting
-        let sortDirections = {};
-        function sortTable(colIndex) {
-            const keys = ['order_sn', 'revenue_date', 'order_status', 'merchandise_subtotal', 'escrow_amount', 'fees_and_charges', 'tax_amount', 'merchandise_subtotal'];
-            const key = keys[colIndex];
-            if (!key) return;
-
-            sortDirections[key] = !sortDirections[key];
-            const dir = sortDirections[key] ? 1 : -1;
-
-            filteredData.sort((a, b) => {
-                let valA = a[key];
-                let valB = b[key];
-
-                if (typeof valA === 'string') {
-                    return valA.localeCompare(valB) * dir;
-                }
-                return (valA - valB) * dir;
-            });
-
-            renderTable();
-        }
-
-        // Drag and drop interface
-        window.addEventListener('dragover', (e) => { e.preventDefault(); });
-        window.addEventListener('drop', (e) => {
-            e.preventDefault();
-            const file = e.dataTransfer.files[0];
-            if (file && file.name.endsWith('.json')) {
-                const reader = new FileReader();
-                reader.onload = (e) => processJSON(e.target.result);
-                reader.readAsText(file);
-            }
-        });
-    </script>
-</body>
-
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Campaign Overlap Viewer</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			:root {
+				--bg: #fff9f4;
+				--panel: rgba(255, 255, 255, 0.88);
+				--ink: #2b1f1a;
+				--muted: #866b5f;
+				--line: rgba(143, 90, 60, 0.2);
+				--hot: #ff6a3d;
+				--hot-strong: #e85020;
+				--ok: #0e9f6e;
+				--chip: #ffe7dd;
+				--shadow: 0 18px 45px rgba(120, 70, 40, 0.15);
+			}
+
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				font-family: 'Be Vietnam Pro', sans-serif;
+				color: var(--ink);
+				min-height: 100vh;
+				background:
+					radial-gradient(
+						circle at 12% 10%,
+						rgba(255, 128, 88, 0.28) 0%,
+						transparent 35%
+					),
+					radial-gradient(
+						circle at 88% 8%,
+						rgba(254, 205, 154, 0.55) 0%,
+						transparent 30%
+					),
+					radial-gradient(
+						circle at 50% 95%,
+						rgba(255, 196, 140, 0.45) 0%,
+						transparent 45%
+					),
+					var(--bg);
+				padding: 28px;
+			}
+
+			.wrap {
+				max-width: 1450px;
+				margin: 0 auto;
+				display: grid;
+				gap: 18px;
+			}
+
+			.hero {
+				background: linear-gradient(
+					135deg,
+					rgba(255, 255, 255, 0.92),
+					rgba(255, 240, 228, 0.9)
+				);
+				border: 1px solid var(--line);
+				border-radius: 20px;
+				box-shadow: var(--shadow);
+				padding: 22px;
+				display: grid;
+				gap: 16px;
+				animation: rise 0.45s ease-out;
+			}
+
+			.hero-top {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				gap: 16px;
+				flex-wrap: wrap;
+			}
+
+			.title {
+				display: flex;
+				align-items: center;
+				gap: 12px;
+			}
+
+			.mark {
+				width: 42px;
+				height: 42px;
+				border-radius: 12px;
+				background: linear-gradient(130deg, var(--hot), #ff8b4d);
+				box-shadow: 0 8px 20px rgba(255, 106, 61, 0.35);
+				display: grid;
+				place-items: center;
+				color: white;
+				font-weight: 800;
+				font-family: 'Space Grotesk', sans-serif;
+			}
+
+			h1 {
+				font-family: 'Space Grotesk', sans-serif;
+				font-size: 1.6rem;
+				line-height: 1.1;
+			}
+
+			.sub {
+				color: var(--muted);
+				font-size: 0.93rem;
+				margin-top: 4px;
+			}
+
+			.actions {
+				display: flex;
+				gap: 10px;
+				flex-wrap: wrap;
+			}
+
+			.btn {
+				border: none;
+				border-radius: 12px;
+				padding: 10px 14px;
+				font-weight: 600;
+				font-family: inherit;
+				cursor: pointer;
+				transition: 0.22s ease;
+			}
+
+			.btn-main {
+				background: var(--hot);
+				color: #fff;
+				box-shadow: 0 8px 18px rgba(255, 106, 61, 0.32);
+			}
+
+			.btn-main:hover {
+				transform: translateY(-1px);
+				background: var(--hot-strong);
+			}
+
+			.btn-soft {
+				background: #fff;
+				border: 1px solid var(--line);
+				color: var(--ink);
+			}
+
+			.btn-soft:hover {
+				background: #fff4ed;
+			}
+
+			.filter-grid {
+				display: grid;
+				grid-template-columns: 1.8fr 1fr 1fr 1fr;
+				gap: 10px;
+			}
+
+			.field {
+				display: grid;
+				gap: 6px;
+			}
+
+			.field label {
+				font-size: 0.78rem;
+				color: var(--muted);
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 0.04em;
+			}
+
+			.field input,
+			.field select {
+				border: 1px solid var(--line);
+				background: rgba(255, 255, 255, 0.95);
+				color: var(--ink);
+				border-radius: 11px;
+				padding: 10px 12px;
+				outline: none;
+				font-size: 0.95rem;
+			}
+
+			.field input:focus,
+			.field select:focus {
+				border-color: var(--hot);
+				box-shadow: 0 0 0 3px rgba(255, 106, 61, 0.2);
+			}
+
+			.stats {
+				display: grid;
+				grid-template-columns: repeat(5, minmax(0, 1fr));
+				gap: 10px;
+			}
+
+			.stat {
+				border: 1px solid var(--line);
+				background: var(--panel);
+				border-radius: 14px;
+				padding: 12px;
+				backdrop-filter: blur(6px);
+				animation: rise 0.45s ease-out;
+			}
+
+			.stat .k {
+				color: var(--muted);
+				font-size: 0.78rem;
+				text-transform: uppercase;
+				font-weight: 700;
+				letter-spacing: 0.04em;
+			}
+
+			.stat .v {
+				margin-top: 8px;
+				font-size: 1.35rem;
+				font-family: 'Space Grotesk', sans-serif;
+				line-height: 1;
+			}
+
+			.panel {
+				border: 1px solid var(--line);
+				background: var(--panel);
+				border-radius: 18px;
+				box-shadow: var(--shadow);
+				overflow: hidden;
+				animation: rise 0.55s ease-out;
+			}
+
+			.table-wrap {
+				overflow: auto;
+				max-height: 72vh;
+			}
+
+			table {
+				width: 100%;
+				border-collapse: collapse;
+				min-width: 1120px;
+				font-size: 0.91rem;
+			}
+
+			th,
+			td {
+				padding: 12px 14px;
+				border-bottom: 1px solid rgba(143, 90, 60, 0.14);
+				text-align: left;
+				vertical-align: top;
+			}
+
+			th {
+				position: sticky;
+				top: 0;
+				z-index: 5;
+				background: #fff0e7;
+				color: #764e3a;
+				font-size: 0.8rem;
+				text-transform: uppercase;
+				letter-spacing: 0.04em;
+				cursor: pointer;
+				user-select: none;
+			}
+
+			tr:hover td {
+				background: rgba(255, 247, 240, 0.95);
+			}
+
+			.tiny {
+				color: var(--muted);
+				font-size: 0.8rem;
+				margin-top: 2px;
+			}
+
+			.main-name {
+				font-weight: 600;
+				line-height: 1.35;
+				max-width: 460px;
+			}
+
+			.campaign-bag {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 7px;
+				max-width: 460px;
+			}
+
+			.chip {
+				border: 1px solid #f5c8b7;
+				background: var(--chip);
+				border-radius: 999px;
+				padding: 4px 9px;
+				font-size: 0.75rem;
+				white-space: nowrap;
+			}
+
+			.n {
+				font-family: 'Space Grotesk', sans-serif;
+				font-weight: 700;
+			}
+
+			.count {
+				display: inline-block;
+				min-width: 40px;
+				text-align: center;
+				border-radius: 999px;
+				padding: 5px 10px;
+				font-weight: 700;
+				font-family: 'Space Grotesk', sans-serif;
+				background: #ffe7dc;
+				color: #8d3f21;
+			}
+
+			.status {
+				margin: 14px;
+				color: var(--muted);
+				font-size: 0.9rem;
+			}
+
+			#fileInput {
+				display: none;
+			}
+
+			.hidden {
+				display: none !important;
+			}
+
+			@keyframes rise {
+				from {
+					opacity: 0;
+					transform: translateY(7px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			@media (max-width: 1040px) {
+				body {
+					padding: 14px;
+				}
+
+				.filter-grid {
+					grid-template-columns: 1fr 1fr;
+				}
+
+				.stats {
+					grid-template-columns: repeat(2, minmax(0, 1fr));
+				}
+			}
+
+			@media (max-width: 680px) {
+				.filter-grid,
+				.stats {
+					grid-template-columns: 1fr;
+				}
+
+				h1 {
+					font-size: 1.3rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<main class="wrap">
+			<section class="hero">
+				<div class="hero-top">
+					<div class="title">
+						<div class="mark">CM</div>
+						<div>
+							<h1>SAN PHAM CHAY NHIEU CAMPAIGN</h1>
+							<p class="sub">
+								Quan sat nhanh overlap campaign theo item, shop,
+								loai campaign va ngan sach.
+							</p>
+						</div>
+					</div>
+					<div class="actions">
+						<button class="btn btn-main" id="loadDefaultBtn">
+							Tai camps.json
+						</button>
+						<button class="btn btn-soft" id="uploadBtn">
+							Chon file JSON
+						</button>
+						<input
+							id="fileInput"
+							type="file"
+							accept="application/json,.json"
+						/>
+					</div>
+				</div>
+
+				<div class="filter-grid">
+					<div class="field">
+						<label for="q">Tim kiem</label>
+						<input
+							id="q"
+							type="text"
+							placeholder="Ten san pham, campaign, item_id, shop_id..."
+						/>
+					</div>
+
+					<div class="field">
+						<label for="shopFilter">Loc shop</label>
+						<select id="shopFilter">
+							<option value="all">Tat ca shop</option>
+						</select>
+					</div>
+
+					<div class="field">
+						<label for="typeFilter">Loai campaign</label>
+						<select id="typeFilter">
+							<option value="all">Tat ca loai</option>
+						</select>
+					</div>
+
+					<div class="field">
+						<label for="minRunning">So camp toi thieu</label>
+						<select id="minRunning">
+							<option value="1">>= 1</option>
+							<option value="2" selected>>= 2</option>
+							<option value="3">>= 3</option>
+							<option value="4">>= 4</option>
+						</select>
+					</div>
+				</div>
+			</section>
+
+			<section class="stats" id="stats">
+				<article class="stat">
+					<div class="k">Tong dong</div>
+					<div class="v n" id="sRows">0</div>
+				</article>
+				<article class="stat">
+					<div class="k">Tong shop</div>
+					<div class="v n" id="sShops">0</div>
+				</article>
+				<article class="stat">
+					<div class="k">Max running camp</div>
+					<div class="v n" id="sMax">0</div>
+				</article>
+				<article class="stat">
+					<div class="k">Avg running camp</div>
+					<div class="v n" id="sAvg">0</div>
+				</article>
+				<article class="stat">
+					<div class="k">Tong budget / ngay</div>
+					<div class="v n" id="sBudget">0</div>
+				</article>
+			</section>
+
+			<section class="panel">
+				<p class="status" id="status">Dang cho du lieu...</p>
+				<div class="table-wrap hidden" id="tableWrap">
+					<table>
+						<thead>
+							<tr>
+								<th data-sort="shop_id">Shop</th>
+								<th data-sort="item_id">Item</th>
+								<th data-sort="item_name">San pham</th>
+								<th data-sort="model_sku_sample">SKU</th>
+								<th data-sort="running_campaign_count">
+									Running
+								</th>
+								<th>Campaigns</th>
+							</tr>
+						</thead>
+						<tbody id="tbody"></tbody>
+					</table>
+				</div>
+			</section>
+		</main>
+
+		<script>
+			const state = {
+				rows: [],
+				filtered: [],
+				shopNames: {},
+				sortKey: 'running_campaign_count',
+				sortDir: 'desc',
+			};
+
+			const els = {
+				q: document.getElementById('q'),
+				shopFilter: document.getElementById('shopFilter'),
+				typeFilter: document.getElementById('typeFilter'),
+				minRunning: document.getElementById('minRunning'),
+				tbody: document.getElementById('tbody'),
+				status: document.getElementById('status'),
+				tableWrap: document.getElementById('tableWrap'),
+				fileInput: document.getElementById('fileInput'),
+				uploadBtn: document.getElementById('uploadBtn'),
+				loadDefaultBtn: document.getElementById('loadDefaultBtn'),
+				sRows: document.getElementById('sRows'),
+				sShops: document.getElementById('sShops'),
+				sMax: document.getElementById('sMax'),
+				sAvg: document.getElementById('sAvg'),
+				sBudget: document.getElementById('sBudget'),
+			};
+
+			function formatNumber(n) {
+				return Number(n || 0).toLocaleString('vi-VN');
+			}
+
+			function formatVnd(v) {
+				return Number(v || 0).toLocaleString('vi-VN') + ' VND';
+			}
+
+			function normalize(input) {
+				return String(input || '')
+					.toLowerCase()
+					.normalize('NFD')
+					.replace(/[\u0300-\u036f]/g, '');
+			}
+
+			function safe(value, fallback = 'N/A') {
+				if (value === null || value === undefined || value === '') {
+					return fallback;
+				}
+				return value;
+			}
+
+			function getShopDisplay(shopId) {
+				const key = String(shopId);
+				return state.shopNames[key] || key;
+			}
+
+			function getAllCampaignTypes(rows) {
+				const set = new Set();
+				rows.forEach((row) => {
+					(row.campaigns || []).forEach((c) =>
+						set.add(c.type || 'unknown')
+					);
+				});
+				return Array.from(set).sort();
+			}
+
+			function getAllShops(rows) {
+				const set = new Set(rows.map((row) => String(row.shop_id)));
+				return Array.from(set).sort((a, b) => Number(a) - Number(b));
+			}
+
+			function fillSelect(selectEl, values, defaultLabel, getLabel) {
+				selectEl.innerHTML = '';
+				const allOption = document.createElement('option');
+				allOption.value = 'all';
+				allOption.textContent = defaultLabel;
+				selectEl.appendChild(allOption);
+
+				values.forEach((value) => {
+					const option = document.createElement('option');
+					option.value = value;
+					option.textContent = getLabel ? getLabel(value) : value;
+					selectEl.appendChild(option);
+				});
+			}
+
+			function setStatus(message) {
+				els.status.textContent = message;
+			}
+
+			function updateStats(data) {
+				const shopSet = new Set(data.map((row) => row.shop_id));
+				const maxRunning = data.reduce(
+					(max, row) =>
+						Math.max(max, Number(row.running_campaign_count || 0)),
+					0
+				);
+				const avgRunning = data.length
+					? data.reduce(
+							(sum, row) =>
+								sum + Number(row.running_campaign_count || 0),
+							0
+						) / data.length
+					: 0;
+
+				const totalBudget = data.reduce((sum, row) => {
+					const rowBudget = (row.campaigns || []).reduce(
+						(s, c) => s + Number(c.daily_budget || 0),
+						0
+					);
+					return sum + rowBudget;
+				}, 0);
+
+				els.sRows.textContent = formatNumber(data.length);
+				els.sShops.textContent = formatNumber(shopSet.size);
+				els.sMax.textContent = formatNumber(maxRunning);
+				els.sAvg.textContent = avgRunning.toFixed(2);
+				els.sBudget.textContent = formatVnd(totalBudget);
+			}
+
+			function compareValues(a, b, key, dir) {
+				const factor = dir === 'asc' ? 1 : -1;
+				const va = a[key];
+				const vb = b[key];
+
+				if (
+					key === 'running_campaign_count' ||
+					key === 'shop_id' ||
+					key === 'item_id'
+				) {
+					return (Number(va || 0) - Number(vb || 0)) * factor;
+				}
+
+				return (
+					String(va || '').localeCompare(String(vb || ''), 'vi') *
+					factor
+				);
+			}
+
+			function applyFilters() {
+				const q = normalize(els.q.value.trim());
+				const shopValue = els.shopFilter.value;
+				const typeValue = els.typeFilter.value;
+				const minRunning = Number(els.minRunning.value || 1);
+
+				state.filtered = state.rows.filter((row) => {
+					const running = Number(row.running_campaign_count || 0);
+					if (running < minRunning) return false;
+
+					if (
+						shopValue !== 'all' &&
+						String(row.shop_id) !== shopValue
+					) {
+						return false;
+					}
+
+					if (typeValue !== 'all') {
+						const hasType = (row.campaigns || []).some(
+							(c) => (c.type || '') === typeValue
+						);
+						if (!hasType) return false;
+					}
+
+					if (!q) return true;
+
+					const rowText = [
+						row.shop_id,
+						getShopDisplay(row.shop_id),
+						row.item_id,
+						row.item_name,
+						row.model_sku_sample,
+						...(row.campaigns || []).map((c) => c.campaign_name),
+						...(row.campaigns || []).map((c) => c.type),
+					]
+						.map(normalize)
+						.join(' ');
+
+					return rowText.includes(q);
+				});
+
+				state.filtered.sort((a, b) =>
+					compareValues(a, b, state.sortKey, state.sortDir)
+				);
+				renderRows();
+				updateStats(state.filtered);
+
+				setStatus(
+					'Hien thi ' +
+						formatNumber(state.filtered.length) +
+						' / ' +
+						formatNumber(state.rows.length) +
+						' dong'
+				);
+			}
+
+			function renderRows() {
+				els.tbody.innerHTML = '';
+
+				if (!state.filtered.length) {
+					const tr = document.createElement('tr');
+					tr.innerHTML =
+						'<td colspan="6" style="padding:18px;color:#866b5f;">Khong co du lieu trung voi dieu kien loc.</td>';
+					els.tbody.appendChild(tr);
+					return;
+				}
+
+				state.filtered.forEach((row) => {
+					const tr = document.createElement('tr');
+
+					const campaigns = (row.campaigns || []).map((c) => {
+						const label = [
+							c.type || 'unknown',
+							c.status || '-',
+							formatVnd(c.daily_budget),
+						].join(' | ');
+						return (
+							'<span class="chip" title="' +
+							String(c.campaign_name || '') +
+							'">' +
+							label +
+							'</span>'
+						);
+					});
+
+					tr.innerHTML =
+						'<td><div class="n">' +
+						safe(getShopDisplay(row.shop_id)) +
+						'</div><div class="tiny">' +
+						safe(row.shop_id) +
+						'</div></td>' +
+						'<td><div class="n">' +
+						safe(row.item_id) +
+						'</div></td>' +
+						'<td><div class="main-name">' +
+						safe(row.item_name, 'Khong co ten san pham') +
+						'</div></td>' +
+						'<td><div>' +
+						safe(row.model_sku_sample) +
+						'</div></td>' +
+						'<td><span class="count">' +
+						formatNumber(row.running_campaign_count) +
+						'</span></td>' +
+						'<td><div class="campaign-bag">' +
+						campaigns.join('') +
+						'</div></td>';
+
+					els.tbody.appendChild(tr);
+				});
+			}
+
+			function setupSortHeaders() {
+				const headers = document.querySelectorAll('th[data-sort]');
+				headers.forEach((th) => {
+					th.addEventListener('click', () => {
+						const key = th.dataset.sort;
+						if (!key) return;
+
+						if (state.sortKey === key) {
+							state.sortDir =
+								state.sortDir === 'asc' ? 'desc' : 'asc';
+						} else {
+							state.sortKey = key;
+							state.sortDir =
+								key === 'running_campaign_count'
+									? 'desc'
+									: 'asc';
+						}
+
+						applyFilters();
+					});
+				});
+			}
+
+			function bindControls() {
+				[els.q, els.shopFilter, els.typeFilter, els.minRunning].forEach(
+					(el) => {
+						el.addEventListener('input', applyFilters);
+						el.addEventListener('change', applyFilters);
+					}
+				);
+
+				els.uploadBtn.addEventListener('click', () =>
+					els.fileInput.click()
+				);
+
+				els.fileInput.addEventListener('change', (event) => {
+					const file = event.target.files[0];
+					if (!file) return;
+
+					const reader = new FileReader();
+					reader.onload = () =>
+						loadFromText(reader.result, file.name);
+					reader.readAsText(file, 'utf-8');
+				});
+
+				els.loadDefaultBtn.addEventListener('click', () =>
+					loadDefaultFile()
+				);
+
+				window.addEventListener('dragover', (event) =>
+					event.preventDefault()
+				);
+				window.addEventListener('drop', (event) => {
+					event.preventDefault();
+					const file =
+						event.dataTransfer.files && event.dataTransfer.files[0];
+					if (!file || !file.name.toLowerCase().endsWith('.json'))
+						return;
+
+					const reader = new FileReader();
+					reader.onload = () =>
+						loadFromText(reader.result, file.name);
+					reader.readAsText(file, 'utf-8');
+				});
+			}
+
+			function prepareData(raw) {
+				if (!raw || !Array.isArray(raw.details)) {
+					throw new Error('Khong tim thay mang details trong JSON');
+				}
+
+				state.shopNames = raw.shop_names || {};
+
+				state.rows = raw.details.map((r) => ({
+					shop_id: r.shop_id,
+					item_id: r.item_id,
+					item_name: r.item_name,
+					model_sku_sample: r.model_sku_sample,
+					running_campaign_count: Number(
+						r.running_campaign_count || 0
+					),
+					campaigns: Array.isArray(r.campaigns) ? r.campaigns : [],
+				}));
+
+				fillSelect(
+					els.shopFilter,
+					getAllShops(state.rows),
+					'Tat ca shop',
+					(shopId) => getShopDisplay(shopId)
+				);
+				fillSelect(
+					els.typeFilter,
+					getAllCampaignTypes(state.rows),
+					'Tat ca loai'
+				);
+
+				state.sortKey = 'running_campaign_count';
+				state.sortDir = 'desc';
+				els.tableWrap.classList.remove('hidden');
+				applyFilters();
+			}
+
+			function loadFromText(text, sourceName) {
+				try {
+					const parsed = JSON.parse(String(text || ''));
+					prepareData(parsed);
+					setStatus('Da tai du lieu tu: ' + sourceName);
+				} catch (error) {
+					setStatus('Loi doc JSON: ' + error.message);
+				}
+			}
+
+			async function loadDefaultFile() {
+				setStatus('Dang tai camps.json...');
+				try {
+					const response = await fetch('camps.json', {
+						cache: 'no-store',
+					});
+					if (!response.ok) {
+						throw new Error('Khong mo duoc camps.json');
+					}
+
+					const text = await response.text();
+					loadFromText(text, 'camps.json');
+				} catch (error) {
+					setStatus('Khong the tai file mac dinh: ' + error.message);
+				}
+			}
+
+			setupSortHeaders();
+			bindControls();
+			loadDefaultFile();
+		</script>
+	</body>
 </html>

@@ -1,0 +1,1576 @@
+{
+  "summary": {
+    "overlap_item_pairs": 68,
+    "shops_with_overlap": 2
+  },
+  "shop_names": {
+    "895467518": "Ngon.Store",
+    "1760524598": "GenZ.Food"
+  },
+  "details": [
+    {
+      "shop_id": 895467518,
+      "item_id": 24439567786,
+      "item_name": "Mứt cóc ngào đường - Mứt cóc sấy dẻo - Mứt Cóc Chanh Muối Đường - Ngọt Cay NGON STORE 500G",
+      "model_sku_sample": "TP00157_250",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 177770575,
+          "campaign_name": "Mứt cóc ngào đường - Mứt cóc sấy dẻo - Mứt Cóc Chanh Muối Đường - Ngọt Cay NGON STORE 500G [3]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 24943405163,
+      "item_name": "✅ LOẠI 1 - Cá Cơm Sấy Giòn Nha Trang - Đặc Sản Biển Giòn Tan, Snack Hải Sản - Đồ Ăn Vặt NGONSTORE",
+      "model_sku_sample": "TP00102_250",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 185604781,
+          "campaign_name": "✅ LOẠI 1 - Cá Cơm Sấy Giòn Nha Trang - Đặc Sản Biển Giòn Tan, Snack Hải Sản - Đồ Ăn Vặt NGONSTORE [13]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 25484242355,
+      "item_name": "【100% Bò】 Khô Bò Que Xé Sợi Thượng Hạng - Khô Bò Sợi Mềm - Khô Bò Xé Mềm - Khô Bò Cay - Đồ Ăn Vặt",
+      "model_sku_sample": "TP00009_300",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 178500365,
+          "campaign_name": "【100% Bò】 Khô Bò Que Xé Sợi Thượng Hạng - Khô Bò Sợi Mềm - Khô Bò Xé Mềm - Khô Bò Cay - Đồ Ăn Vặt [26]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 26061007331,
+      "item_name": "〖ĐẶC SẢN〗Xoài Sấy Dẻo Ít Đường - Trái Cây Sấy Dẻo - HEALTHY - Xoài Sấy Nguyên Miếng - Đồ Ăn Vặt",
+      "model_sku_sample": "TP00013_1000",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 175403002,
+          "campaign_name": "〖ĐẶC SẢN〗Xoài Sấy Dẻo Ít Đường - Trái Cây Sấy Dẻo - HEALTHY - Xoài Sấy Nguyên Miếng - Đồ Ăn Vặt [17]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 26062501825,
+      "item_name": "《LOẠI 1》Chuối Sấy Dẻo Nguyên Trái - Chuối Sấy Ngọt Dẻo Hàng Loại 1 - Trái Cây Sấy Dẻo - Đồ Ăn Vặt",
+      "model_sku_sample": "TP00039_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 186572351,
+          "campaign_name": "《LOẠI 1》Chuối Sấy Dẻo Nguyên Trái - Chuối Sấy Ngọt Dẻo Hàng Loại 1 - Trái Cây Sấy Dẻo - Đồ Ăn Vặt [12]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 26062655871,
+      "item_name": "《HÀNG CHUẨN》Bánh Quy Cá - Bánh Quy Tuổi Thơ - Snack Bánh Cá - Đồ Ăn Vặt NGON STORE",
+      "model_sku_sample": "TP00051_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 169653326,
+          "campaign_name": "《HÀNG CHUẨN》Bánh Quy Cá - Bánh Quy Tuổi Thơ - Snack Bánh Cá - Đồ Ăn Vặt NGON STORE [4]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        },
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 26454206131,
+      "item_name": "【SIÊU NGON】Khô Gà Lá Chanh Loại 1 Không Bột - Khô Gà Giòn Cay - Đồ Ăn Vặt Ngon Store",
+      "model_sku_sample": "TP00008_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 186572347,
+          "campaign_name": "【SIÊU NGON】Khô Gà Lá Chanh Loại 1 Không Bột - Khô Gà Giòn Cay - Đồ Ăn Vặt Ngon Store [32]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 26460434070,
+      "item_name": "【HÀNG CHUẨN】Bánh Gấu Thiên Hồng 1KG - Hương Vị Tuổi Thơ - Bánh Gấu Nhân Kem - Đồ Ăn Vặt NGON STORE",
+      "model_sku_sample": "TP00003_300",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 148617198,
+          "campaign_name": "【HÀNG CHUẨN】Bánh Gấu Thiên Hồng 1KG - Hương Vị Tuổi Thơ - Bánh Gấu Nhân Kem - Đồ Ăn Vặt NGON STORE [6]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 10000000
+        },
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 26465842658,
+      "item_name": "【ĐẶC SẢN】1KG Khoai Lang Vàng Mix Khoai Lang Tím Sấy Mật Ong - Khoai Lang Sấy Giòn - NGON STORE",
+      "model_sku_sample": "TP00137_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 164820716,
+          "campaign_name": "【ĐẶC SẢN】1KG Khoai Lang Vàng Mix Khoai Lang Tím Sấy Mật Ong - Khoai Lang Sấy Giòn - NGON STORE [21]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 200000
+        },
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 26488658769,
+      "item_name": "🌟LOẠI 1🌟 Đậu Phộng Rang Muối - Lạc Rang Muối - Đậu Phộng Tẩm Vị - Đồ Ăn Vặt NGONSTORE",
+      "model_sku_sample": "TP00217_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 178913935,
+          "campaign_name": "🌟LOẠI 1🌟 Đậu Phộng Rang Muối - Lạc Rang Muối - Đậu Phộng Tẩm Vị - Đồ Ăn Vặt NGONSTORE [4]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 26503679912,
+      "item_name": "💌CỰC NGON💌 Snack Sò Mắm Hành Giòn Giòn Cay Cay - Đồ Ăn Vặt NGON STORE - Hương Vị Tuổi Thơ",
+      "model_sku_sample": "TP00052_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 169673838,
+          "campaign_name": "💌CỰC NGON💌 Snack Sò Mắm Hành Giòn Giòn Cay Cay - Đồ Ăn Vặt NGON STORE - Hương Vị Tuổi Thơ [9]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        },
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 27331177815,
+      "item_name": null,
+      "model_sku_sample": null,
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 167190434,
+          "campaign_name": "🍋 Chanh Leo Sấy Thăng Hoa 🍋 - Chanh Dây Sấy – Snack Dinh Dưỡng, Ăn Vặt , Pha Trà Giảm Cân NGONSTORE [11]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        },
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 27339539390,
+      "item_name": "(DATE MỚI) ◾️CƠM CHÁY BỂ CHÀ BÔNG◾️ 500G - Cơm Cháy Chà Bông Miếng Bể - Giòn Rụm - Chuẩn Vị Đậm Đà",
+      "model_sku_sample": "TP00240_250",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 171394095,
+          "campaign_name": "(DATE MỚI) ◾️CƠM CHÁY BỂ CHÀ BÔNG◾️ 500G - Cơm Cháy Chà Bông Miếng Bể - Giòn Rụm - Chuẩn Vị Đậm Đà [3]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        },
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 27560446617,
+      "item_name": "【ĐẶC SẢN 】 Khoai Lang Tím Sấy Mật Ong - Khoai Lang Tím Sấy Giòn - Khoai Sấy Giòn - Khoai Tím Sấy",
+      "model_sku_sample": "TP00007_1000",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 178500374,
+          "campaign_name": "【ĐẶC SẢN 】 Khoai Lang Tím Sấy Mật Ong - Khoai Lang Tím Sấy Giòn - Khoai Sấy Giòn - Khoai Tím Sấy [20]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 27738671402,
+      "item_name": "🌟HÀNG CHUẨN🌟 500G Bánh Gấu Mix 3 Vị - Bánh Gấu Nhân Kem Liên Hưng - Bánh Gấu Kem - Ăn Vặt Tuổi Thơ",
+      "model_sku_sample": "TP00219_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 167749527,
+          "campaign_name": "🌟HÀNG CHUẨN🌟 500G Bánh Gấu Mix 3 Vị - Bánh Gấu Nhân Kem Liên Hưng - Bánh Gấu Kem - Ăn Vặt Tuổi Thơ [2]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        },
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 27916582911,
+      "item_name": "《SIÊU PHẨM》Đậu Hà Lan Cháy Tỏi Ớt Loại 1 - Đậu Hà Lan Tẩm Vị - Snack Đồ Ăn Vặt Tuổi Thơ - NGON STORE",
+      "model_sku_sample": "TP00062_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 178913932,
+          "campaign_name": "《SIÊU PHẨM》Đậu Hà Lan Cháy Tỏi Ớt Loại 1 - Đậu Hà Lan Tẩm Vị - Snack Đồ Ăn Vặt Tuổi Thơ - NGON STORE [13]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 28029609273,
+      "item_name": "Bánh Nướng Nhân Táo Đỏ Hạt Óc Chó - Bánh Ăn Kiêng - Bánh Táo Không Đường - Đồ Ăn Vặt NGONSTORE",
+      "model_sku_sample": "TP00192_250",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 167770312,
+          "campaign_name": "Bánh Nướng Nhân Táo Đỏ Hạt Óc Chó - Bánh Ăn Kiêng - Bánh Táo Không Đường - Đồ Ăn Vặt NGONSTORE [15]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        },
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 28427264761,
+      "item_name": "(HÀNG CHUẨN) Kẹo CAFE Sữa Capuchino 3D Kẹo Cà Phê Sữa Đậm Đà Siêu Ngon - Kẹo Coffee NGON STORE 500G",
+      "model_sku_sample": "TP00171_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 169863289,
+          "campaign_name": "(HÀNG CHUẨN) Kẹo CAFE Sữa Capuchino 3D Kẹo Cà Phê Sữa Đậm Đà Siêu Ngon - Kẹo Coffee NGON STORE 500G [23]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        },
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 28454860339,
+      "item_name": "《ĐẶC SẢN》 Xoài Sấy Muối Ớt, Dẻo Dẻo Ngọt Ngọt Cay Cay - Xoài Sấy Dẻo Muối Ớt - Trái Cây Sấy Dẻo",
+      "model_sku_sample": "TP00014_250",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 175403021,
+          "campaign_name": "《ĐẶC SẢN》 Xoài Sấy Muối Ớt, Dẻo Dẻo Ngọt Ngọt Cay Cay - Xoài Sấy Dẻo Muối Ớt - Trái Cây Sấy Dẻo [29]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 28707633630,
+      "item_name": "(HÀNG XỊN) Kẹo Dừa Giòn Sakura - Thơm Ngon Béo Ngậy - Ăn Vặt Ngon Quà Tặng Tết NGON STORE",
+      "model_sku_sample": "TP00029_250",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 178500370,
+          "campaign_name": "(HÀNG XỊN) Kẹo Dừa Giòn Sakura - Thơm Ngon Béo Ngậy - Ăn Vặt Ngon Quà Tặng Tết NGON STORE [4]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 28829530977,
+      "item_name": "💌 ĐẶC SẢN 💌 Mứt Mix Dâu Tây - Dâu Tằm - Me Cay Đặc Sản Đà Lạt Chua Ngọt - ĐỒ ĂN VẶT NGONSTORE",
+      "model_sku_sample": "TP00191_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 169863297,
+          "campaign_name": "💌 ĐẶC SẢN 💌 Mứt Mix Dâu Tây - Dâu Tằm - Me Cay Đặc Sản Đà Lạt Chua Ngọt - ĐỒ ĂN VẶT NGONSTORE [15]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 110000
+        },
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 29211959577,
+      "item_name": "《HÀNG CHUẨN》Bắp Sấy Khô Bò Lá Chanh - Bắp Khô Bò - Bắp Sấy Mix Khô Bò - Đồ Ăn Vặt NGONSTORE",
+      "model_sku_sample": "TP00058_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 186572350,
+          "campaign_name": "《HÀNG CHUẨN》Bắp Sấy Khô Bò Lá Chanh - Bắp Khô Bò - Bắp Sấy Mix Khô Bò - Đồ Ăn Vặt NGONSTORE [21]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 29410911671,
+      "item_name": "《TUỔI THƠ》Snack Bim Bim Que Đậu Hà Lan - Snack Bim Que - Đồ Ăn Vặt Snack Ngon Store",
+      "model_sku_sample": "TP00018_350",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 171162137,
+          "campaign_name": "《TUỔI THƠ》Snack Bim Bim Que Đậu Hà Lan - Snack Bim Que - Đồ Ăn Vặt Snack Ngon Store [44]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        },
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 29427023680,
+      "item_name": "《ĐẶC SẢN》Khoai Lang Mật Sấy Dẻo Không Đường Hút Chân Không - Khoai Sấy Dẻo - Đồ Ăn Vặt NGONSTORE",
+      "model_sku_sample": "TP00169_250",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 186572348,
+          "campaign_name": "《ĐẶC SẢN》Khoai Lang Mật Sấy Dẻo Không Đường Hút Chân Không - Khoai Sấy Dẻo - Đồ Ăn Vặt NGONSTORE [24]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 29604613449,
+      "item_name": "《HÀNG CHUẨN》Bánh Quy Đũa Bơ Sữa - Bánh Que Đũa - Bánh Đũa Mặn - Hương Vị Tuổi Thơ - Ăn Vặt NGONSTORE",
+      "model_sku_sample": "TP00074_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 165044199,
+          "campaign_name": "《HÀNG CHUẨN》Bánh Quy Đũa Bơ Sữa - Bánh Que Đũa - Bánh Đũa Mặn - Hương Vị Tuổi Thơ - Ăn Vặt NGONSTORE [22]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        },
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 29725937065,
+      "item_name": "🔥NGON CAY🔥 Khô Bò Đỏ Xé Sợi - Khô Bò Xé Cay 500G - Đồ Ăn Vặt Ngon Store - Khô Bò mềm",
+      "model_sku_sample": "TP00164_1000",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 169863286,
+          "campaign_name": "🔥NGON CAY🔥 Khô Bò Đỏ Xé Sợi - Khô Bò Xé Cay 500G - Đồ Ăn Vặt Ngon Store - Khô Bò mềm [9]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        },
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 40212533098,
+      "item_name": "ĐẶC SẢN Chuối Xiêm Ép Dẻo - Phơi Khô Tự Nhiên - Chuối Ép Dẻo Nhà Làm Hút Chân Không",
+      "model_sku_sample": "TP00243_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 175403011,
+          "campaign_name": "ĐẶC SẢN Chuối Xiêm Ép Dẻo - Phơi Khô Tự Nhiên - Chuối Ép Dẻo Nhà Làm Hút Chân Không [2]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 41410423558,
+      "item_name": "🍭ĐẶC BIỆT🍭 1KG Ô Mai Giun Thái Lan - Giòn Cay Chua Ngọt - Ô Mai Dây Ăn Vặt Tuổi Thơ NGONSTORE",
+      "model_sku_sample": "TP00227_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 175403015,
+          "campaign_name": "🍭ĐẶC BIỆT🍭 1KG Ô Mai Giun Thái Lan - Giòn Cay Chua Ngọt - Ô Mai Dây Ăn Vặt Tuổi Thơ NGONSTORE [4]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 41811008882,
+      "item_name": "Bánh Tai Heo Nhí Mix 3 Vị 1KG - Giòn Rụm Thơm Ngon - Chuẩn Vị Tuổi Thơ",
+      "model_sku_sample": "TP00230_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 185604782,
+          "campaign_name": "Bánh Tai Heo Nhí Mix 3 Vị 1KG - Giòn Rụm Thơm Ngon - Chuẩn Vị Tuổi Thơ [3]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 41819586419,
+      "item_name": "Đậu Nành Xanh Rang Muối Ăn Liền 500G - Thơm Bùi Tự Nhiên - Hạt Dinh Dưỡng Ăn Vặt Lành Mạnh",
+      "model_sku_sample": "TP00251_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 175403012,
+          "campaign_name": "Đậu Nành Xanh Rang Muối Ăn Liền 500G - Thơm Bùi Tự Nhiên - Hạt Dinh Dưỡng Ăn Vặt Lành Mạnh [3]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 42720554200,
+      "item_name": "(GIÒN RỤM) Bim Tăm Phô Mai Cay - Cay Cay Đậm Vị Giòn Rụm - Snack Bim Bim Phô Mai Cay",
+      "model_sku_sample": "TP00258_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 178913930,
+          "campaign_name": "(GIÒN RỤM) Bim Tăm Phô Mai Cay - Cay Cay Đậm Vị Giòn Rụm - Snack Bim Bim Phô Mai Cay",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 42772767073,
+      "item_name": "(DATE MỚI) Khoai Lang Vàng Cọng Sấy Giòn - Giòn Ngon Thơm Bùi - Ăn Vặt Dinh Dưỡng -  Khoai Lang Que",
+      "model_sku_sample": "TP00263_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 186572349,
+          "campaign_name": "(DATE MỚI) Khoai Lang Vàng Cọng Sấy Giòn - Giòn Ngon Thơm Bùi - Ăn Vặt Dinh Dưỡng -  Khoai Lang Que [2]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 42821565145,
+      "item_name": "(HÀNG XỊN) Hạt Điều Tỏi Ớt - Thơm Bùi Đậm Đà Giòn Rụm - Đặc Sản Hạt Điều Rang",
+      "model_sku_sample": "TP00097_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 178913928,
+          "campaign_name": "(HÀNG XỊN) Hạt Điều Tỏi Ớt - Thơm Bùi Đậm Đà Giòn Rụm - Đặc Sản Hạt Điều Rang",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 42871527525,
+      "item_name": "(HÀNG XỊN) Da Heo Sấy Tỏi Muối Ớt Siêu Ngon - Giòn Rụm Đậm Đà - DATE MỚI - Da Heo Muối Ớt",
+      "model_sku_sample": "TP00259_400",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 178913936,
+          "campaign_name": "(HÀNG XỊN) Da Heo Sấy Tỏi Muối Ớt Siêu Ngon - Giòn Rụm Đậm Đà - DATE MỚI - Da Heo Muối Ớt",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 42961560710,
+      "item_name": "1KG Kẹo Chuối Mè Gừng Đậu Phộng - Dẻo Thơm Đặc Biệt Thơm Ngon - Ăn Vặt Lành Mạnh",
+      "model_sku_sample": "TP00237_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 184450319,
+          "campaign_name": "1KG Kẹo Chuối Mè Gừng Đậu Phộng - Dẻo Thơm Đặc Biệt Thơm Ngon - Ăn Vặt Lành Mạnh [2]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 200000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 43152968820,
+      "item_name": "Mứt Trần Bì Cam Thảo Loại 1 - Mứt Vỏ Cam Vỏ Quýt Sấy Khô - Trần Bì Sấy Khô - Đồ Ăn Vặt NGON STORE",
+      "model_sku_sample": "TP00210_250",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 178913931,
+          "campaign_name": "Mứt Trần Bì Cam Thảo Loại 1 - Mứt Vỏ Cam Vỏ Quýt Sấy Khô - Trần Bì Sấy Khô - Đồ Ăn Vặt NGON STORE [9]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 43210706641,
+      "item_name": "⭐LOẠI 1⭐ Đậu Hà Lan Muối 1KG - Giòn Ngon Bùi Thơm - Đậu Hà Lan Rang Muối NGONSTORE",
+      "model_sku_sample": "TP00229_1000",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 178500373,
+          "campaign_name": "⭐LOẠI 1⭐ Đậu Hà Lan Muối 1KG - Giòn Ngon Bùi Thơm - Đậu Hà Lan Rang Muối NGONSTORE [5]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 43658927265,
+      "item_name": "🌽GIÒN RỤM🌽 1KG Bắp Sấy Mắm Ớt Tẩm Vị - Mặn Ngọt Đậm Đà - Bắp Rang Giòn Snack Ăn Vặt NGONSTORE",
+      "model_sku_sample": "TP00222_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 169863296,
+          "campaign_name": "🌽GIÒN RỤM🌽 1KG Bắp Sấy Mắm Ớt Tẩm Vị - Mặn Ngọt Đậm Đà - Bắp Rang Giòn Snack Ăn Vặt NGONSTORE [2]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        },
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 44315617545,
+      "item_name": "(LOẠI 1) Đậu Hà Lan Wasabi 500G - Giòn Rụm - Thơm Cay Nồng Bùi Chuẩn Vị - Snack Ăn Vặt Ăn Chay",
+      "model_sku_sample": "TP00244_1000",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 175403027,
+          "campaign_name": "(LOẠI 1) Đậu Hà Lan Wasabi 500G - Giòn Rụm - Thơm Cay Nồng Bùi Chuẩn Vị - Snack Ăn Vặt Ăn Chay [3]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 45202457890,
+      "item_name": "(DATE MỚI) Kẹo Socola Trứng Khủng Long - Ngọt Dịu Thơm Ngon - Kẹo Trứng Nhân Socola Tuổi Thơ",
+      "model_sku_sample": "TP00279_670",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 178500367,
+          "campaign_name": "(DATE MỚI) Kẹo Socola Trứng Khủng Long - Ngọt Dịu Thơm Ngon - Kẹo Trứng Nhân Socola Tuổi Thơ [2]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 45353169341,
+      "item_name": "(HAND MADE) Kẹo Gừng Phấn - Kẹo Da Trâu Đặc Sản Bến Tre - Dẻo Thơm Cay Nồng Loại Đặc Biệt Nhà Làm",
+      "model_sku_sample": "TP00286_250",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 178883537,
+          "campaign_name": "(HAND MADE) Kẹo Gừng Phấn - Kẹo Da Trâu Đặc Sản Bến Tre - Dẻo Thơm Cay Nồng Loại Đặc Biệt Nhà Làm",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 46002845410,
+      "item_name": "Kẹo Dẻo Banana Tuổi Thơ - Kẹo Dẻo Hình Chuối Nguyên Trái - Thơm Ngon Tiện Lợi",
+      "model_sku_sample": "TP00285_200",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 178500362,
+          "campaign_name": "Kẹo Dẻo Banana Tuổi Thơ - Kẹo Dẻo Hình Chuối Nguyên Trái - Thơm Ngon Tiện Lợi",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 47201537883,
+      "item_name": null,
+      "model_sku_sample": null,
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 175403001,
+          "campaign_name": "Kẹo Socola Nhộng Nhiều Màu - Kẹo Socola Sỏi Hình Nhộng - Chocolate Nhộng Tuổi Thơ",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 50302625785,
+      "item_name": "[CHUA NHIỀU] Me Xóc Ớt Chua Cay - Me Chua Sốc Đường Muối Ớt Thịt Dày Siêu Ngon",
+      "model_sku_sample": "TP00284_250",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 177770579,
+          "campaign_name": "[CHUA NHIỀU] Me Xóc Ớt Chua Cay - Me Chua Sốc Đường Muối Ớt Thịt Dày Siêu Ngon",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 51401020531,
+      "item_name": "(DATE MỚI) Mứt Mãng Cầu Quấn Viên - Sên Đường Chua Ngọt - Mứt Mãng Cầu Quấn Giấy Kiếng",
+      "model_sku_sample": "TP00272_250",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 185604783,
+          "campaign_name": "(DATE MỚI) Mứt Mãng Cầu Quấn Viên - Sên Đường Chua Ngọt - Mứt Mãng Cầu Quấn Giấy Kiếng [2]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 53252211625,
+      "item_name": "(DATE MỚI) Mứt Gừng - Lát Mỏng Cay Nồng Thơm Ngon Chuẩn Vị - Mứt Tết Đặc Sản NGONSTORE",
+      "model_sku_sample": "TP00276_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 178500361,
+          "campaign_name": "(DATE MỚI) Mứt Gừng - Lát Mỏng Cay Nồng Thơm Ngon Chuẩn Vị - Mứt Tết Đặc Sản NGONSTORE",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 55301023270,
+      "item_name": null,
+      "model_sku_sample": null,
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 178500364,
+          "campaign_name": "Ô Mai Sấu Giòn - Chua Ngọt Mặn Cay Hấp Dẫn - Đặc Sản Hà Nội - Ô Mai Xí Muội Chua Cay [2]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 56102503513,
+      "item_name": null,
+      "model_sku_sample": null,
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 177770574,
+          "campaign_name": "[LOẠI 1] Kiwi Vàng Sấy Dẻo - Trái Cây Sấy Cao Cấp - Chua Ngọt Thơm Ngon",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 895467518,
+      "item_id": 56300844199,
+      "item_name": "(SIÊU NGON) Me Dốt Muối Ớt Đỏ - Chua Cay Hấp Dẫn - Cơm Dày Thơm Nồng - Me Dốt Rim Muối Ớt Đỏ",
+      "model_sku_sample": "TP00271_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 172550235,
+          "campaign_name": "Giải Pháp Tự Động Chọn Sản Phẩm",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 5000000
+        },
+        {
+          "campaign_id": 184489280,
+          "campaign_name": "(SIÊU NGON) Me Dốt Muối Ớt Đỏ - Chua Cay Hấp Dẫn - Cơm Dày Thơm Nồng - Me Dốt Rim Muối Ớt Đỏ [2]",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 1760524598,
+      "item_id": 27894313303,
+      "item_name": "[HÀNG TUYỂN] Kẹo Mè Xửng Dẻo Đặc Biệt - Vị Truyền Thống Ít Ngọt, Mềm Mịn Thơm Hương Mè Rang",
+      "model_sku_sample": "TP00268_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 185182073,
+          "campaign_name": "Chiến dịch Tự Động Chọn Sản phẩm (cấp độ Shop)",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 100000
+        },
+        {
+          "campaign_id": 186629688,
+          "campaign_name": "[HÀNG TUYỂN] Kẹo Mè Xửng Dẻo Đặc Biệt - Vị Truyền Thống Ít Ngọt, Mềm Mịn Thơm Hương Mè Rang",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 1760524598,
+      "item_id": 29844301871,
+      "item_name": "[KHÔNG HẠT] Me Rim Chua Ngọt Nguyên Trái Không Hạt – Thấm Đường Thanh Dịu – Me Sấy Dẻo",
+      "model_sku_sample": "TP00270_250",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 185182073,
+          "campaign_name": "Chiến dịch Tự Động Chọn Sản phẩm (cấp độ Shop)",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 100000
+        },
+        {
+          "campaign_id": 186629694,
+          "campaign_name": "[KHÔNG HẠT] Me Rim Chua Ngọt Nguyên Trái Không Hạt – Thấm Đường Thanh Dịu – Me Sấy Dẻo",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 1760524598,
+      "item_id": 41678986607,
+      "item_name": "[HÀNG TUYỂN] Đậu Phộng Rang Muối - Giòn Rụm, Thơm Béo, Vị Mặn Vừa Ăn - Lạc Rang Muối",
+      "model_sku_sample": "TP00217_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 185182073,
+          "campaign_name": "Chiến dịch Tự Động Chọn Sản phẩm (cấp độ Shop)",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 100000
+        },
+        {
+          "campaign_id": 186629678,
+          "campaign_name": "[HÀNG TUYỂN] Đậu Phộng Rang Muối - Giòn Rụm, Thơm Béo, Vị Mặn Vừa Ăn - Lạc Rang Muối",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 1760524598,
+      "item_id": 42278974156,
+      "item_name": null,
+      "model_sku_sample": null,
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 185182073,
+          "campaign_name": "Chiến dịch Tự Động Chọn Sản phẩm (cấp độ Shop)",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 100000
+        },
+        {
+          "campaign_id": 186629684,
+          "campaign_name": "[LOẠI 1] Kẹo Dẻo Đà Lạt Vị Trái Cây - Kẹo Trái Cây Thập Cẩm - Dẻo Mềm Thơm Ngon - Đặc Sản Đà Lạt",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 1760524598,
+      "item_id": 43328987247,
+      "item_name": "[CHẤT LƯỢNG] Me Dốt Muối Ớt Đỏ – Cơm Dày Thơm Nồng, Rim Thấm Đậm Đà – Me Dốt Tẩm Vị",
+      "model_sku_sample": "TP00271_250",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 185182073,
+          "campaign_name": "Chiến dịch Tự Động Chọn Sản phẩm (cấp độ Shop)",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 100000
+        },
+        {
+          "campaign_id": 186629695,
+          "campaign_name": "[CHẤT LƯỢNG] Me Dốt Muối Ớt Đỏ – Cơm Dày Thơm Nồng, Rim Thấm Đậm Đà – Me Dốt Tẩm Vị",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 1760524598,
+      "item_id": 47806595869,
+      "item_name": "[CHÍNH HÃNG] Bánh Gấu Nhân Kem Thiên Hồng - Vỏ Giòn Nhân Thơm Ngọt Dịu - Bánh Tuổi Thơ",
+      "model_sku_sample": "TP00003_300",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 185182073,
+          "campaign_name": "Chiến dịch Tự Động Chọn Sản phẩm (cấp độ Shop)",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 100000
+        },
+        {
+          "campaign_id": 186629685,
+          "campaign_name": "[CHÍNH HÃNG] Bánh Gấu Nhân Kem Thiên Hồng - Vỏ Giòn Nhân Thơm Ngọt Dịu - Bánh Tuổi Thơ",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 1760524598,
+      "item_id": 54806688212,
+      "item_name": "[SIÊU NGON] Khô Bò Vụn Nhỏ Loại Đặc Biệt - Bò Khô Vụn Nhí Ăn Liền - Khô Mềm Siêu Thơm Siêu Ngon",
+      "model_sku_sample": "TP00214_300",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 185182073,
+          "campaign_name": "Chiến dịch Tự Động Chọn Sản phẩm (cấp độ Shop)",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 100000
+        },
+        {
+          "campaign_id": 186629692,
+          "campaign_name": "[SIÊU NGON] Khô Bò Vụn Nhỏ Loại Đặc Biệt - Bò Khô Vụn Nhí Ăn Liền - Khô Mềm Siêu Thơm Siêu Ngon",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 1760524598,
+      "item_id": 55556647185,
+      "item_name": "[SIÊU PHẨM] Me Rim Muối Ớt Nguyên Trái – Chua Cay Ngọt Hài Hòa – Mứt Me Tẩm Vị Muối Ớt",
+      "model_sku_sample": "TP00256_250",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 185182073,
+          "campaign_name": "Chiến dịch Tự Động Chọn Sản phẩm (cấp độ Shop)",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 100000
+        },
+        {
+          "campaign_id": 186629691,
+          "campaign_name": "[SIÊU PHẨM] Me Rim Muối Ớt Nguyên Trái – Chua Cay Ngọt Hài Hòa – Mứt Me Tẩm Vị Muối Ớt",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 1760524598,
+      "item_id": 56006605590,
+      "item_name": "[DATE MỚI] Kẹo Cafe Sữa Capuchino 3D - Kẹo Mềm Phủ Cà Phê Capuchino - Dẻo Thơm Ngon Đậm Vị Chuẩn Cafe",
+      "model_sku_sample": "TP00171_100",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 185182073,
+          "campaign_name": "Chiến dịch Tự Động Chọn Sản phẩm (cấp độ Shop)",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 100000
+        },
+        {
+          "campaign_id": 186629675,
+          "campaign_name": "[DATE MỚI] Kẹo Cafe Sữa Capuchino 3D - Kẹo Mềm Phủ Cà Phê Capuchino - Dẻo Thơm Ngon Đậm Vị Chuẩn Cafe",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 1760524598,
+      "item_id": 56056643263,
+      "item_name": "✨HOT TREND✨ Ô Mai Xí Muội Đ.À.O Hồng Phấn – Thịt Dẻo Không Hạt – Chua Ngọt Hài Hòa – Hồng Đ.ào Bao Tử",
+      "model_sku_sample": "TP00226_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 185182073,
+          "campaign_name": "Chiến dịch Tự Động Chọn Sản phẩm (cấp độ Shop)",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 100000
+        },
+        {
+          "campaign_id": 186629682,
+          "campaign_name": "✨HOT TREND✨ Ô Mai Xí Muội Đ.À.O Hồng Phấn – Thịt Dẻo Không Hạt – Chua Ngọt Hài Hòa – Hồng Đ.ào Bao Tử",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 1760524598,
+      "item_id": 56806580790,
+      "item_name": "[CHẤT LƯỢNG] Khô Gà Lá Chanh - Khô Gà Xé Dai Mềm Không Vụn - Thơm Ngon Đậm Đà - Càng Ăn Càng Thích",
+      "model_sku_sample": "TP00008_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 185182073,
+          "campaign_name": "Chiến dịch Tự Động Chọn Sản phẩm (cấp độ Shop)",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 100000
+        },
+        {
+          "campaign_id": 186629681,
+          "campaign_name": "[CHẤT LƯỢNG] Khô Gà Lá Chanh - Khô Gà Xé Dai Mềm Không Vụn - Thơm Ngon Đậm Đà - Càng Ăn Càng Thích",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 1760524598,
+      "item_id": 56956856444,
+      "item_name": "[CỰC PHẨM] Da Heo Mắm Hành - Giòn Rụm Tẩm Vị Đậm Đà Vừa Miệng Dễ Ăn - Da Heo Chiên Giòn",
+      "model_sku_sample": "TP00043_400",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 185182073,
+          "campaign_name": "Chiến dịch Tự Động Chọn Sản phẩm (cấp độ Shop)",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 100000
+        },
+        {
+          "campaign_id": 186629679,
+          "campaign_name": "[CỰC PHẨM] Da Heo Mắm Hành - Giòn Rụm Tẩm Vị Đậm Đà Vừa Miệng Dễ Ăn - Da Heo Chiên Giòn",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 1760524598,
+      "item_id": 57056728514,
+      "item_name": "[DATE MỚI] Bánh Đồng T.iền Sữa - Giòn Xốp Nhẹ, Hương Sữa Béo Dịu, Ngọt Thanh, Không Gây Ngấy.",
+      "model_sku_sample": "TP00248_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 185182073,
+          "campaign_name": "Chiến dịch Tự Động Chọn Sản phẩm (cấp độ Shop)",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 100000
+        },
+        {
+          "campaign_id": 186629696,
+          "campaign_name": "[DATE MỚI] Bánh Đồng T.iền Sữa - Giòn Xốp Nhẹ, Hương Sữa Béo Dịu, Ngọt Thanh, Không Gây Ngấy.",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 1760524598,
+      "item_id": 57156686742,
+      "item_name": null,
+      "model_sku_sample": null,
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 185182073,
+          "campaign_name": "Chiến dịch Tự Động Chọn Sản phẩm (cấp độ Shop)",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 100000
+        },
+        {
+          "campaign_id": 186629676,
+          "campaign_name": "[HŨ 500G] Kẹo Socola Nhộng 7 Màu Đa Sắc - Vỏ Giòn Tan Nhân Béo Dịu - Ăn Vặt Tuổi Thơ",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 1760524598,
+      "item_id": 57256624640,
+      "item_name": "[SIÊU NGON] Cá Đù Cháy Tỏi Ớt Mắm Kẹo - Hàng Cao Cấp - Thơm Ngon Đậm Vị - Snack Khô Hải Sản",
+      "model_sku_sample": "TP00231_200",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 185182073,
+          "campaign_name": "Chiến dịch Tự Động Chọn Sản phẩm (cấp độ Shop)",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 100000
+        },
+        {
+          "campaign_id": 186629686,
+          "campaign_name": "[SIÊU NGON] Cá Đù Cháy Tỏi Ớt Mắm Kẹo - Hàng Cao Cấp - Thơm Ngon Đậm Vị - Snack Khô Hải Sản",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 1760524598,
+      "item_id": 57306643158,
+      "item_name": null,
+      "model_sku_sample": null,
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 185182073,
+          "campaign_name": "Chiến dịch Tự Động Chọn Sản phẩm (cấp độ Shop)",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 100000
+        },
+        {
+          "campaign_id": 186629680,
+          "campaign_name": "[ĐẶC SẢN MIỀN TÂY] Kẹo Gừng Phấn Bến Tre – Dẻo Dai Cay Nhẹ Ngọt Thanh – Kẹo Da Trâu Truyền Thống",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 1760524598,
+      "item_id": 57356593384,
+      "item_name": "[LOẠI 1] Đậu Phộng Da Cá Nước Cốt Dừa - Bùi Thơm Giòn Ngon Ăn Liền - Đậu Phộng Sấy Khô Cốt Dừa",
+      "model_sku_sample": "TP00123_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 185182073,
+          "campaign_name": "Chiến dịch Tự Động Chọn Sản phẩm (cấp độ Shop)",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 100000
+        },
+        {
+          "campaign_id": 186629689,
+          "campaign_name": "[LOẠI 1] Đậu Phộng Da Cá Nước Cốt Dừa - Bùi Thơm Giòn Ngon Ăn Liền - Đậu Phộng Sấy Khô Cốt Dừa",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 1760524598,
+      "item_id": 57506635540,
+      "item_name": "[HÀNG MỚI VỀ] Đậu Nành Xanh Rang Muối – Giòn Bùi Tự Nhiên – Snack Lành Mạnh Cho Mỗi Ngày🌱🥜",
+      "model_sku_sample": "TP00251_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 185182073,
+          "campaign_name": "Chiến dịch Tự Động Chọn Sản phẩm (cấp độ Shop)",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 100000
+        },
+        {
+          "campaign_id": 186629677,
+          "campaign_name": "[HÀNG MỚI VỀ] Đậu Nành Xanh Rang Muối – Giòn Bùi Tự Nhiên – Snack Lành Mạnh Cho Mỗi Ngày🌱🥜",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    },
+    {
+      "shop_id": 1760524598,
+      "item_id": 58006646500,
+      "item_name": "[SIÊU PHẨM] Đậu Phộng Da Cá Tỏi Ớt - Thơm Ngon Đậm Vị Cay Dịu - Đậu Phộng Sấy Tẩm Vị",
+      "model_sku_sample": "TP00080_500",
+      "running_campaign_count": 2,
+      "campaigns": [
+        {
+          "campaign_id": 185182073,
+          "campaign_name": "Chiến dịch Tự Động Chọn Sản phẩm (cấp độ Shop)",
+          "status": "ongoing",
+          "type": "product_gms",
+          "daily_budget": 100000
+        },
+        {
+          "campaign_id": 186629683,
+          "campaign_name": "[SIÊU PHẨM] Đậu Phộng Da Cá Tỏi Ớt - Thơm Ngon Đậm Vị Cay Dịu - Đậu Phộng Sấy Tẩm Vị",
+          "status": "ongoing",
+          "type": "product_manual",
+          "daily_budget": 100000
+        }
+      ]
+    }
+  ]
+}
