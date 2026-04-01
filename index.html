@@ -283,6 +283,12 @@
 				max-width: 460px;
 			}
 
+			.campaign-line {
+				display: grid;
+				gap: 5px;
+				margin-bottom: 8px;
+			}
+
 			.chip {
 				border: 1px solid #f5c8b7;
 				background: var(--chip);
@@ -639,6 +645,7 @@
 						row.item_id,
 						row.item_name,
 						row.model_sku_sample,
+						...(row.running_campaign_names || []),
 						...(row.campaigns || []).map((c) => c.campaign_name),
 						...(row.campaigns || []).map((c) => c.type),
 					]
@@ -677,18 +684,29 @@
 				state.filtered.forEach((row) => {
 					const tr = document.createElement('tr');
 
-					const campaigns = (row.campaigns || []).map((c) => {
+					const campaigns = (row.campaigns || []).map((c, idx) => {
+						const fallbackName =
+							c.campaign_name || 'Không có tên campaign';
+						const runningName =
+							Array.isArray(row.running_campaign_names) &&
+							row.running_campaign_names[idx]
+								? row.running_campaign_names[idx]
+								: fallbackName;
 						const label = [
 							c.type || 'chưa xác định',
 							c.status || '-',
 							formatVnd(c.daily_budget),
 						].join(' | ');
+
 						return (
-							'<span class="chip" title="' +
-							String(c.campaign_name || '') +
-							'">' +
+							'<div class="campaign-line">' +
+							'<div class="tiny" style="line-height:1.35;">' +
+							safe(runningName) +
+							'</div>' +
+							'<div class="campaign-bag"><span class="chip">' +
 							label +
-							'</span>'
+							'</span></div>' +
+							'</div>'
 						);
 					});
 
@@ -710,9 +728,9 @@
 						'<td><span class="count">' +
 						formatNumber(row.running_campaign_count) +
 						'</span></td>' +
-						'<td><div class="campaign-bag">' +
+						'<td>' +
 						campaigns.join('') +
-						'</div></td>';
+						'</td>';
 
 					els.tbody.appendChild(tr);
 				});
@@ -796,6 +814,11 @@
 					item_id: r.item_id,
 					item_name: r.item_name,
 					model_sku_sample: r.model_sku_sample,
+					running_campaign_names: Array.isArray(
+						r.running_campaign_names
+					)
+						? r.running_campaign_names
+						: [],
 					running_campaign_count: Number(
 						r.running_campaign_count || 0
 					),
