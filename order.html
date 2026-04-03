@@ -1,0 +1,1105 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Orders Table Viewer</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			:root {
+				--bg: #fffaf5;
+				--panel: rgba(255, 255, 255, 0.9);
+				--panel-strong: rgba(255, 246, 237, 0.98);
+				--ink: #231813;
+				--muted: #7a6459;
+				--line: rgba(130, 87, 61, 0.18);
+				--accent: #ff6b3d;
+				--accent-strong: #e85727;
+				--success: #0f9d6a;
+				--warning: #d97706;
+				--danger: #dc2626;
+				--shadow: 0 18px 44px rgba(127, 78, 44, 0.14);
+				--chip: #ffe9dd;
+			}
+
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				min-height: 100vh;
+				padding: 28px;
+				color: var(--ink);
+				font-family: Inter, sans-serif;
+				background:
+					radial-gradient(
+						circle at 10% 10%,
+						rgba(255, 111, 61, 0.22) 0,
+						transparent 35%
+					),
+					radial-gradient(
+						circle at 90% 12%,
+						rgba(255, 201, 150, 0.5) 0,
+						transparent 30%
+					),
+					radial-gradient(
+						circle at 50% 100%,
+						rgba(255, 180, 120, 0.22) 0,
+						transparent 42%
+					),
+					var(--bg);
+			}
+
+			.wrap {
+				max-width: 1600px;
+				margin: 0 auto;
+				display: grid;
+				gap: 18px;
+			}
+
+			.hero {
+				border: 1px solid var(--line);
+				border-radius: 22px;
+				background: linear-gradient(
+					135deg,
+					rgba(255, 255, 255, 0.94),
+					rgba(255, 240, 231, 0.92)
+				);
+				box-shadow: var(--shadow);
+				padding: 22px;
+				display: grid;
+				gap: 16px;
+			}
+
+			.hero-top {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 14px;
+				flex-wrap: wrap;
+			}
+
+			.brand {
+				display: flex;
+				align-items: center;
+				gap: 12px;
+			}
+
+			.logo {
+				width: 44px;
+				height: 44px;
+				border-radius: 14px;
+				display: grid;
+				place-items: center;
+				color: #fff;
+				font-weight: 800;
+				font-family: 'Space Grotesk', sans-serif;
+				background: linear-gradient(135deg, var(--accent), #ff9059);
+				box-shadow: 0 10px 24px rgba(255, 107, 61, 0.33);
+			}
+
+			h1 {
+				font-family: 'Space Grotesk', sans-serif;
+				font-size: 1.58rem;
+				line-height: 1.1;
+			}
+
+			.sub {
+				color: var(--muted);
+				font-size: 0.95rem;
+				margin-top: 4px;
+			}
+
+			.actions {
+				display: flex;
+				gap: 10px;
+				flex-wrap: wrap;
+			}
+
+			.btn {
+				border: 1px solid transparent;
+				border-radius: 12px;
+				padding: 10px 14px;
+				font-weight: 600;
+				font-family: inherit;
+				cursor: pointer;
+				transition:
+					transform 0.2s ease,
+					background 0.2s ease,
+					border-color 0.2s ease;
+			}
+
+			.btn:hover {
+				transform: translateY(-1px);
+			}
+
+			.btn-main {
+				background: var(--accent);
+				color: white;
+				box-shadow: 0 8px 18px rgba(255, 107, 61, 0.28);
+			}
+
+			.btn-main:hover {
+				background: var(--accent-strong);
+			}
+
+			.btn-soft {
+				background: white;
+				border-color: var(--line);
+				color: var(--ink);
+			}
+
+			.btn-soft:hover {
+				background: #fff5ef;
+			}
+
+			.filters {
+				display: grid;
+				grid-template-columns: 2fr 1fr 1fr 1fr;
+				gap: 10px;
+			}
+
+			.field {
+				display: grid;
+				gap: 6px;
+			}
+
+			.field label {
+				color: var(--muted);
+				font-size: 0.78rem;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 0.04em;
+			}
+
+			.field input,
+			.field select {
+				width: 100%;
+				border: 1px solid var(--line);
+				border-radius: 12px;
+				padding: 10px 12px;
+				background: rgba(255, 255, 255, 0.96);
+				color: var(--ink);
+				outline: none;
+				font: inherit;
+			}
+
+			.field input:focus,
+			.field select:focus {
+				border-color: var(--accent);
+				box-shadow: 0 0 0 3px rgba(255, 107, 61, 0.18);
+			}
+
+			.stats {
+				display: grid;
+				grid-template-columns: repeat(6, minmax(0, 1fr));
+				gap: 10px;
+			}
+
+			.stat {
+				border: 1px solid var(--line);
+				border-radius: 16px;
+				background: var(--panel);
+				box-shadow: var(--shadow);
+				padding: 14px;
+			}
+
+			.stat .k {
+				color: var(--muted);
+				font-size: 0.76rem;
+				text-transform: uppercase;
+				letter-spacing: 0.04em;
+				font-weight: 700;
+			}
+
+			.stat .v {
+				margin-top: 8px;
+				font-family: 'Space Grotesk', sans-serif;
+				font-size: 1.35rem;
+				font-weight: 700;
+			}
+
+			.panel {
+				border: 1px solid var(--line);
+				border-radius: 20px;
+				background: var(--panel);
+				box-shadow: var(--shadow);
+				overflow: hidden;
+			}
+
+			.status {
+				padding: 14px 16px 0;
+				color: var(--muted);
+				font-size: 0.92rem;
+			}
+
+			.table-wrap {
+				overflow: auto;
+				max-height: 72vh;
+			}
+
+			table {
+				width: 100%;
+				min-width: 1800px;
+				border-collapse: collapse;
+				font-size: 0.9rem;
+			}
+
+			th,
+			td {
+				border-bottom: 1px solid rgba(130, 87, 61, 0.12);
+				padding: 12px 14px;
+				vertical-align: top;
+				text-align: left;
+			}
+
+			th {
+				position: sticky;
+				top: 0;
+				z-index: 5;
+				background: #fff0e5;
+				color: #7f5038;
+				font-size: 0.78rem;
+				text-transform: uppercase;
+				letter-spacing: 0.04em;
+				cursor: pointer;
+				user-select: none;
+				white-space: nowrap;
+			}
+
+			tbody tr:hover td {
+				background: rgba(255, 247, 241, 0.95);
+			}
+
+			.shop {
+				font-weight: 700;
+				line-height: 1.35;
+			}
+
+			.tiny {
+				color: var(--muted);
+				font-size: 0.78rem;
+				margin-top: 2px;
+			}
+
+			.order-sn {
+				font-family: 'Space Grotesk', sans-serif;
+				font-weight: 700;
+			}
+
+			.money {
+				font-family: 'Space Grotesk', sans-serif;
+				font-weight: 700;
+				white-space: nowrap;
+			}
+
+			.status-badge,
+			.chip {
+				display: inline-flex;
+				align-items: center;
+				gap: 6px;
+				border-radius: 999px;
+				padding: 5px 10px;
+				font-size: 0.75rem;
+				font-weight: 700;
+				white-space: nowrap;
+			}
+
+			.status-completed,
+			.status-4 {
+				background: rgba(15, 157, 106, 0.1);
+				color: var(--success);
+			}
+
+			.status-cancelled,
+			.status-5 {
+				background: rgba(220, 38, 38, 0.1);
+				color: var(--danger);
+			}
+
+			.status-processing,
+			.status-pending,
+			.status-1,
+			.status-2,
+			.status-3 {
+				background: rgba(217, 119, 6, 0.1);
+				color: var(--warning);
+			}
+
+			.chip {
+				background: var(--chip);
+				color: #8a4427;
+				border: 1px solid rgba(255, 107, 61, 0.22);
+			}
+
+			.item-list {
+				display: grid;
+				gap: 6px;
+				min-width: 260px;
+			}
+
+			.item-row {
+				line-height: 1.35;
+			}
+
+			.detail-btn {
+				border: 1px solid var(--line);
+				background: white;
+				border-radius: 10px;
+				padding: 7px 10px;
+				font-weight: 600;
+				cursor: pointer;
+				color: var(--ink);
+			}
+
+			.detail-btn:hover {
+				background: #fff5ef;
+			}
+
+			.empty {
+				padding: 28px 16px;
+				color: var(--muted);
+				text-align: center;
+			}
+
+			#fileInput {
+				display: none;
+			}
+
+			.hidden {
+				display: none !important;
+			}
+
+			.drawer-backdrop {
+				position: fixed;
+				inset: 0;
+				background: rgba(21, 13, 9, 0.5);
+				display: none;
+				align-items: center;
+				justify-content: center;
+				padding: 18px;
+				z-index: 30;
+			}
+
+			.drawer-backdrop.open {
+				display: flex;
+			}
+
+			.drawer {
+				width: min(1100px, 100%);
+				max-height: 90vh;
+				overflow: auto;
+				border-radius: 18px;
+				background: #fffaf6;
+				border: 1px solid rgba(255, 255, 255, 0.55);
+				box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
+				padding: 18px;
+			}
+
+			.drawer-head {
+				display: flex;
+				justify-content: space-between;
+				gap: 12px;
+				align-items: flex-start;
+				margin-bottom: 14px;
+			}
+
+			.drawer-title {
+				display: grid;
+				gap: 4px;
+			}
+
+			.drawer-title h2 {
+				font-family: 'Space Grotesk', sans-serif;
+				font-size: 1.2rem;
+			}
+
+			.json-box {
+				border: 1px solid var(--line);
+				border-radius: 14px;
+				background: white;
+				padding: 14px;
+				white-space: pre-wrap;
+				word-break: break-word;
+				font-family:
+					'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+				font-size: 0.84rem;
+				line-height: 1.5;
+			}
+
+			@media (max-width: 1200px) {
+				.filters,
+				.stats {
+					grid-template-columns: repeat(2, minmax(0, 1fr));
+				}
+			}
+
+			@media (max-width: 720px) {
+				body {
+					padding: 14px;
+				}
+
+				.filters,
+				.stats {
+					grid-template-columns: 1fr;
+				}
+
+				h1 {
+					font-size: 1.28rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<main class="wrap">
+			<section class="hero">
+				<div class="hero-top">
+					<div class="brand">
+						<div class="logo">OR</div>
+						<div>
+							<h1>ORDERS TABLE VIEWER</h1>
+							<p class="sub">
+								Hiển thị đầy đủ danh sách orders theo từng shop,
+								có tìm kiếm, lọc, sắp xếp và xem chi tiết từng
+								đơn.
+							</p>
+						</div>
+					</div>
+					<div class="actions">
+						<button class="btn btn-main" id="loadDefaultBtn">
+							Tải orders.json
+						</button>
+						<button class="btn btn-soft" id="uploadBtn">
+							Chọn file JSON
+						</button>
+						<input
+							id="fileInput"
+							type="file"
+							accept="application/json,.json"
+						/>
+					</div>
+				</div>
+
+				<div class="filters">
+					<div class="field">
+						<label for="searchInput">Tìm kiếm</label>
+						<input
+							id="searchInput"
+							type="text"
+							placeholder="Mã đơn, shop, tên shop, trạng thái, order_id..."
+						/>
+					</div>
+					<div class="field">
+						<label for="shopFilter">Lọc shop</label>
+						<select id="shopFilter">
+							<option value="all">Tất cả shop</option>
+						</select>
+					</div>
+					<div class="field">
+						<label for="statusFilter">Lọc trạng thái</label>
+						<select id="statusFilter">
+							<option value="all">Tất cả trạng thái</option>
+						</select>
+					</div>
+					<div class="field">
+						<label for="sortSelect">Sắp xếp nhanh</label>
+						<select id="sortSelect">
+							<option value="create_time_desc">
+								Mới nhất trước
+							</option>
+							<option value="create_time_asc">
+								Cũ nhất trước
+							</option>
+							<option value="total_price_desc">
+								Giá trị cao trước
+							</option>
+							<option value="total_price_asc">
+								Giá trị thấp trước
+							</option>
+							<option value="actual_profit_desc">
+								Lợi nhuận cao trước
+							</option>
+							<option value="actual_profit_asc">
+								Lợi nhuận thấp trước
+							</option>
+						</select>
+					</div>
+				</div>
+			</section>
+
+			<section class="stats">
+				<article class="stat">
+					<div class="k">Tổng shops</div>
+					<div class="v" id="sShops">0</div>
+				</article>
+				<article class="stat">
+					<div class="k">Tổng orders</div>
+					<div class="v" id="sOrders">0</div>
+				</article>
+				<article class="stat">
+					<div class="k">Completed</div>
+					<div class="v" id="sCompleted">0</div>
+				</article>
+				<article class="stat">
+					<div class="k">Cancelled</div>
+					<div class="v" id="sCancelled">0</div>
+				</article>
+				<article class="stat">
+					<div class="k">Tổng giá trị</div>
+					<div class="v" id="sRevenue">0</div>
+				</article>
+				<article class="stat">
+					<div class="k">Tổng profit</div>
+					<div class="v" id="sProfit">0</div>
+				</article>
+			</section>
+
+			<section class="panel">
+				<p class="status" id="status">Đang chờ dữ liệu...</p>
+				<div class="table-wrap hidden" id="tableWrap">
+					<table>
+						<thead>
+							<tr>
+								<th data-sort="shop_name">Shop</th>
+								<th data-sort="order_sn">Mã đơn</th>
+								<th data-sort="create_time_iso">Thời gian</th>
+								<th data-sort="status_text">Trạng thái</th>
+								<th data-sort="item_count">Số món</th>
+								<th data-sort="total_price">Tổng giá trị</th>
+								<th data-sort="merchandise_subtotal">
+									Tiền hàng
+								</th>
+								<th data-sort="shipping_subtotal">Phí ship</th>
+								<th data-sort="fees_and_charges">Phí</th>
+								<th data-sort="tax_amount">Thuế</th>
+								<th data-sort="escrow_amount">Escrow</th>
+								<th data-sort="total_fee">Tổng phí</th>
+								<th data-sort="actual_profit">Lợi nhuận</th>
+								<th>Sản phẩm</th>
+								<th>Chi tiết</th>
+							</tr>
+						</thead>
+						<tbody id="tbody"></tbody>
+					</table>
+				</div>
+				<div class="empty" id="emptyState">
+					Chưa có dữ liệu. Hãy tải orders.json để xem bảng.
+				</div>
+			</section>
+		</main>
+
+		<div
+			class="drawer-backdrop"
+			id="drawerBackdrop"
+			role="dialog"
+			aria-modal="true"
+			aria-hidden="true"
+		>
+			<div class="drawer">
+				<div class="drawer-head">
+					<div class="drawer-title">
+						<h2 id="drawerTitle">Chi tiết đơn hàng</h2>
+						<div class="tiny" id="drawerSubtitle"></div>
+					</div>
+					<button class="btn btn-soft" id="closeDrawerBtn">
+						Đóng
+					</button>
+				</div>
+				<div class="json-box" id="drawerContent"></div>
+			</div>
+		</div>
+
+		<script>
+			const state = {
+				rows: [],
+				filtered: [],
+				sortKey: 'create_time_iso',
+				sortDir: 'desc',
+				shopNames: {},
+				selectedOrder: null,
+			};
+
+			const els = {
+				searchInput: document.getElementById('searchInput'),
+				shopFilter: document.getElementById('shopFilter'),
+				statusFilter: document.getElementById('statusFilter'),
+				sortSelect: document.getElementById('sortSelect'),
+				tbody: document.getElementById('tbody'),
+				status: document.getElementById('status'),
+				tableWrap: document.getElementById('tableWrap'),
+				emptyState: document.getElementById('emptyState'),
+				fileInput: document.getElementById('fileInput'),
+				uploadBtn: document.getElementById('uploadBtn'),
+				loadDefaultBtn: document.getElementById('loadDefaultBtn'),
+				sShops: document.getElementById('sShops'),
+				sOrders: document.getElementById('sOrders'),
+				sCompleted: document.getElementById('sCompleted'),
+				sCancelled: document.getElementById('sCancelled'),
+				sRevenue: document.getElementById('sRevenue'),
+				sProfit: document.getElementById('sProfit'),
+				drawerBackdrop: document.getElementById('drawerBackdrop'),
+				drawerTitle: document.getElementById('drawerTitle'),
+				drawerSubtitle: document.getElementById('drawerSubtitle'),
+				drawerContent: document.getElementById('drawerContent'),
+				closeDrawerBtn: document.getElementById('closeDrawerBtn'),
+			};
+
+			function formatNumber(value) {
+				return Number(value || 0).toLocaleString('vi-VN');
+			}
+
+			function formatMoney(value) {
+				return Number(value || 0).toLocaleString('vi-VN') + ' ₫';
+			}
+
+			function normalize(value) {
+				return String(value || '')
+					.toLowerCase()
+					.normalize('NFD')
+					.replace(/[\u0300-\u036f]/g, '');
+			}
+
+			function safe(value, fallback = 'N/A') {
+				return value === null || value === undefined || value === ''
+					? fallback
+					: value;
+			}
+
+			function getShopDisplay(shopId) {
+				const key = String(shopId);
+				return state.shopNames[key] || key;
+			}
+
+			function getStatusClass(statusText, statusCode) {
+				const text = normalize(statusText);
+				if (text.includes('completed')) return 'status-completed';
+				if (text.includes('cancel')) return 'status-cancelled';
+				if (text.includes('pending') || text.includes('processing'))
+					return 'status-processing';
+				if (statusCode === 4) return 'status-completed';
+				if (statusCode === 5) return 'status-cancelled';
+				return 'status-processing';
+			}
+
+			function flattenOrders(raw) {
+				const rows = [];
+				const shops = Array.isArray(raw.shops) ? raw.shops : [];
+				const shopMap = {};
+
+				shops.forEach((shop) => {
+					const shopId = shop.shop_id;
+					const shopName =
+						shop.shop_name ||
+						raw.shop_names?.[String(shopId)] ||
+						'N/A';
+					shopMap[String(shopId)] = shopName;
+
+					(shop.orders || []).forEach((order) => {
+						rows.push({
+							shop_id: shopId,
+							shop_name: shopName,
+							shop_total_orders: shop.total_orders_on_date || 0,
+							order_id: order.order_id,
+							order_sn: order.order_sn,
+							create_time: order.create_time,
+							create_time_iso: order.create_time_iso,
+							status_code: order.status_code,
+							status_text: order.status_text,
+							total_price: order.total_price,
+							merchandise_subtotal: order.merchandise_subtotal,
+							shipping_subtotal: order.shipping_subtotal,
+							fees_and_charges: order.fees_and_charges,
+							tax_amount: order.tax_amount,
+							escrow_amount: order.escrow_amount,
+							total_fee: order.total_fee,
+							actual_profit: order.actual_profit,
+							buyer_user_id: order.buyer_user_id,
+							item_count: order.item_count,
+							items: Array.isArray(order.items)
+								? order.items
+								: [],
+							raw_order_items: Array.isArray(
+								order.raw_order_items
+							)
+								? order.raw_order_items
+								: [],
+							source_meta: shop.meta || null,
+						});
+					});
+				});
+
+				state.shopNames = shopMap;
+				state.rows = rows;
+			}
+
+			function fillSelect(selectEl, values, defaultLabel, getLabel) {
+				selectEl.innerHTML = '';
+				const defaultOption = document.createElement('option');
+				defaultOption.value = 'all';
+				defaultOption.textContent = defaultLabel;
+				selectEl.appendChild(defaultOption);
+
+				values.forEach((value) => {
+					const option = document.createElement('option');
+					option.value = value;
+					option.textContent = getLabel ? getLabel(value) : value;
+					selectEl.appendChild(option);
+				});
+			}
+
+			function populateFilters() {
+				const shopIds = Array.from(
+					new Set(state.rows.map((row) => String(row.shop_id)))
+				).sort((a, b) => Number(a) - Number(b));
+				const statuses = Array.from(
+					new Set(state.rows.map((row) => row.status_text || 'N/A'))
+				).sort((a, b) => a.localeCompare(b, 'vi'));
+
+				fillSelect(els.shopFilter, shopIds, 'Tất cả shop', (shopId) =>
+					getShopDisplay(shopId)
+				);
+				fillSelect(els.statusFilter, statuses, 'Tất cả trạng thái');
+			}
+
+			function setStatus(message) {
+				els.status.textContent = message;
+			}
+
+			function updateStats(data) {
+				const shopCount = new Set(data.map((row) => row.shop_id)).size;
+				const completedCount = data.filter((row) =>
+					normalize(row.status_text).includes('completed')
+				).length;
+				const cancelledCount = data.filter((row) =>
+					normalize(row.status_text).includes('cancel')
+				).length;
+				const totalRevenue = data.reduce(
+					(sum, row) => sum + Number(row.total_price || 0),
+					0
+				);
+				const totalProfit = data.reduce(
+					(sum, row) => sum + Number(row.actual_profit || 0),
+					0
+				);
+
+				els.sShops.textContent = formatNumber(shopCount);
+				els.sOrders.textContent = formatNumber(data.length);
+				els.sCompleted.textContent = formatNumber(completedCount);
+				els.sCancelled.textContent = formatNumber(cancelledCount);
+				els.sRevenue.textContent = formatMoney(totalRevenue);
+				els.sProfit.textContent = formatMoney(totalProfit);
+			}
+
+			function compareRows(a, b, key, dir) {
+				const factor = dir === 'asc' ? 1 : -1;
+				const numericKeys = new Set([
+					'shop_id',
+					'order_id',
+					'create_time',
+					'status_code',
+					'total_price',
+					'merchandise_subtotal',
+					'shipping_subtotal',
+					'fees_and_charges',
+					'tax_amount',
+					'escrow_amount',
+					'total_fee',
+					'actual_profit',
+					'item_count',
+				]);
+
+				const av = a[key];
+				const bv = b[key];
+
+				if (numericKeys.has(key)) {
+					return (Number(av || 0) - Number(bv || 0)) * factor;
+				}
+
+				return (
+					String(av || '').localeCompare(String(bv || ''), 'vi') *
+					factor
+				);
+			}
+
+			function applyFilters() {
+				const term = normalize(els.searchInput.value.trim());
+				const shopValue = els.shopFilter.value;
+				const statusValue = els.statusFilter.value;
+
+				state.filtered = state.rows.filter((row) => {
+					if (
+						shopValue !== 'all' &&
+						String(row.shop_id) !== shopValue
+					)
+						return false;
+					if (
+						statusValue !== 'all' &&
+						String(row.status_text || '') !== statusValue
+					)
+						return false;
+
+					if (!term) return true;
+
+					const searchable = [
+						row.shop_name,
+						row.shop_id,
+						row.order_id,
+						row.order_sn,
+						row.status_text,
+						row.create_time_iso,
+						row.total_price,
+						row.merchandise_subtotal,
+						row.shipping_subtotal,
+						row.fees_and_charges,
+						row.tax_amount,
+						row.escrow_amount,
+						row.total_fee,
+						row.actual_profit,
+						row.item_count,
+						...(row.items || []).map(
+							(item) => item.item_name || ''
+						),
+						...(row.items || []).map(
+							(item) => item.model_name || ''
+						),
+						...(row.items || []).map(
+							(item) => item.model_sku || ''
+						),
+						...(row.raw_order_items || []).map((item) =>
+							JSON.stringify(item)
+						),
+					].join(' ');
+
+					return normalize(searchable).includes(term);
+				});
+
+				state.filtered.sort((a, b) =>
+					compareRows(a, b, state.sortKey, state.sortDir)
+				);
+				renderTable();
+				updateStats(state.filtered);
+				setStatus(
+					'Hiển thị ' +
+						formatNumber(state.filtered.length) +
+						' / ' +
+						formatNumber(state.rows.length) +
+						' dòng'
+				);
+			}
+
+			function itemSummary(row) {
+				if (!row.items.length) return 'Không có dữ liệu items';
+				return row.items
+					.map((item) => {
+						const name =
+							item.item_name ||
+							item.model_name ||
+							'Không có tên item';
+						const qty =
+							item.model_quantity_purchased ?? item.quantity ?? 0;
+						return name + (qty ? ' × ' + qty : '');
+					})
+					.join(' • ');
+			}
+
+			function renderTable() {
+				els.tbody.innerHTML = '';
+
+				if (!state.filtered.length) {
+					els.tbody.innerHTML =
+						'<tr><td colspan="15" class="empty">Không có dữ liệu phù hợp với bộ lọc hiện tại.</td></tr>';
+					return;
+				}
+
+				state.filtered.forEach((row) => {
+					const tr = document.createElement('tr');
+					const statusClass = getStatusClass(
+						row.status_text,
+						row.status_code
+					);
+
+					tr.innerHTML = `
+          <td>
+            <div class="shop">${safe(getShopDisplay(row.shop_id))}</div>
+            <div class="tiny">shop_id: ${safe(row.shop_id)}</div>
+            <div class="tiny">Tổng đơn shop: ${formatNumber(row.shop_total_orders)}</div>
+          </td>
+          <td><div class="order-sn">${safe(row.order_sn)}</div><div class="tiny">order_id: ${safe(row.order_id)}</div></td>
+          <td>
+            <div>${safe(row.create_time_iso)}</div>
+            <div class="tiny">${safe(row.create_time)}</div>
+          </td>
+          <td><span class="status-badge ${statusClass}">${safe(row.status_text)}</span><div class="tiny">status_code: ${safe(row.status_code)}</div></td>
+          <td><span class="chip">${formatNumber(row.item_count)}</span></td>
+          <td class="money">${formatMoney(row.total_price)}</td>
+          <td class="money">${formatMoney(row.merchandise_subtotal)}</td>
+          <td class="money">${formatMoney(row.shipping_subtotal)}</td>
+          <td class="money">${formatMoney(row.fees_and_charges)}</td>
+          <td class="money">${formatMoney(row.tax_amount)}</td>
+          <td class="money">${formatMoney(row.escrow_amount)}</td>
+          <td class="money">${formatMoney(row.total_fee)}</td>
+          <td class="money">${formatMoney(row.actual_profit)}</td>
+          <td>
+            <div class="item-list">
+              <div class="item-row">${itemSummary(row)}</div>
+            </div>
+          </td>
+          <td><button class="detail-btn" data-order-id="${row.order_id}">Xem</button></td>
+        `;
+
+					tr.querySelector('button').addEventListener('click', () =>
+						openDrawer(row)
+					);
+					els.tbody.appendChild(tr);
+				});
+			}
+
+			function openDrawer(row) {
+				state.selectedOrder = row;
+				els.drawerTitle.textContent = `Chi tiết đơn ${row.order_sn}`;
+				els.drawerSubtitle.textContent = `${getShopDisplay(row.shop_id)} | ${safe(row.status_text)} | ${safe(row.create_time_iso)}`;
+				els.drawerContent.textContent = JSON.stringify(row, null, 2);
+				els.drawerBackdrop.classList.add('open');
+				els.drawerBackdrop.setAttribute('aria-hidden', 'false');
+			}
+
+			function closeDrawer() {
+				els.drawerBackdrop.classList.remove('open');
+				els.drawerBackdrop.setAttribute('aria-hidden', 'true');
+				state.selectedOrder = null;
+			}
+
+			function setSortFromQuickSelect() {
+				const mapping = {
+					create_time_desc: ['create_time', 'desc'],
+					create_time_asc: ['create_time', 'asc'],
+					total_price_desc: ['total_price', 'desc'],
+					total_price_asc: ['total_price', 'asc'],
+					actual_profit_desc: ['actual_profit', 'desc'],
+					actual_profit_asc: ['actual_profit', 'asc'],
+				};
+
+				const [key, dir] = mapping[els.sortSelect.value] || [
+					'create_time',
+					'desc',
+				];
+				state.sortKey = key;
+				state.sortDir = dir;
+				applyFilters();
+			}
+
+			function loadFromText(text, sourceName) {
+				try {
+					const parsed = JSON.parse(String(text || ''));
+					if (!parsed || !Array.isArray(parsed.shops)) {
+						throw new Error('Không tìm thấy mảng shops trong JSON');
+					}
+
+					flattenOrders(parsed);
+					populateFilters();
+					els.tableWrap.classList.remove('hidden');
+					els.emptyState.classList.add('hidden');
+					setSortFromQuickSelect();
+					setStatus('Đã tải dữ liệu từ: ' + sourceName);
+				} catch (error) {
+					setStatus('Lỗi đọc JSON: ' + error.message);
+				}
+			}
+
+			async function loadDefaultFile() {
+				setStatus('Đang tải orders.json...');
+				try {
+					const response = await fetch('orders.json', {
+						cache: 'no-store',
+					});
+					if (!response.ok) {
+						throw new Error('Không mở được orders.json');
+					}
+
+					const text = await response.text();
+					loadFromText(text, 'orders.json');
+				} catch (error) {
+					setStatus('Không thể tải file mặc định: ' + error.message);
+				}
+			}
+
+			function bindEvents() {
+				[els.searchInput, els.shopFilter, els.statusFilter].forEach(
+					(el) => {
+						el.addEventListener('input', applyFilters);
+						el.addEventListener('change', applyFilters);
+					}
+				);
+
+				els.sortSelect.addEventListener(
+					'change',
+					setSortFromQuickSelect
+				);
+				els.uploadBtn.addEventListener('click', () =>
+					els.fileInput.click()
+				);
+				els.loadDefaultBtn.addEventListener('click', loadDefaultFile);
+				els.fileInput.addEventListener('change', (event) => {
+					const file = event.target.files[0];
+					if (!file) return;
+
+					const reader = new FileReader();
+					reader.onload = () =>
+						loadFromText(reader.result, file.name);
+					reader.readAsText(file, 'utf-8');
+				});
+
+				window.addEventListener('dragover', (event) =>
+					event.preventDefault()
+				);
+				window.addEventListener('drop', (event) => {
+					event.preventDefault();
+					const file =
+						event.dataTransfer.files && event.dataTransfer.files[0];
+					if (!file || !file.name.toLowerCase().endsWith('.json'))
+						return;
+
+					const reader = new FileReader();
+					reader.onload = () =>
+						loadFromText(reader.result, file.name);
+					reader.readAsText(file, 'utf-8');
+				});
+
+				document.querySelectorAll('th[data-sort]').forEach((th) => {
+					th.addEventListener('click', () => {
+						const key = th.dataset.sort;
+						if (!key) return;
+
+						if (state.sortKey === key) {
+							state.sortDir =
+								state.sortDir === 'asc' ? 'desc' : 'asc';
+						} else {
+							state.sortKey = key;
+							state.sortDir = 'desc';
+						}
+
+						applyFilters();
+					});
+				});
+
+				els.drawerBackdrop.addEventListener('click', (event) => {
+					if (event.target === els.drawerBackdrop) closeDrawer();
+				});
+				els.closeDrawerBtn.addEventListener('click', closeDrawer);
+				window.addEventListener('keydown', (event) => {
+					if (event.key === 'Escape') closeDrawer();
+				});
+			}
+
+			bindEvents();
+			loadDefaultFile();
+		</script>
+	</body>
+</html>
